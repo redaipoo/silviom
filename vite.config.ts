@@ -5,4 +5,8 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   base: '/silviom/',
+  build: {
+    target: ['es2020', 'chrome80', 'safari13', 'firefox78'],
+    cssTarget: ['chrome80', 'safari13', 'firefox78'],
+  },
 })
