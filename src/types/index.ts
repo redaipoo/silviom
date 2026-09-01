@@ -91,6 +91,8 @@ export interface ProcessStep {
 export interface BeforeAfterItem {
   id: string;
   titleArabic: string;
+  titleEn?: string;
+  category?: CategoryType;
   categoryArabic: string;
   beforeImage: string;
   afterImage: string;

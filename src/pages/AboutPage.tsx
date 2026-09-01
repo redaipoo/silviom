@@ -13,7 +13,7 @@ export const AboutPage: React.FC = () => {
             من نحن في <span className="text-gold-gradient">المجد</span>
           </h1>
           <p className="text-xs sm:text-sm text-brand-ivory/70 mt-3 leading-relaxed font-light">
-            نحن استوديو تصميم داخلي وتصنيع مطابخ عصرية، نؤمن بأن المساحات الجميلة تبدأ بفهم عميق لاحتياجات الإنسان وتتحول إلى واقع عبر أرقى معايير الحرفية.
+            شركة رائدة في مدينة البيضاء متخصصة في صناعة وتصميم المطابخ العصرية الفاخرة وأعمال الـ PVC و MDF، نجمع بين جودة المواد وجمال التصميم الهندسي.
           </p>
         </div>
 
@@ -21,25 +21,25 @@ export const AboutPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-20">
           <div className="lg:col-span-6 space-y-5">
             <h2 className="text-xl sm:text-3xl font-bold text-brand-ivory font-arabic">
-              فلسفتنا: التوازن بين <span className="text-brand-gold">الفخامة الخالدة</span> والوظيفة الذكية
+              فلسفتنا: التوازن بين <span className="text-brand-gold">الفخامة العصرية</span> ومتانة الخامات
             </h2>
 
             <p className="text-xs sm:text-sm text-brand-ivory/80 leading-relaxed font-light">
-              تأسست شركة <strong className="text-brand-champagne">المجد (AL MĀGD)</strong> لتضع معياراً جديداً في سوق التصميم الداخلي وتفصيل المطابخ الفاخرة. نرى في كل مساحة لوحة بيضاء ننسج فيها تفاصيل الراحة، الإضاءة الطبيعية، والانسجام البصري بين الخامات الطبيعية كالرخام، الأخشاب المعالجة، والزجاج.
+              تأسست <strong className="text-brand-champagne">شركة المجد للمطابخ الحديثة و PVC</strong> في مدينة البيضاء لتكون الوجهة الأولى للباحثين عن التميز في تفصيل المطابخ، الأبواب، النوافذ، وغرف النوم والديكورات الداخلية. نعتمد على أجود خامات الـ PVC و MDF المقاومة للرطوبة والمصممة لتدوم طويلاً.
             </p>
 
             <p className="text-xs sm:text-sm text-brand-ivory/80 leading-relaxed font-light">
-              لا نكتفي بتقديم رسومات جميلة، بل نمتلك ورش تصنيع مجهزة بأحدث خطوط الإنتاج الأوروبية لضمان تنفيذ كل مليمتر بدقة هندسية متناهية.
+              نمتلك ورش عمل متطورة وفريقاً من الفنيين والمهندسين ذوي الخبرة العالية لتحويل مساحة منزلك إلى لوحة معمارية تجمع بين استغلال المساحات بأعلى كفاءة والمظهر الجمالي الفاخر.
             </p>
 
             <div className="grid grid-cols-2 gap-3 pt-2">
               <div className="p-3.5 rounded-xl bg-brand-surface/60 border border-brand-gold/20">
-                <p className="text-xl font-serif font-bold text-brand-gold">+15</p>
-                <p className="text-[11px] text-brand-ivory/70 mt-0.5">عاماً من الخبرة في الأسواق الخليجية</p>
+                <p className="text-xl font-serif font-bold text-brand-gold">البيضاء - ليبيا</p>
+                <p className="text-[11px] text-brand-ivory/70 mt-0.5">شارع القهاوي (بالقرب من قرطاسية بغداد)</p>
               </div>
               <div className="p-3.5 rounded-xl bg-brand-surface/60 border border-brand-gold/20">
                 <p className="text-xl font-serif font-bold text-brand-champagne">100%</p>
-                <p className="text-[11px] text-brand-ivory/70 mt-0.5">مطابقة تامة بين التصميم 3D والتنفيذ</p>
+                <p className="text-[11px] text-brand-ivory/70 mt-0.5">مطابقة تامة بين التصميم والتنفيذ</p>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ export const AboutPage: React.FC = () => {
             <div className="rounded-3xl overflow-hidden border border-brand-gold/30 shadow-2xl aspect-[4/3] group">
               <img
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-                alt="AL MĀGD Interior Excellence"
+                alt="شركة المجد للمطابخ الحديثة و PVC"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -62,7 +62,7 @@ export const AboutPage: React.FC = () => {
               لماذا يختار عملاؤنا <span className="text-gold-gradient">المجد</span>؟
             </h2>
             <p className="text-xs text-brand-ivory/60 mt-1.5">
-              التزامنا بالتميز يرتكز على 4 أركان أساسية لا نساوم عليها
+              التزامنا بتقديم الأفضل لأهلنا في مدينة البيضاء وكافة المدن المجاورة
             </p>
           </div>
 
@@ -71,9 +71,9 @@ export const AboutPage: React.FC = () => {
               <div className="w-10 h-10 rounded-xl bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center text-brand-gold">
                 <Diamond size={20} weight="duotone" />
               </div>
-              <h3 className="text-sm font-bold text-brand-ivory">خامات أصلية معتمدة</h3>
+              <h3 className="text-sm font-bold text-brand-ivory">خامات PVC و MDF معتمدة</h3>
               <p className="text-xs text-brand-ivory/70 leading-relaxed font-light">
-                نستورد أجود أنواع الأخشاب الطبيعية، الرخام الإيطالي، والملحقات النمساوية والألمانية.
+                خامات أصلية مقاومة للرطوبة والحرارة وعوامل الاستخدام اليومي.
               </p>
             </div>
 
@@ -81,9 +81,9 @@ export const AboutPage: React.FC = () => {
               <div className="w-10 h-10 rounded-xl bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center text-brand-champagne">
                 <ShieldCheck size={20} weight="duotone" />
               </div>
-              <h3 className="text-sm font-bold text-brand-ivory">ضمان شامل ومكتوب</h3>
+              <h3 className="text-sm font-bold text-brand-ivory">ضمان حقيقي وموثوق</h3>
               <p className="text-xs text-brand-ivory/70 leading-relaxed font-light">
-                ضمانات حقيقية على المفصلات، الأسطح، وجودة التصنيع ضد الرطوبة وعوامل الزمن.
+                ضمان على جودة التصنيع وسلامة التركيب ومفصلات الهيدروليك والإكسسوارات.
               </p>
             </div>
 
@@ -91,9 +91,9 @@ export const AboutPage: React.FC = () => {
               <div className="w-10 h-10 rounded-xl bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center text-brand-gold">
                 <Medal size={20} weight="duotone" />
               </div>
-              <h3 className="text-sm font-bold text-brand-ivory">إشراف هندسي ميداني</h3>
+              <h3 className="text-sm font-bold text-brand-ivory">دقة أخذ المقاسات والتركيب</h3>
               <p className="text-xs text-brand-ivory/70 leading-relaxed font-light">
-                متابعة دورية من مهندسي الديكور أثناء التركيب لضمان أدق تفاصيل التشطيب والتسليم.
+                فريق فني محترف يضمن لك تركيباً نظيفاً ودقيقاً حتى أصغر التفاصيل.
               </p>
             </div>
 
@@ -101,9 +101,9 @@ export const AboutPage: React.FC = () => {
               <div className="w-10 h-10 rounded-xl bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center text-brand-champagne">
                 <Users size={20} weight="duotone" />
               </div>
-              <h3 className="text-sm font-bold text-brand-ivory">خدمة عملاء VIP</h3>
+              <h3 className="text-sm font-bold text-brand-ivory">تسهيلات في الدفع</h3>
               <p className="text-xs text-brand-ivory/70 leading-relaxed font-light">
-                استشارات مخصصة وتواصل مستمر عبر واتساب وتقارير أسبوعية مصورة لمراحل العمل.
+                خيارات دفع مرنة تشمل النقد، البطاقات المصرفية، وإمكانية التقسيط الميسر.
               </p>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { WhatsappLogo, Phone, Envelope, MapPin, ArrowUp } from '@phosphor-icons/react';
+import { WhatsappLogo, Phone, MapPin, ArrowUp } from '@phosphor-icons/react';
 import { getWhatsAppUrl } from '../../utils/whatsapp';
 import logoImg from '../../assets/logo.png';
 
@@ -8,6 +8,8 @@ export const Footer: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const facebookUrl = 'https://www.facebook.com/p/%D8%B4%D8%B1%D9%83%D8%A9-%D8%A7%D9%84%D9%85%D8%AC%D8%AF-%D9%84%D9%84%D9%85%D8%B7%D8%A7%D8%A8%D8%AE-%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB%D8%A9-%D9%88-P-V-C-100041790767867/';
 
   return (
     <footer className="bg-brand-dark border-t border-brand-gold/20 pt-16 pb-10 text-brand-ivory relative overflow-hidden">
@@ -23,34 +25,34 @@ export const Footer: React.FC = () => {
               <div className="w-14 h-14 rounded-2xl overflow-hidden border border-brand-gold/40 p-1 bg-brand-surface shadow-luxury">
                 <img
                   src={logoImg}
-                  alt="المجد - AL MĀGD"
+                  alt="شركة المجد للمطابخ الحديثة و PVC"
                   className="w-full h-full object-contain"
                 />
               </div>
               <div>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-2xl font-extrabold text-brand-ivory tracking-wide">المجد</span>
+                  <span className="text-2xl font-extrabold text-brand-ivory tracking-wide font-arabic">المجد</span>
                   <span className="text-sm font-light text-brand-gold font-serif tracking-widest">AL MĀGD</span>
                 </div>
                 <p className="text-xs text-brand-champagne font-medium tracking-wide">
-                  Modern Kitchens & Bespoke Interiors
+                  Modern Kitchens & P V C
                 </p>
               </div>
             </Link>
 
             <p className="text-sm text-brand-ivory/70 leading-relaxed max-w-md">
-              شركة رائدة متخصصة في تصميم وتنفيذ المطابخ العصرية الفاخرة والديكورات الداخلية المتكاملة. نصمم المساحات التي تشبهك وفق أعلى معايير الجودة والاهتمام بأدق التفاصيل.
+              شركة المجد لصناعة وأعمال المطابخ العصرية والأبواب والنوافذ والديكورات الداخلية (PVC | MDF). نصمم المساحات التي تلبي طموحك في مدينة البيضاء وكافة المدن الليبية بأعلى معايير الإتقان.
             </p>
 
             {/* Direct WhatsApp Badge */}
             <a
-              href={getWhatsAppUrl('السلام عليكم، أود التواصل مع فريق شركة المجد للاستفسار عن التصاميم.')}
+              href={getWhatsAppUrl('السلام عليكم، أود التواصل مع شركة المجد للمطابخ الحديثة و PVC.')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-brand-surface/80 border border-brand-gold/30 hover:border-brand-gold text-brand-ivory hover:text-brand-champagne transition-all text-xs font-semibold shadow-inner-luxury group"
             >
               <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span>متاحون الآن للمحادثة والاستشارة عبر واتساب</span>
+              <span>تواصل مباشر واستشارة عبر واتساب</span>
               <WhatsappLogo size={16} weight="fill" className="text-emerald-400 group-hover:scale-110 transition-transform" />
             </a>
           </div>
@@ -141,54 +143,42 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm text-brand-ivory/70">
               <li className="flex items-start gap-2.5">
                 <MapPin size={16} weight="duotone" className="text-brand-gold shrink-0 mt-0.5" />
-                <span>المملكة العربية السعودية - صالات العرض والمعارض الرئيسية</span>
+                <span>ليبيا - البيضاء، شارع القهاوي (بالقرب من قرطاسية بغداد)</span>
               </li>
-              <li className="flex items-center gap-2.5">
-                <Phone size={16} weight="duotone" className="text-brand-gold shrink-0" />
-                <span dir="ltr" className="text-left font-mono text-xs">+966 50 000 0000</span>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Envelope size={16} weight="duotone" className="text-brand-gold shrink-0" />
-                <span>info@almagd-kitchens.com</span>
+              <li className="flex items-start gap-2.5">
+                <Phone size={16} weight="duotone" className="text-brand-gold shrink-0 mt-0.5" />
+                <div className="space-y-0.5 text-xs text-brand-ivory/90 font-mono" dir="ltr">
+                  <div>094 5919679</div>
+                  <div>092 3741578</div>
+                  <div>091 3769091</div>
+                </div>
               </li>
             </ul>
 
             {/* Social Links */}
             <div className="pt-2">
-              <p className="text-xs text-brand-gold/80 mb-2">تابعنا للمزيد من الإلهام اليومي:</p>
+              <p className="text-xs text-brand-gold/80 mb-2">تابعنا على صفحتنا الرسمية:</p>
               <div className="flex items-center gap-2">
-                {/* Instagram SVG */}
+                {/* Facebook Link to Official Page */}
                 <a
-                  href="https://instagram.com"
+                  href={facebookUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-brand-surface border border-brand-gold/20 flex items-center justify-center text-brand-ivory/80 hover:text-brand-gold hover:border-brand-gold transition-all"
-                  aria-label="Instagram"
-                >
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                </a>
-                
-                {/* Facebook SVG */}
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-brand-surface border border-brand-gold/20 flex items-center justify-center text-brand-ivory/80 hover:text-brand-gold hover:border-brand-gold transition-all"
-                  aria-label="Facebook"
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#1877F2]/20 border border-[#1877F2]/40 text-[#1877F2] hover:bg-[#1877F2]/30 text-xs font-bold transition-all"
+                  aria-label="صفحة شركة المجد على فيسبوك"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
+                  <span>فيسبوك (13k+ متابع)</span>
                 </a>
 
                 {/* WhatsApp */}
                 <a
-                  href={getWhatsAppUrl('السلام عليكم، أود التواصل مع شركة المجد')}
+                  href={getWhatsAppUrl('السلام عليكم شركة المجد')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-[#25D366]/20 border border-[#25D366]/40 flex items-center justify-center text-[#25D366] hover:bg-[#25D366]/30 transition-all"
+                  className="w-8 h-8 rounded-xl bg-[#25D366]/20 border border-[#25D366]/40 flex items-center justify-center text-[#25D366] hover:bg-[#25D366]/30 transition-all"
                   aria-label="WhatsApp"
                 >
                   <WhatsappLogo size={16} weight="fill" />
@@ -202,7 +192,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-ivory/50">
           <div className="flex items-center gap-2">
-            <span>© {new Date().getFullYear()} شركة المجد (AL MĀGD). جميع الحقوق محفوظة.</span>
+            <span>© {new Date().getFullYear()} شركة المجد للمطابخ الحديثة و P V C - البيضاء، ليبيا. جميع الحقوق محفوظة.</span>
           </div>
 
           <div className="flex items-center gap-6">

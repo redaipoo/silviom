@@ -3,76 +3,90 @@ import { BeforeAfterItem, ProcessStep } from '../types';
 export const beforeAfterData: BeforeAfterItem[] = [
   {
     id: 'ba-01',
-    titleArabic: 'تحويل مطبخ قديم إلى تحفة عصرية مفتوحة مع جزيرة رخامية',
-    categoryArabic: 'مطابخ حديثة',
-    // Before: Empty / raw / older style kitchen space
-    beforeImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80',
-    // After: Luxury modern kitchen
-    afterImage: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=85',
-    description: 'إعادة توزيع كاملة للمساحة مع هدم الجدار الفاصل لإنشاء مساحة مفتوحة، وتركيب خزائن بلمسة الجوز الطبيعي ورخام كلكتا مضيء.',
-    duration: '25 يوماً',
-    location: 'فيلا خاصة - الرياض'
+    titleArabic: 'تجديد مطبخ فيلا عصرية',
+    titleEn: 'Modern Villa Kitchen Renovation',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ',
+    beforeImage: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80',
+    afterImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    description: 'تحويل مطبخ قديم وضيق إلى مساحة مفتوحة بنظام PVC فخم مع جزيرة رخامية وإضاءات LED مخفية وأجهزة بلت إن.',
+    location: 'البيضاء - شارع القهاوي',
+    duration: '3 أسابيع',
   },
   {
     id: 'ba-02',
-    titleArabic: 'تجديد صالة معيشة رئيسية ودمج مدفأة رخامية جدارية',
-    categoryArabic: 'غرف معيشة',
+    titleArabic: 'تحويل غرفة نوم رئيسية لجناح فندقي',
+    titleEn: 'Master Suite Transformation',
+    category: 'bedrooms',
+    categoryArabic: 'غرف نوم',
     beforeImage: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80',
-    afterImage: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85',
-    description: 'تحويل مساحة استقبال تقليدية إلى مجلس معاصر بتكسيات ترافرتين طبيعية وإضاءات مدمجة غير مباشرة.',
+    afterImage: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80',
+    description: 'إعادة تصميم غرفة النوم بالكامل مع دمج دريسنج روم زجاجي وإضاءة دافئة مريحة.',
+    location: 'البيضاء - حي الأندلس',
+    duration: 'أسبوعين',
+  },
+  {
+    id: 'ba-03',
+    titleArabic: 'تطوير صالة استقبال ومجلس معاصر',
+    titleEn: 'Contemporary Majlis Renovation',
+    category: 'living-rooms',
+    categoryArabic: 'غرف معيشة',
+    beforeImage: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1200&q=80',
+    afterImage: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80',
+    description: 'تجديد مجلس الاستقبال بكسوات جدارية خشبية وتنسيق ألوان يعطي انطباعاً بالرحابة والفخامة.',
+    location: 'البيضاء - شارع العروبة',
     duration: '18 يوماً',
-    location: 'بنتهاوس - جدة'
-  }
+  },
 ];
 
 export const processSteps: ProcessStep[] = [
   {
     step: 1,
-    titleArabic: 'الاستشارة وفهم الاحتياج',
-    titleEn: 'Consultation & Vision',
-    description: 'جلسة نقاش تفصيلية للاستماع إلى تطلعاتك وأسلوب حياتك والميزانية المحددة للمشروع.',
-    highlight: 'لقاء تفاعلي لتحديد الهوية المطلوبة'
+    titleArabic: 'الاستشارة وأخذ المقاسات الميدانية',
+    titleEn: 'Site Measurement & Consultation',
+    description: 'زيارة مهندسنا لموقعك في البيضاء لرفع المقاسات بدقة ومناقشة احتياجاتك وتفضيلاتك في الخامات.',
+    highlight: 'معاينة دقيقة للمساحة',
   },
   {
     step: 2,
-    titleArabic: 'رفع المقاسات ودراسة الفراغ',
-    titleEn: 'Space Assessment',
-    description: 'زيارة موقعية بأجهزة ليزر دقيقة لدراسة الإضاءة الطبيعية، مسارات الحركة، ونقاط التغذية والصرف.',
-    highlight: 'رفع هندسي رقمي دقيق بنسبة 100%'
+    titleArabic: 'التصميم الهندسي وثلاثي الأبعاد (3D)',
+    titleEn: '3D Concept & Layout',
+    description: 'رسم مخطط تفصيلي ورندر 3D واقعي لتشاهد مطبخك أو مساحتك قبل البدء في أي تصنيع.',
+    highlight: 'رؤية واقعية مسبقة',
   },
   {
     step: 3,
-    titleArabic: 'المفهوم البصري ولوحة الخامات',
-    titleEn: 'Moodboard & Concept',
-    description: 'تقديم لوحة عينات حقيقية للأخشاب، الرخام، الأقمشة، والألوان للاتفاق على الطابع العام.',
-    highlight: 'تنسيق متناغم للمواد والتشطيبات'
+    titleArabic: 'اختيار الخامات والألوان والإكسسوارات',
+    titleEn: 'Material & Hardware Selection',
+    description: 'تحديد خامات PVC و MDF والأسطح الرخامية والمفصلات الهيدروليكية ذات الجودة العالية.',
+    highlight: 'خامات معتمدة ومقاومة للرطوبة',
   },
   {
     step: 4,
-    titleArabic: 'التصميم ثلاثي الأبعاد 3D',
-    titleEn: '3D Photorealistic Render',
-    description: 'بناء مجسم رقمي سينمائي للفرش والإضاءة ترى من خلاله مشروعك المستقبلي بكل تفاصيله.',
-    highlight: 'معاينة واقعية مطابقة للتنفيذ'
+    titleArabic: 'الموافقة على المخططات واعتماد التكلفة',
+    titleEn: 'Final Approval & Agreement',
+    description: 'تثبيت المقاسات وجدول التنفيذ والدفعات بوضوح تام، مع إمكانية الدفع نقداً أو بالصكوك المعتمدة.',
+    highlight: 'شفافية والتزام بالميزانية',
   },
   {
     step: 5,
-    titleArabic: 'المراجعة والتطوير',
-    titleEn: 'Refinement & Approval',
-    description: 'إجراء أي تعديلات مطلوبة على التصاميم والألوان حتى نصل إلى رضاك التام والاعتماد النهائي.',
-    highlight: 'مرونة كاملة في ضبط التفاصيل'
+    titleArabic: 'التصنيع والتجهيز في ورش المجد',
+    titleEn: 'Precision Manufacturing',
+    description: 'قص وتجميع الخزائن والوحدات بأحدث الماكينات وتحت رقابة صارمة على الجودة.',
+    highlight: 'حرفية تصنيع عالية',
   },
   {
     step: 6,
-    titleArabic: 'المخططات التنفيذية والكميات',
-    titleEn: 'Executive Drawings',
-    description: 'إصدار كتيب الرسومات التفصيلية، المخططات الكهربائية، والسباكة، ومواصفات المواد للتصنيع.',
-    highlight: 'مخططات هندسية معيارية للورش والموقع'
+    titleArabic: 'التركيب الميداني وضبط المحاذاة',
+    titleEn: 'Expert Installation',
+    description: 'فريق فني متخصص لتركيب الوحدات والأسطح والأجهزة بدقة مليمترية.',
+    highlight: 'تركيب نظيف وسريع',
   },
   {
     step: 7,
-    titleArabic: 'التصنيع والتنفيذ والتسليم',
-    titleEn: 'Bespoke Craftsmanship',
-    description: 'بدء التصنيع في مصانعنا بأحدث الماكينات ثم التركيب بالموقع تحت إشراف هندسي صارم وضمان شامل.',
-    highlight: 'تسليم نظيف في الموعد المحدد'
-  }
+    titleArabic: 'التسليم النهائي وشهادة الضمان',
+    titleEn: 'Handover & Warranty',
+    description: 'معاينة شاملة مع العميل للتأكد من رضاكم التام، وتسليم شهادة الضمان المعتمدة.',
+    highlight: 'ضمان وخدمة ما بعد البيع',
+  },
 ];

@@ -68,7 +68,7 @@ export const Navbar: React.FC = () => {
                 </span>
               </div>
               <span className="text-[10px] text-brand-champagne/80 tracking-wider">
-                Modern Kitchens
+                Modern Kitchens & PVC
               </span>
             </div>
           </Link>

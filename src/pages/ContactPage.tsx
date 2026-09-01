@@ -8,6 +8,8 @@ export const ContactPage: React.FC = () => {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
 
+  const facebookUrl = 'https://www.facebook.com/p/%D8%B4%D8%B1%D9%83%D8%A9-%D8%A7%D9%84%D9%85%D8%AC%D8%AF-%D9%84%D9%84%D9%85%D8%B7%D8%A7%D8%A8%D8%AE-%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB%D8%A9-%D9%88-P-V-C-100041790767867/';
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
@@ -23,7 +25,7 @@ export const ContactPage: React.FC = () => {
             تواصل مع <span className="text-gold-gradient">المجد</span>
           </h1>
           <p className="text-xs sm:text-sm text-brand-ivory/70 mt-3 leading-relaxed font-light">
-            يسعدنا استقبالك في صالات عرضنا أو الإجابة على استفساراتك هاتفياً وعبر واتساب في أي وقت
+            يسعدنا استقبالك في معرضنا بمدينة البيضاء أو الإجابة على استفساراتك هاتفياً وعبر واتساب وفيسبوك في أي وقت
           </p>
         </div>
 
@@ -38,9 +40,9 @@ export const ContactPage: React.FC = () => {
               <div className="w-9 h-9 rounded-xl bg-brand-gold/15 flex items-center justify-center text-brand-gold">
                 <MapPin size={20} weight="duotone" />
               </div>
-              <h3 className="text-sm font-bold text-brand-ivory">صالات العرض الرئيسية</h3>
-              <p className="text-xs text-brand-ivory/70 leading-relaxed font-light">
-                المملكة العربية السعودية - الرياض - طريق الملك فهد / طريق التخصصي
+              <h3 className="text-sm font-bold text-brand-ivory">المعرض والإدارة</h3>
+              <p className="text-xs text-brand-ivory/80 leading-relaxed font-medium">
+                ليبيا - البيضاء، شارع القهاوي (بالقرب من قرطاسية بغداد)
               </p>
             </div>
 
@@ -49,21 +51,40 @@ export const ContactPage: React.FC = () => {
               <div className="w-9 h-9 rounded-xl bg-brand-gold/15 flex items-center justify-center text-brand-gold">
                 <Phone size={20} weight="duotone" />
               </div>
-              <h3 className="text-sm font-bold text-brand-ivory">الهاتف والواتساب</h3>
-              <div className="space-y-0.5 text-xs text-brand-ivory/80 font-mono" dir="ltr">
-                <p>+966 50 000 0000</p>
-                <p>+966 11 000 0000</p>
+              <h3 className="text-sm font-bold text-brand-ivory">أرقام التواصل والاتصال</h3>
+              <div className="space-y-1 text-xs text-brand-ivory/90 font-mono" dir="ltr">
+                <p className="flex items-center justify-end gap-2 font-bold text-brand-champagne">
+                  <span>094 5919679</span>
+                </p>
+                <p className="flex items-center justify-end gap-2">
+                  <span>092 3741578</span>
+                </p>
+                <p className="flex items-center justify-end gap-2">
+                  <span>091 3769091</span>
+                </p>
               </div>
 
-              <div className="pt-1.5">
+              <div className="pt-2 flex flex-col sm:flex-row gap-2">
                 <a
-                  href={getWhatsAppUrl('السلام عليكم، أود التواصل مع شركة المجد')}
+                  href={getWhatsAppUrl('السلام عليكم شركة المجد للمطابخ الحديثة و PVC')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] text-xs font-bold hover:bg-[#25D366]/30 transition-all whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] text-xs font-bold hover:bg-[#25D366]/30 transition-all whitespace-nowrap flex-1"
                 >
-                  <WhatsappLogo size={15} weight="fill" />
+                  <WhatsappLogo size={16} weight="fill" />
                   <span>محادثة واتساب سريعة</span>
+                </a>
+
+                <a
+                  href={facebookUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#1877F2]/20 border border-[#1877F2]/40 text-[#1877F2] text-xs font-bold hover:bg-[#1877F2]/30 transition-all whitespace-nowrap flex-1"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                  <span>صفحة فيسبوك الرسمية</span>
                 </a>
               </div>
             </div>
@@ -75,8 +96,8 @@ export const ContactPage: React.FC = () => {
               </div>
               <h3 className="text-sm font-bold text-brand-ivory">ساعات العمل الرسمية</h3>
               <ul className="space-y-1 text-xs text-brand-ivory/70 font-light">
-                <li>السبت - الخميس: 9:00 ص - 10:00 م</li>
-                <li>الجمعة: 4:00 م - 10:00 م</li>
+                <li>السبت - الخميس: 9:00 ص - 9:00 م</li>
+                <li>الجمعة: عطلة أسبوعية / استقبال رسائل الواتساب</li>
               </ul>
             </div>
 
@@ -88,7 +109,7 @@ export const ContactPage: React.FC = () => {
               أرسل لنا استفسارك مباشرة
             </h3>
             <p className="text-xs text-brand-ivory/60 mb-5">
-              سيتواصل معك فريق خدمة العملاء خلال أقل من ساعتين
+              سيتواصل معك فريق شركة المجد في أقرب وقت
             </p>
 
             {!submitted ? (
@@ -106,26 +127,26 @@ export const ContactPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-brand-gold mb-1.5">رقم الجوال</label>
+                  <label className="block text-xs font-bold text-brand-gold mb-1.5">رقم الهاتف (ليبي)</label>
                   <input
                     type="tel"
                     required
                     dir="ltr"
                     value={phone}
                     onChange={e => setPhone(e.target.value)}
-                    placeholder="+966 5X XXX XXXX"
+                    placeholder="09X XXXXXXX"
                     className="w-full bg-brand-dark/90 border border-brand-gold/20 focus:border-brand-gold rounded-xl px-4 py-2.5 text-xs sm:text-sm text-brand-ivory outline-none text-right"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-brand-gold mb-1.5">الرسالة أو الاستفسار</label>
+                  <label className="block text-xs font-bold text-brand-gold mb-1.5">الرسالة أو نوع العمل المطلوب</label>
                   <textarea
                     rows={4}
                     required
                     value={message}
                     onChange={e => setMessage(e.target.value)}
-                    placeholder="كيف يمكننا مساعدتك؟"
+                    placeholder="مطابخ حديثة، أبواب ونوافذ PVC، غرف نوم، ديكور داخلي..."
                     className="w-full bg-brand-dark/90 border border-brand-gold/20 focus:border-brand-gold rounded-xl p-3 text-xs sm:text-sm text-brand-ivory outline-none"
                   />
                 </div>
@@ -142,7 +163,7 @@ export const ContactPage: React.FC = () => {
               <div className="py-8 text-center space-y-3">
                 <CheckCircle size={36} weight="fill" className="text-emerald-400 mx-auto" />
                 <h4 className="text-base font-bold text-brand-ivory">تم إرسال رسالتك بنجاح</h4>
-                <p className="text-xs text-brand-ivory/70">شكراً لتواصلك مع شركة المجد، سنقوم بالرد عليك في أقرب وقت.</p>
+                <p className="text-xs text-brand-ivory/70">شكراً لتواصلك مع شركة المجد بالبيضاء، سنقوم بالرد عليك في أقرب وقت.</p>
               </div>
             )}
           </div>

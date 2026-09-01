@@ -1,81 +1,57 @@
 import { DesignItem } from '../types';
 
-export const OFFICIAL_WHATSAPP_NUMBER = '+966500000000'; // Brand WhatsApp number (or international format)
+export const OFFICIAL_WHATSAPP_NUMBER = '218945919679'; // Libyan international format without +
 
-/**
- * Generate a WhatsApp direct chat URL with encoded text
- */
-export function getWhatsAppUrl(text: string, phone: string = OFFICIAL_WHATSAPP_NUMBER): string {
-  const cleanPhone = phone.replace(/[^\d+]/g, '');
-  return `https://wa.me/${cleanPhone.replace('+', '')}?text=${encodeURIComponent(text)}`;
-}
+export const getWhatsAppUrl = (message: string, phone: string = OFFICIAL_WHATSAPP_NUMBER): string => {
+  const cleanPhone = phone.replace(/[^0-9]/g, '');
+  const encodedMessage = encodeURIComponent(message.trim());
+  return `https://wa.me/${cleanPhone}?text=${encodedMessage}`;
+};
 
-/**
- * Single design execution inquiry
- */
-export function getDesignInquiryMessage(design: DesignItem): string {
-  const currentUrl = typeof window !== 'undefined' ? `${window.location.origin}/designs/${design.slug}` : '';
-  
-  return `السلام عليكم ورحمة الله،
-أعجبني تصميم "${design.title}" من تصاميم شركة المجد (AL MĀGD).
-التصنيف: ${design.categoryArabic} | الطراز: ${design.styleArabic}
-المساحة التقريبية: ${design.approximateArea}
+export const getDesignInquiryMessage = (design: DesignItem): string => {
+  const currentUrl = typeof window !== 'undefined'
+    ? `${window.location.origin}/#/designs/${design.slug}`
+    : `https://redaipoo.github.io/silviom/#/designs/${design.slug}`;
 
-${currentUrl ? `رابط التصميم: ${currentUrl}\n` : ''}أرغب في الاستفسار عن إمكانية تنفيذ تصميم مشابه أو حجز موعد استشارة وتحديد التكلفة التقديرية.`;
-}
+  return `السلام عليكم شركة المجد،
+أنا مهتم بتنفيذ تصميم "${design.title}" (${design.categoryArabic}) في مساحتي.
+رابط التصميم: ${currentUrl}
+أرجو التواصل لمناقشة التفاصيل وتحديد موعد أخذ المقاسات.`;
+};
 
-/**
- * Similar design inquiry
- */
-export function getSimilarDesignInquiryMessage(design: DesignItem): string {
-  return `السلام عليكم ورحمة الله،
-شاهدت تصميم "${design.title}" على موقع شركة المجد، وأرغب في طلب تصميم خاص مشابه بنفس الروح واللمسات العصرية لمساحتي.`;
-}
+export const getSimilarDesignInquiryMessage = (design: DesignItem): string => {
+  return `السلام عليكم شركة المجد،
+أعجبني طراز تصميم "${design.title}" (${design.styleArabic}) وأود تصميم مساحة مشابهة له بمقاسات مخصصة لمنزلي في البيضاء/ليبيا.`;
+};
 
-/**
- * Batch favorites WhatsApp inquiry
- */
-export function getBatchFavoritesMessage(designs: DesignItem[]): string {
-  if (designs.length === 0) {
-    return 'السلام عليكم ورحمة الله، أرغب في الاستفسار عن خدمات التصميم الداخلي لدى شركة المجد.';
-  }
+export const getBatchFavoritesMessage = (designs: DesignItem[]): string => {
+  const titles = designs.map((d, i) => `${i + 1}. ${d.title} (${d.categoryArabic})`).join('\n');
+  return `السلام عليكم شركة المجد،
+قمت باختيار وتفضيل هذه التصاميم من موقعكم وأود استشارتكم في إمكانية تنفيذها:
 
-  const designsList = designs
-    .map((d, index) => `${index + 1}. ${d.title} (${d.categoryArabic} - ${d.styleArabic})`)
-    .join('\n');
+${titles}
 
-  return `السلام عليكم ورحمة الله،
-قمت باختيار وتفضيل مجموعة من تصاميمكم الرائعة على موقع شركة المجد (AL MĀGD):
+يرجى تزويدي بالأسعار التقريبية وتفاصيل التنفيذ.`;
+};
 
-${designsList}
-
-أرغب في مناقشة هذه الاختيارات معكم لتنفيذ مشروع يجمع بين هذه الأفكار الجميلة.`;
-}
-
-/**
- * Project Consultation Request Form Message
- */
-export function getProjectFormWhatsAppMessage(data: {
+export const getProjectFormWhatsAppMessage = (formData: {
   name: string;
   phone: string;
   projectType: string;
   location: string;
-  spaceSize: string;
-  preferredStyle: string;
-  budgetRange: string;
-  details: string;
-}): string {
-  return `السلام عليكم ورحمة الله،
-طلب استشارة وتصميم مشروع جديد من موقع شركة المجد:
-
-- الاسم: ${data.name}
-- رقم التواصل: ${data.phone}
-- نوع المشروع: ${data.projectType}
-- المدينة / الموقع: ${data.location}
-- المساحة التقريبية: ${data.spaceSize}
-- الطراز المفضل: ${data.preferredStyle}
-- الميزانية المتوقعة: ${data.budgetRange || 'غير محدد'}
-- تفاصيل إضافية: ${data.details || 'لا يوجد'}
-
-يرجى التواصل معي لتنسيق الخطوة القادمة. شكراً لكم.`;
-}
+  spaceSize?: string;
+  preferredStyle?: string;
+  budgetRange?: string;
+  details?: string;
+}): string => {
+  return `طلب مشروع جديد عبر الموقع - شركة المجد:
+-----------------------------------
+الاسم: ${formData.name}
+رقم الهاتف: ${formData.phone}
+نوع المشروع: ${formData.projectType}
+المدينة/الموقع: ${formData.location}
+المساحة: ${formData.spaceSize || 'غير محدد'}
+الأسلوب المفضل: ${formData.preferredStyle || 'حسب اقتراح المهندس'}
+الميزانية المتوقعة: ${formData.budgetRange || 'غير محدد'}
+ملاحظات: ${formData.details || 'لا يوجد'}`;
+};
