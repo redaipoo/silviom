@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
+import { WhatsappLogo, Phone, Envelope, MapPin, ArrowUp } from '@phosphor-icons/react';
 import { getWhatsAppUrl } from '../../utils/whatsapp';
+import logoImg from '../../assets/logo.png';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -21,7 +22,7 @@ export const Footer: React.FC = () => {
             <Link to="/" className="flex items-center gap-3.5 group">
               <div className="w-14 h-14 rounded-2xl overflow-hidden border border-brand-gold/40 p-1 bg-brand-surface shadow-luxury">
                 <img
-                  src="/brand/logo.png"
+                  src={logoImg}
                   alt="المجد - AL MĀGD"
                   className="w-full h-full object-contain"
                 />
@@ -50,7 +51,7 @@ export const Footer: React.FC = () => {
             >
               <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
               <span>متاحون الآن للمحادثة والاستشارة عبر واتساب</span>
-              <MessageCircle className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform" />
+              <WhatsappLogo size={16} weight="fill" className="text-emerald-400 group-hover:scale-110 transition-transform" />
             </a>
           </div>
 
@@ -139,15 +140,15 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-3 text-sm text-brand-ivory/70">
               <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
+                <MapPin size={16} weight="duotone" className="text-brand-gold shrink-0 mt-0.5" />
                 <span>المملكة العربية السعودية - صالات العرض والمعارض الرئيسية</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-brand-gold shrink-0" />
+                <Phone size={16} weight="duotone" className="text-brand-gold shrink-0" />
                 <span dir="ltr" className="text-left font-mono text-xs">+966 50 000 0000</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-brand-gold shrink-0" />
+                <Envelope size={16} weight="duotone" className="text-brand-gold shrink-0" />
                 <span>info@almagd-kitchens.com</span>
               </li>
             </ul>
@@ -190,7 +191,7 @@ export const Footer: React.FC = () => {
                   className="w-8 h-8 rounded-lg bg-[#25D366]/20 border border-[#25D366]/40 flex items-center justify-center text-[#25D366] hover:bg-[#25D366]/30 transition-all"
                   aria-label="WhatsApp"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <WhatsappLogo size={16} weight="fill" />
                 </a>
               </div>
             </div>
@@ -212,7 +213,7 @@ export const Footer: React.FC = () => {
               aria-label="العودة لأعلى الصفحة"
             >
               <span>للأعلى</span>
-              <ArrowUp className="w-4 h-4" />
+              <ArrowUp size={16} weight="bold" />
             </button>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { X, Heart, Sparkle, WhatsappLogo, House, Image, SquaresFour, Info, PaperPlaneTilt } from '@phosphor-icons/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getWhatsAppUrl } from '../../utils/whatsapp';
+import logoImg from '../../assets/logo.png';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -55,7 +56,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
             <div className="p-4 border-b border-brand-gold/15 flex items-center justify-between bg-brand-surface/60">
               <div className="flex items-center gap-3">
                 <img
-                  src="/brand/logo.png"
+                  src={logoImg}
                   alt="المجد"
                   className="w-9 h-9 object-contain rounded-lg border border-brand-gold/30 p-0.5 bg-brand-dark"
                 />

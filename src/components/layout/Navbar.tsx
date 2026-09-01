@@ -4,6 +4,7 @@ import { MagnifyingGlass, Heart, List, Sparkle } from '@phosphor-icons/react';
 import { useFavorites } from '../../context/FavoritesContext';
 import { SearchModal } from '../gallery/SearchModal';
 import { MobileMenu } from './MobileMenu';
+import logoImg from '../../assets/logo.png';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,7 +53,7 @@ export const Navbar: React.FC = () => {
           <Link to="/" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-xl overflow-hidden border border-brand-gold/30 p-0.5 bg-brand-dark shadow-md group-hover:border-brand-gold transition-colors">
               <img
-                src="/brand/logo.png"
+                src={logoImg}
                 alt="المجد - AL MĀGD"
                 className="w-full h-full object-contain"
               />
