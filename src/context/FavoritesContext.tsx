@@ -19,38 +19,62 @@ interface FavoritesContextType {
   clearToast: () => void;
 }
 
-const STORAGE_KEY = 'al_magd_favorites_v2';
+const STORAGE_KEY = 'al_magd_favs_v3';
+const DEFAULT_FAVORITES = ['mg-k-01', 'mg-b-01', 'mg-w-01'];
+
+function getSafeInitialFavorites(): string[] {
+  try {
+    if (typeof window === 'undefined') return DEFAULT_FAVORITES;
+    
+    // Clean old keys if present
+    ['al_magd_favorites_v1', 'al_magd_favorites_v2', 'al_magd_favorites'].forEach(oldKey => {
+      try { localStorage.removeItem(oldKey); } catch {}
+    });
+
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) return DEFAULT_FAVORITES;
+    
+    const parsed = JSON.parse(saved);
+    if (Array.isArray(parsed)) {
+      const valid = parsed.filter((id): id is string => 
+        typeof id === 'string' && designsData.some(d => d.id === id)
+      );
+      return valid.length > 0 ? valid : DEFAULT_FAVORITES;
+    }
+  } catch (err) {
+    console.warn('LocalStorage error in FavoritesProvider:', err);
+  }
+  return DEFAULT_FAVORITES;
+}
 
 const FavoritesContext = createContext<FavoritesContextType | undefined>(undefined);
 
 export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [favoriteIds, setFavoriteIds] = useState<string[]>(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      return saved ? JSON.parse(saved) : ['mg-k-01', 'mg-b-01', 'mg-w-01'];
-    } catch {
-      return ['mg-k-01', 'mg-b-01', 'mg-w-01'];
-    }
-  });
-
+  const [favoriteIds, setFavoriteIds] = useState<string[]>(getSafeInitialFavorites);
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // Sync with localStorage
+  // Sync with localStorage safely
   useEffect(() => {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(favoriteIds));
+      if (typeof window !== 'undefined' && Array.isArray(favoriteIds)) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(favoriteIds));
+      }
     } catch (e) {
-      console.error('Failed to save favorites to localStorage', e);
+      console.warn('Failed to save favorites to localStorage', e);
     }
   }, [favoriteIds]);
 
-  // Keep selected IDs in sync with available favorite IDs
+  // Keep selected IDs in sync
   useEffect(() => {
-    setSelectedIds(prev => prev.filter(id => favoriteIds.includes(id)));
+    if (Array.isArray(favoriteIds)) {
+      setSelectedIds(prev => (Array.isArray(prev) ? prev.filter(id => favoriteIds.includes(id)) : []));
+    }
   }, [favoriteIds]);
 
-  const isFavorite = (id: string) => favoriteIds.includes(id);
+  const isFavorite = (id: string): boolean => {
+    return Array.isArray(favoriteIds) && favoriteIds.includes(id);
+  };
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
@@ -62,7 +86,7 @@ export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   const clearToast = () => setToastMessage(null);
 
   const addToFavorites = (id: string) => {
-    if (!favoriteIds.includes(id)) {
+    if (Array.isArray(favoriteIds) && !favoriteIds.includes(id)) {
       setFavoriteIds(prev => [...prev, id]);
       const design = designsData.find(d => d.id === id);
       showToast(`تمت إضافة "${design?.title || 'التصميم'}" إلى المفضلة`);
@@ -70,8 +94,8 @@ export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   };
 
   const removeFromFavorites = (id: string) => {
-    setFavoriteIds(prev => prev.filter(item => item !== id));
-    setSelectedIds(prev => prev.filter(item => item !== id));
+    setFavoriteIds(prev => (Array.isArray(prev) ? prev.filter(item => item !== id) : []));
+    setSelectedIds(prev => (Array.isArray(prev) ? prev.filter(item => item !== id) : []));
     const design = designsData.find(d => d.id === id);
     showToast(`تمت إزالة "${design?.title || 'التصميم'}" من المفضلة`);
   };
@@ -91,34 +115,38 @@ export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   };
 
   const toggleSelect = (id: string) => {
-    setSelectedIds(prev => 
-      prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]
-    );
+    setSelectedIds(prev => {
+      const list = Array.isArray(prev) ? prev : [];
+      return list.includes(id) ? list.filter(item => item !== id) : [...list, id];
+    });
   };
 
   const selectAll = () => {
-    setSelectedIds(favoriteIds);
+    setSelectedIds(Array.isArray(favoriteIds) ? favoriteIds : []);
   };
 
   const deselectAll = () => {
     setSelectedIds([]);
   };
 
-  const isAllSelected = favoriteIds.length > 0 && selectedIds.length === favoriteIds.length;
+  const safeFavoriteIds = Array.isArray(favoriteIds) ? favoriteIds : [];
+  const safeSelectedIds = Array.isArray(selectedIds) ? selectedIds : [];
 
-  const favoriteItems = designsData.filter(d => favoriteIds.includes(d.id));
+  const isAllSelected = safeFavoriteIds.length > 0 && safeSelectedIds.length === safeFavoriteIds.length;
+
+  const favoriteItems = designsData.filter(d => safeFavoriteIds.includes(d.id));
 
   return (
     <FavoritesContext.Provider
       value={{
-        favoriteIds,
+        favoriteIds: safeFavoriteIds,
         favoriteItems,
         isFavorite,
         toggleFavorite,
         addToFavorites,
         removeFromFavorites,
         clearFavorites,
-        selectedIds,
+        selectedIds: safeSelectedIds,
         toggleSelect,
         selectAll,
         deselectAll,
@@ -135,7 +163,22 @@ export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 export const useFavorites = () => {
   const context = useContext(FavoritesContext);
   if (!context) {
-    throw new Error('useFavorites must be used within a FavoritesProvider');
+    return {
+      favoriteIds: DEFAULT_FAVORITES,
+      favoriteItems: designsData.filter(d => DEFAULT_FAVORITES.includes(d.id)),
+      isFavorite: () => false,
+      toggleFavorite: () => {},
+      addToFavorites: () => {},
+      removeFromFavorites: () => {},
+      clearFavorites: () => {},
+      selectedIds: [],
+      toggleSelect: () => {},
+      selectAll: () => {},
+      deselectAll: () => {},
+      isAllSelected: false,
+      toastMessage: null,
+      clearToast: () => {},
+    };
   }
   return context;
 };
