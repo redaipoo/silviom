@@ -19,7 +19,7 @@ interface FavoritesContextType {
   clearToast: () => void;
 }
 
-const STORAGE_KEY = 'al_magd_favorites_v1';
+const STORAGE_KEY = 'al_magd_favorites_v2';
 
 const FavoritesContext = createContext<FavoritesContextType | undefined>(undefined);
 
@@ -27,9 +27,9 @@ export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   const [favoriteIds, setFavoriteIds] = useState<string[]>(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      return saved ? JSON.parse(saved) : ['mg-k-01', 'mg-b-01', 'mg-l-01']; // Initial inspiring favorites
+      return saved ? JSON.parse(saved) : ['mg-k-01', 'mg-b-01', 'mg-w-01'];
     } catch {
-      return ['mg-k-01', 'mg-b-01', 'mg-l-01'];
+      return ['mg-k-01', 'mg-b-01', 'mg-w-01'];
     }
   });
 

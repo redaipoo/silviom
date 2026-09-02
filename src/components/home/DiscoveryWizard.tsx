@@ -16,7 +16,6 @@ import {
   HouseLine,
   Door
 } from '@phosphor-icons/react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 export const DiscoveryWizard: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -151,16 +150,9 @@ export const DiscoveryWizard: React.FC = () => {
           )}
 
           {/* Steps Content */}
-          <AnimatePresence mode="wait">
-            {!isCompleted ? (
-              <motion.div
-                key={currentStep}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3 }}
-                className="min-h-[260px] flex flex-col justify-between"
-              >
+          {!isCompleted ? (
+            <div className="min-h-[260px] flex flex-col justify-between">
+              
                 {/* Step 1 */}
                 {currentStep === 1 && (
                   <div>
@@ -299,14 +291,11 @@ export const DiscoveryWizard: React.FC = () => {
                     <ArrowLeft size={14} weight="bold" />
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ) : (
               /* Results Area */
-              <motion.div
-                initial={{ opacity: 0, scale: 0.96 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.35 }}
-                className="space-y-6"
+              <div
+                className="space-y-6 animate-fade-in"
               >
                 <div className="flex items-center justify-between pb-4 border-b border-brand-gold/15">
                   <div className="flex items-center gap-2">
@@ -373,12 +362,9 @@ export const DiscoveryWizard: React.FC = () => {
                     طلب تنفيذ تصميم مخصص لمساحتي
                   </button>
                 </div>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-
         </div>
-
       </div>
     </section>
   );

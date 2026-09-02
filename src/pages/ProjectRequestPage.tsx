@@ -32,12 +32,16 @@ export const ProjectRequestPage: React.FC = () => {
     e.preventDefault();
     setIsSubmitted(true);
     
-    confetti({
-      particleCount: 80,
-      spread: 70,
-      origin: { y: 0.6 },
-      colors: ['#BB9A6B', '#DFCAA7', '#043337', '#F6F1E8'],
-    });
+    try {
+      confetti({
+        particleCount: 80,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#BB9A6B', '#DFCAA7', '#043337', '#F6F1E8'],
+      });
+    } catch {
+      // Safe fallback
+    }
   };
 
   const whatsAppUrl = getWhatsAppUrl(getProjectFormWhatsAppMessage(formData));
