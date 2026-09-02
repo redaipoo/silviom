@@ -21,10 +21,10 @@ export const FeaturedDesigns: React.FC<FeaturedDesignsProps> = ({ onQuickView })
           <div>
             <div className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-gold uppercase tracking-wider mb-2">
               <Sparkle size={14} weight="fill" />
-              <span>مشاريع مختارة</span>
+              <span>معرض أعمالنا الواقعية</span>
             </div>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-brand-ivory tracking-tight font-arabic">
-              أحدث تصاميم <span className="text-gold-gradient">المطابخ والديكور</span>
+              أحدث مشاريع <span className="text-gold-gradient">المطابخ وغرف النوم والديكور</span>
             </h2>
           </div>
 
@@ -32,7 +32,7 @@ export const FeaturedDesigns: React.FC<FeaturedDesignsProps> = ({ onQuickView })
             to="/designs"
             className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-gold hover:text-brand-champagne transition-colors self-start sm:self-auto group"
           >
-            <span>عرض كل التصاميم</span>
+            <span>عرض كل المشاريع ({designsData.length})</span>
             <ArrowLeft size={16} weight="bold" className="transition-transform group-hover:-translate-x-1" />
           </Link>
         </div>
@@ -54,7 +54,7 @@ export const FeaturedDesigns: React.FC<FeaturedDesignsProps> = ({ onQuickView })
             to="/designs"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl text-xs sm:text-sm font-bold bg-brand-surface border border-brand-gold/30 hover:border-brand-gold text-brand-ivory hover:text-brand-champagne shadow-luxury transition-all hover:scale-[1.01]"
           >
-            <span>تصفح جميع التصاميم بالمعرض</span>
+            <span>تصفح كامل المعرض ({designsData.length} تصميم)</span>
             <ArrowLeft size={14} weight="bold" />
           </Link>
         </div>

@@ -1,58 +1,59 @@
 import { ServiceItem } from '../types';
+import { getProjectImage } from '../utils/assetHelper';
 
 export const servicesData: ServiceItem[] = [
   {
     id: 'kitchen-design',
-    titleArabic: 'تصميم وتفصيل المطابخ',
-    titleEn: 'Kitchen Design & Crafting',
-    description: 'تفصيل مطابخ عصرية فاخرة بخامات PVC و MDF ورخام طبيعي بأنظمة تخزين ذكية.',
-    image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=85',
-    features: ['مقاومة تامة للرطوبة', 'أجهزة بلت إن مدمجة', 'مفصلات هيدروليك بلوم'],
+    titleArabic: 'تصميم وتفصيل المطابخ الحديثة',
+    titleEn: 'Modern Kitchens Crafting',
+    description: 'تفصيل مطابخ عصرية فاخرة بخامات PVC و MDF ورخام طبيعي بأنظمة تخزين ذكية وأجهزة بلت إن.',
+    image: getProjectImage('p1.jpg'),
+    features: ['مقاومة تامة للرطوبة والمياه', 'أجهزة Built-in مدمجة', 'مفصلات هيدروليك إيطالية'],
     icon: 'CookingPot'
   },
   {
     id: 'bedroom-design',
-    titleArabic: 'غرف النوم والأجنحة',
+    titleArabic: 'غرف النوم والأجنحة الفندقية',
     titleEn: 'Luxury Bedroom Suites',
-    description: 'تصميم أجنحة نوم فندقية بلمسات هادئة وتكسيات جدارية وإضاءات مخفية مريحة.',
-    image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=85',
-    features: ['خلفيات سرير منجدة', 'تسريحات مدمجة معلقة', 'إضاءات محيطية دافئة'],
+    description: 'تصميم وتصنيع أجنحة نوم ماستر وغرف شبابية بتكسيات خشبية جدارية وأسرّة مدمجة وإضاءات محيطية.',
+    image: getProjectImage('p11.jpg'),
+    features: ['خلفيات سرير منجدة فاخرة', 'تسريحات وكمودينو مخصص', 'إضاءات LED دافئة'],
     icon: 'Bed'
   },
   {
     id: 'wardrobes',
-    titleArabic: 'الخزائن ودواليب الملابس',
+    titleArabic: 'الخزائن ودواليب الملابس (Dressing Rooms)',
     titleEn: 'Custom Wardrobes & Closets',
-    description: 'تفصيل خزائن ملابس مدمجة ودريسنج روم بأنظمة أبواب زجاجية وتقسيمات عملية.',
-    image: 'https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=1200&q=85',
-    features: ['أبواب زجاج فاميه', 'إضاءات LED تلقائية', 'استغلال كامل للارتفاع'],
+    description: 'تفصيل خزائن ملابس مدمجة ودريسنج روم بأنظمة أبواب زجاجية شفافة وعاكسة وإضاءات ذكية.',
+    image: getProjectImage('p16.jpg'),
+    features: ['أبواب زجاج سيكوريت عسلي', 'إضاءات داخلية تلقائية', 'تقسيمات ذكية للأحذية والإكسسوارات'],
     icon: 'CoatHanger'
   },
   {
     id: 'interior-design',
-    titleArabic: 'الديكورات والتصميم الداخلي',
-    titleEn: 'Interior Architecture',
-    description: 'تنسيق داخلي متكامل للصالات والمجالس بتكسيات خشبية وبديل رخام راقٍ.',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85',
-    features: ['تكسيات WPC عصرية', 'ديكورات شاشات مدمجة', 'تناغم لوني مدروس'],
+    titleArabic: 'الديكور والتصميم الداخلي للصالات',
+    titleEn: 'Interior Architecture & Decor',
+    description: 'تنسيق داخلي متكامل للصالات والمجالس والمداخل بتكسيات بديل رخام وبديل خشب وأركان كوفي كورنر.',
+    image: getProjectImage('p21.jpg'),
+    features: ['ديكورات شاشات وبديل رخام UV', 'بديل خشب كوري عازل', 'مداخل واستقبال فخم'],
     icon: 'HouseLine'
   },
   {
     id: '3d-design',
-    titleArabic: 'التصميم ثلاثي الأبعاد 3D',
+    titleArabic: 'التصميم ثلاثي الأبعاد 3D والمعاينة',
     titleEn: '3D Spatial Planning',
-    description: 'مخططات وتصاميم هندسية 3D لمعاينة توزيع المساحة وحركتها قبل التنفيذ.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
-    features: ['أبعاد ومقاسات دقيقة', 'توزيع هندسي للمثلث الحركي', 'تعديل مرن للتصميم'],
+    description: 'مخططات وتصاميم هندسية ثلاثية الأبعاد لرؤية المساحة وتوزيعها واختيار الألوان قبل البدء في التنفيذ.',
+    image: getProjectImage('p26.jpg'),
+    features: ['مقاسات وأبعاد دقيقة', 'محاكاة واقعية للخامات', 'تعديل مرن حسب الرغبة'],
     icon: 'Cube'
   },
   {
-    id: 'rendering',
-    titleArabic: 'رندر وإظهار معماري',
-    titleEn: 'Photorealistic Rendering',
-    description: 'إظهار بصري واقعي سينمائي يحاكي الإضاءة والألوان بدقة متطابقة للواقع.',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85',
-    features: ['محاكاة واقعية 100%', 'رؤية الخامات والألوان مسبقاً', 'دقة تفاصيل 4K'],
-    icon: 'Sparkle'
+    id: 'pvc-doors',
+    titleArabic: 'أبواب ونوافذ PVC وأبواب MDF',
+    titleEn: 'PVC Doors, Windows & CNC Works',
+    description: 'تصنيع أبواب ونوافذ PVC عازلة للصوت والحرارة، وأبواب غرف MDF محفورة بأحدث ماكينات CNC.',
+    image: getProjectImage('p29.jpg'),
+    features: ['عزل صوتي وحراري فائق', 'حفر ليزر CNC بدقة عالية', 'مقاومة تامة للعوامل الجوية'],
+    icon: 'Door'
   }
 ];

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { servicesData } from '../../data/servicesData';
-import { ArrowLeft, CookingPot, Bed, CoatHanger, HouseLine, Cube, Sparkle } from '@phosphor-icons/react';
+import { ArrowLeft, CookingPot, Bed, CoatHanger, HouseLine, Cube, Sparkle, Door } from '@phosphor-icons/react';
 
 export const ServicesShowcase: React.FC = () => {
   const getIcon = (iconName: string) => {
@@ -11,6 +11,7 @@ export const ServicesShowcase: React.FC = () => {
       case 'CoatHanger': return <CoatHanger size={22} weight="duotone" />;
       case 'HouseLine': return <HouseLine size={22} weight="duotone" />;
       case 'Cube': return <Cube size={22} weight="duotone" />;
+      case 'Door': return <Door size={22} weight="duotone" />;
       case 'Sparkle': return <Sparkle size={22} weight="duotone" />;
       default: return <Sparkle size={22} weight="duotone" />;
     }
@@ -26,7 +27,7 @@ export const ServicesShowcase: React.FC = () => {
             خدماتنا <span className="text-gold-gradient">المتخصصة</span>
           </h2>
           <p className="text-xs sm:text-sm text-brand-ivory/70 mt-2 font-light">
-            حلول متكاملة في التصميم والتصنيع بأعلى معايير الإتقان في مدينة البيضاء
+            حلول متكاملة في التصميم الداخلي والتصنيع بأعلى معايير الإتقان في مدينة البيضاء
           </p>
         </div>
 
@@ -52,7 +53,7 @@ export const ServicesShowcase: React.FC = () => {
                 </div>
               </div>
 
-              {/* Body (Short Title & 1 Short Sentence Max) */}
+              {/* Body */}
               <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
                 <div>
                   <h3 className="text-base font-bold text-brand-ivory group-hover:text-brand-gold transition-colors">

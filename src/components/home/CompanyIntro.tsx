@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, MapPin, ShieldCheck, WhatsappLogo } from '@phosphor-icons/react';
 import logoImg from '../../assets/logo.png';
 import { getWhatsAppUrl } from '../../utils/whatsapp';
+import { getProjectImage } from '../../utils/assetHelper';
 
 export const CompanyIntro: React.FC = () => {
-  const whatsAppUrl = getWhatsAppUrl('السلام عليكم شركة المجد، أود التعرف أكثر على خدماتكم وتفاصيل التنفيذ.');
+  const whatsAppUrl = getWhatsAppUrl('السلام عليكم شركة المجد، أود التعرف أكثر على خدماتكم في تصميم المطابخ وغرف النوم والديكورات الداخلية.');
 
   return (
     <section id="company-intro" className="py-16 sm:py-24 bg-brand-surface/20 border-t border-brand-gold/15 relative overflow-hidden">
@@ -16,8 +17,8 @@ export const CompanyIntro: React.FC = () => {
           <div className="lg:col-span-5 relative order-2 lg:order-1">
             <div className="relative rounded-3xl overflow-hidden border border-brand-gold/30 shadow-2xl group">
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-                alt="شركة المجد للمطابخ الحديثة و PVC"
+                src={getProjectImage('p21.jpg')}
+                alt="شركة المجد للمطابخ الحديثة وغرف النوم والديكور الداخلي و PVC"
                 className="w-full h-[360px] sm:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-black/20" />
@@ -26,7 +27,7 @@ export const CompanyIntro: React.FC = () => {
               <div className="absolute bottom-4 right-4 left-4 p-3 rounded-2xl bg-brand-dark/90 backdrop-blur-md border border-brand-gold/30 flex items-center justify-between shadow-xl">
                 <div className="flex items-center gap-2 text-xs font-semibold text-brand-ivory">
                   <MapPin size={16} weight="duotone" className="text-brand-gold" />
-                  <span>البيضاء — شارع القهاوي</span>
+                  <span>البيضاء — شارع القهاوي (بالقرب من قرطاسية بغداد)</span>
                 </div>
                 <span className="text-[10px] text-brand-champagne font-bold px-2 py-0.5 rounded-md bg-brand-surface border border-brand-gold/20">
                   PVC | MDF
@@ -53,28 +54,28 @@ export const CompanyIntro: React.FC = () => {
                   <span className="text-xs font-light text-brand-gold font-serif tracking-widest">AL MĀGD</span>
                 </div>
                 <p className="text-xs text-brand-champagne font-medium">
-                  Modern Kitchens & P V C
+                  Modern Kitchens, Bedrooms & PVC Decor
                 </p>
               </div>
             </div>
 
             <h2 className="text-2xl sm:text-4xl font-extrabold text-brand-ivory leading-tight font-arabic">
-              الريادة في صناعة <span className="text-gold-gradient">المطابخ الفاخرة</span> بالبيضاء
+              الريادة في صناعة <span className="text-gold-gradient">المطابخ والديكورات الداخلية</span> بمدينة البيضاء
             </h2>
 
             <p className="text-xs sm:text-sm text-brand-ivory/80 leading-relaxed font-light">
-              شركة المجد متخصصة في صناعة وتفصيل المطابخ العصرية والأبواب والنوافذ والديكورات الداخلية (PVC | MDF). نجمع بين الفخامة المعمارية، المتانة الفائقة، والالتزام بأدق التفاصيل الهندسية لتحصل على مساحة استثنائية تدوم لسنوات.
+              شركة المجد متخصصة في صناعة وتفصيل المطابخ العصرية، غرف النوم الفاخرة، خزائن الملابس ودريسنج روم، والأبواب والنوافذ والديكورات الداخلية المتكاملة (PVC | MDF). نجمع بين الفخامة المعمارية، المتانة الفائقة، والالتزام بأدق التفاصيل الهندسية لتحصل على مساحة استثنائية تدوم لسنوات.
             </p>
 
             {/* Quick trust badges */}
-            <div className="grid grid-cols-2 gap-3 pt-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
               <div className="p-3.5 rounded-xl bg-brand-surface/40 border border-brand-gold/15 flex items-center gap-2.5">
                 <ShieldCheck size={20} weight="duotone" className="text-brand-gold shrink-0" />
-                <span className="text-xs font-bold text-brand-ivory">خامات أصلية وضمان معتمد</span>
+                <span className="text-xs font-bold text-brand-ivory">خامات أصلية وضمان تشطيب معتمد</span>
               </div>
               <div className="p-3.5 rounded-xl bg-brand-surface/40 border border-brand-gold/15 flex items-center gap-2.5">
                 <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-                <span className="text-xs font-bold text-brand-ivory">استشارات ومعاينات ميدانية</span>
+                <span className="text-xs font-bold text-brand-ivory">استشارات هندسية ومعاينات ميدانية</span>
               </div>
             </div>
 

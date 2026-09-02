@@ -1,46 +1,57 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { WhatsappLogo, ArrowLeft } from '@phosphor-icons/react';
+import { WhatsappLogo, ArrowLeft, Sparkle } from '@phosphor-icons/react';
 import { getWhatsAppUrl } from '../../utils/whatsapp';
+import { getProjectImage } from '../../utils/assetHelper';
 
 export const HeroSection: React.FC = () => {
-  const whatsAppUrl = getWhatsAppUrl('السلام عليكم شركة المجد، أود الاستفسار عن تفصيل وتصميم مطبخ عصري.');
+  const whatsAppUrl = getWhatsAppUrl('السلام عليكم شركة المجد، أود الاستفسار عن تفصيل وتصميم مساحتي (مطابخ / غرف نوم / خزائن / ديكورات).');
 
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-brand-dark">
-      {/* High-Resolution Photorealistic Modern Kitchen Background */}
+      {/* Real Company Interior Background Photo */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=2000&q=90"
-          alt="مطبخ عصري فاخر من تصميم شركة المجد"
+          src={getProjectImage('p1.jpg')}
+          alt="تصميم وتنفيذ شركة المجد للمطابخ وغرف النوم والديكورات الداخلية"
           className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out"
           loading="eager"
           fetchPriority="high"
         />
-        {/* Subtle Dark Luxury Overlay for High Contrast & Readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/65 to-brand-dark/40" />
-        <div className="absolute inset-0 bg-black/25 backdrop-blur-[0.5px]" />
+        {/* Dark Luxury Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/75 to-brand-dark/45" />
+        <div className="absolute inset-0 bg-black/30 backdrop-blur-[0.5px]" />
       </div>
 
-      {/* Content Container (Minimal, Spacious, Impactful) */}
+      {/* Content Container */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-16 flex flex-col items-center">
         
-        {/* Short Brand Eyebrow */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-dark/80 border border-brand-gold/30 text-brand-champagne text-xs font-semibold tracking-wider uppercase mb-6 backdrop-blur-md shadow-luxury">
-          <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
-          <span>شركة المجد للمطابخ الحديثة و P V C — البيضاء</span>
+        {/* Brand Eyebrow Badge */}
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-dark/85 border border-brand-gold/30 text-brand-champagne text-xs font-semibold tracking-wider uppercase mb-6 backdrop-blur-md shadow-luxury">
+          <Sparkle size={14} weight="fill" className="text-brand-gold shrink-0 animate-pulse" />
+          <span>شركة المجد للمطابخ الحديثة، غرف النوم، والديكورات الداخلية — البيضاء</span>
         </div>
 
-        {/* Short Powerful Headline */}
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.15] font-arabic max-w-4xl">
-          مطابخ عصرية.<br className="hidden sm:inline" />
-          <span className="text-gold-gradient">صُممت لأجلك.</span>
+        {/* Comprehensive Powerful Headline (Not just kitchens!) */}
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.2] font-arabic max-w-4xl">
+          تصاميم راقية.<br className="hidden sm:inline" />
+          <span className="text-gold-gradient">حلول داخلية متكاملة تليق بك.</span>
         </h1>
 
-        {/* Short Subtitle */}
-        <p className="text-sm sm:text-lg text-brand-ivory/80 max-w-xl mx-auto mt-5 font-light leading-relaxed">
-          نصمم وننفذ أرقى المطابخ والديكورات الداخلية بخامات PVC و MDF عالية الجودة ومطابقة تامة لأعلى معايير الإتقان.
+        {/* Subtitle Covering Full Spectrum */}
+        <p className="text-xs sm:text-base md:text-lg text-brand-ivory/85 max-w-2xl mx-auto mt-5 font-light leading-relaxed">
+          نصمم ونفصّل أرقى المطابخ العصرية، غرف النوم الفاخرة، خزائن الملابس والدريسنج روم، وتكسيات الديكور الداخلي وأعمال الـ PVC بأعلى معايير الجودة والإتقان.
         </p>
+
+        {/* Service Quick Tags */}
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs text-brand-champagne/90">
+          <span className="px-2.5 py-1 rounded-lg bg-brand-surface/70 border border-brand-gold/20">مطابخ مودرن</span>
+          <span className="px-2.5 py-1 rounded-lg bg-brand-surface/70 border border-brand-gold/20">غرف نوم ماستر</span>
+          <span className="px-2.5 py-1 rounded-lg bg-brand-surface/70 border border-brand-gold/20">خزائن ودريسنج روم</span>
+          <span className="px-2.5 py-1 rounded-lg bg-brand-surface/70 border border-brand-gold/20">ديكور وصالات</span>
+          <span className="px-2.5 py-1 rounded-lg bg-brand-surface/70 border border-brand-gold/20">أبواب PVC & MDF</span>
+          <span className="px-2.5 py-1 rounded-lg bg-brand-surface/70 border border-brand-gold/20">تصميم 3D</span>
+        </div>
 
         {/* Two Clear Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
@@ -49,7 +60,7 @@ export const HeroSection: React.FC = () => {
             to="/designs"
             className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-gold via-brand-champagne to-brand-gold text-brand-dark font-extrabold text-sm sm:text-base shadow-luxury-gold hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 whitespace-nowrap"
           >
-            <span>تصفح التصاميم</span>
+            <span>استكشف جميع الأعمال والتصاميم</span>
             <ArrowLeft size={18} weight="bold" />
           </Link>
 
