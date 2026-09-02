@@ -37,12 +37,10 @@ export const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({
 }) => {
   const categories: { id: CategoryType; label: string }[] = [
     { id: 'all', label: 'الكل' },
-    { id: 'kitchens', label: 'مطابخ' },
-    { id: 'bedrooms', label: 'غرف نوم' },
-    { id: 'wardrobes', label: 'خزائن ودواليب' },
-    { id: 'interior-design', label: 'ديكور داخلي' },
+    { id: 'kitchens', label: 'مطابخ حديثة' },
     { id: '3d-designs', label: 'تصاميم 3D' },
-    { id: 'rendering', label: 'رندر وإظهار' },
+    { id: 'interior-design', label: 'ديكور وصالات' },
+    { id: 'rendering', label: 'مشاريع منفذة' },
   ];
 
   const styles: { id: StyleType | 'all'; label: string }[] = [
@@ -62,6 +60,7 @@ export const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({
     { id: 'gray', label: 'رمادي', bgClass: 'bg-gray-400' },
     { id: 'wood', label: 'خشبي', bgClass: 'bg-[#9B7C4F]' },
     { id: 'dark', label: 'داكن', bgClass: 'bg-[#043337]' },
+    { id: 'green', label: 'أخضر', bgClass: 'bg-[#3E523A]' },
   ];
 
   const spaces: { id: SpaceType | 'all'; label: string }[] = [

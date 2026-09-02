@@ -4,50 +4,34 @@ import { getProjectImage } from '../utils/assetHelper';
 export const categoriesData: CategoryInfo[] = [
   {
     id: 'kitchens',
-    nameArabic: 'مطابخ حديثة',
-    nameEn: 'Modern Kitchens',
-    description: 'مطابخ عصرية متكاملة تجمع بين الفخامة والوظيفة العملية بخامات PVC و MDF مع أسطح رخام وكوارتز.',
+    nameArabic: 'مطابخ حديثة فاخرة',
+    nameEn: 'Modern Luxury Kitchens',
+    description: 'مطابخ عصرية مخصصة تجمع بين الفخامة والوظيفة العملية بخامات PVC و MDF مع أسطح رخام وكوارتز وأجهزة مدمجة.',
     image: getProjectImage('p1.jpg'),
-    count: 10
-  },
-  {
-    id: 'bedrooms',
-    nameArabic: 'غرف نوم فاخرة',
-    nameEn: 'Luxury Bedrooms',
-    description: 'أجنحة نوم فندقية وتصاميم ماستر بتكسيات جدارية خشبية وأسرّة مدمجة وإضاءات محيطية ناعمة.',
-    image: getProjectImage('p11.jpg'),
-    count: 5
-  },
-  {
-    id: 'wardrobes',
-    nameArabic: 'خزائن ودواليب ملابس',
-    nameEn: 'Custom Wardrobes',
-    description: 'خزائن ملابس مخصصة ودريسنج روم فاخرة (Walk-in Closets) بأبواب زجاجية وإضاءات LED ذكية.',
-    image: getProjectImage('p16.jpg'),
-    count: 5
-  },
-  {
-    id: 'interior-design',
-    nameArabic: 'ديكور وتصميم داخلي',
-    nameEn: 'Interior Design',
-    description: 'ديكورات صالات، تكسيات شاشات، بديل خشب ورخام، وأركان كوفي كورنر بتشطيبات راقية.',
-    image: getProjectImage('p21.jpg'),
-    count: 5
+    count: 18
   },
   {
     id: '3d-designs',
-    nameArabic: 'تصاميم 3D ثلاثية الأبعاد',
-    nameEn: '3D Concept Design',
-    description: 'معاينة واقعية ثلاثية الأبعاد لمشروعك قبل البدء في التنفيذ لتختار الألوان والخامات بدقة تامة.',
-    image: getProjectImage('p26.jpg'),
-    count: 3
+    nameArabic: 'تصاميم 3D ورندر معماري',
+    nameEn: '3D Spatial Design & Renders',
+    description: 'معاينة واقعية ثلاثية الأبعاد لمشروعك قبل البدء في التنفيذ لتختار الألوان، الخامات، وتوزيع الإضاءة بدقة تامة.',
+    image: getProjectImage('p31.jpg'),
+    count: 6
+  },
+  {
+    id: 'interior-design',
+    nameArabic: 'ديكور وصالات طعام مدمجة',
+    nameEn: 'Interior Decor & Dining Spaces',
+    description: 'تنسيق داخلي متكامل يدمج المطبخ مع منطقة تناول الطعام، جزر بكراسي بار فاخرة، وإضاءات معلقة راقية.',
+    image: getProjectImage('p29.jpg'),
+    count: 5
   },
   {
     id: 'rendering',
-    nameArabic: 'أعمال PVC وأبواب عصرية',
-    nameEn: 'PVC Doors & Custom Works',
-    description: 'تصنيع أبواب ونوافذ PVC عازلة للصوت والحرارة، وأبواب غرف MDF محفورة بأحدث ماكينات CNC.',
-    image: getProjectImage('p29.jpg'),
-    count: 3
+    nameArabic: 'مشاريع منفذة على أرض الواقع',
+    nameEn: 'Real Executed Projects',
+    description: 'صور حقيقية لمشاريع تم تصنيعها وتركيبها وتسليمها على أرض الواقع بجودة وإتقان شركة المجد داخل ليبيا.',
+    image: getProjectImage('p28.jpg'),
+    count: 2
   }
 ];

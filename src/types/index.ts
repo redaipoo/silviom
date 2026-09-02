@@ -24,7 +24,8 @@ export type ColorType =
   | 'black' 
   | 'gray' 
   | 'wood' 
-  | 'dark';
+  | 'dark'
+  | 'green';
 
 export type SpaceType = 
   | 'small' 
