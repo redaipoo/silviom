@@ -4,11 +4,12 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/silviom/',
+  base: './',
   build: {
-    target: ['es2019', 'chrome75', 'safari13', 'firefox68'],
-    cssTarget: ['chrome75', 'safari13', 'firefox68'],
+    target: ['es2018', 'chrome70', 'safari12', 'firefox65'],
+    cssTarget: ['chrome70', 'safari12', 'firefox65'],
+    modulePreload: false,
     sourcemap: false,
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 1500,
   },
 })
