@@ -33,7 +33,7 @@ export const CategoryGrid: React.FC = () => {
           {categoriesData.map(category => (
             <Link
               key={category.id}
-              to={`/designs?category=${category.id}`}
+              to={category.link || `/designs?category=${category.id}`}
               className="group relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-brand-gold/20 hover:border-brand-gold/70 shadow-lg hover:shadow-2xl transition-all duration-400 flex flex-col justify-end p-5"
             >
               {/* Background Image */}

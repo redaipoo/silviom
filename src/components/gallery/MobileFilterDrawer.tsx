@@ -36,11 +36,8 @@ export const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({
   totalResultsCount,
 }) => {
   const categories: { id: CategoryType; label: string }[] = [
-    { id: 'all', label: 'الكل' },
+    { id: 'all', label: 'جميع المطابخ (31)' },
     { id: 'kitchens', label: 'مطابخ حديثة' },
-    { id: '3d-designs', label: 'تصاميم 3D' },
-    { id: 'interior-design', label: 'ديكور وصالات' },
-    { id: 'rendering', label: 'مشاريع منفذة' },
   ];
 
   const styles: { id: StyleType | 'all'; label: string }[] = [

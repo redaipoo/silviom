@@ -2,30 +2,26 @@ import { DesignItem } from '../types';
 import { getProjectImage } from '../utils/assetHelper';
 
 export const designsData: DesignItem[] = [
-  // 1. KITCHENS (مطابخ حديثة) - p1
+  // 1. Photo 1 (p1.jpg)
   {
     id: 'mg-k-01',
-    title: 'مطبخ مودرن رمادي داكن مع خشب الجوز وإضاءة مخفية',
-    titleEn: 'Dark Gray & Walnut Modern Kitchen with Hidden Lighting',
-    slug: 'dark-gray-walnut-kitchen-01',
+    title: 'مطبخ مودرن حرف L بلون رمادي داكن وخشب الجوز',
+    titleEn: 'Modern L-Shaped Kitchen in Dark Gray & Walnut Wood',
+    slug: 'modern-l-shaped-dark-gray-walnut-01',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'luxury',
     styleArabic: 'فاخر',
-    colors: ['dark', 'wood', 'beige'],
-    colorsArabic: ['داكن', 'خشبي', 'بيج'],
+    colors: ['dark', 'gray', 'wood'],
+    colorsArabic: ['داكن', 'رمادي', 'خشبي'],
     space: 'large',
     spaceArabic: 'واسعة',
-    approximateArea: '24 م²',
+    approximateArea: '22 م²',
     mainImage: getProjectImage('p1.jpg'),
-    galleryImages: [
-      getProjectImage('p1.jpg'),
-      getProjectImage('p2.jpg'),
-      getProjectImage('p3.jpg')
-    ],
-    description: 'مطبخ على شكل حرف L بخزائن رمادية داكنة مات مع أرفف خشبية مضاءة بإضاءة LED دافئة، وخلفية رخام بيج، وفرن مدمج أسود، وحوض مع خلاط أسود أنيق.',
-    materials: ['خزائن MDF رمادي مات', 'أرفف خشب جوز مضاءة', 'رخام بيج طبيعي', 'أجهزة بلت إن سوداء'],
-    tags: ['مطابخ_المجد', 'مطبخ_رمادي', 'إضاءة_مخفية', 'مطبخ_L'],
+    galleryImages: [getProjectImage('p1.jpg')],
+    description: 'مطبخ مودرن بتوزيع زاوية على شكل حرف L. الخزائن السفلية والعلوية بلون رمادي داكن مطفي (Matte Dark Gray) بدون مقابض ظاهرة، مع عمود أرفف جانبية مفتوحة من خشب الجوز البني الدافئ مضاءة بشرائط LED مخفية. سطح العمل والخلفية الجدارية من الرخام البيج الطبيعي، ومزود بموقد مسطح وحوض جلي أسود مع خلاط أسود مقوس وفرن مدمج جانبي.',
+    materials: ['خزائن MDF رمادي داكن مطفي', 'أرفف خشب جوز طبيعي مضاءة', 'سطح وخلفية رخام بيج طبيعي', 'حوض وخلاط أسود مطفي'],
+    tags: ['مطبخ_حرف_L', 'رمادي_داكن', 'خشب_جوز', 'أرفف_مضاءة', 'رخام_بيج'],
     views: 1840,
     favoritesCount: 520,
     dateAdded: '2026-08-20',
@@ -34,30 +30,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p2
+  // 2. Photo 2 (p2.jpg)
   {
     id: 'mg-k-02',
-    title: 'مطبخ رمادي داكن على شكل U مع إضاءة سفلية',
-    titleEn: 'Dark Gray U-Shaped Kitchen with Under-Cabinet Lighting',
-    slug: 'dark-gray-u-kitchen-02',
+    title: 'مطبخ متوازي حرف U بلون رمادي داكن وسطح كوارتز فاتح',
+    titleEn: 'U-Shaped Kitchen in Dark Gray with Light Quartz Counter',
+    slug: 'u-shaped-dark-gray-light-quartz-02',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'modern',
     styleArabic: 'مودرن',
-    colors: ['gray', 'dark'],
-    colorsArabic: ['رمادي', 'داكن'],
+    colors: ['dark', 'gray', 'white'],
+    colorsArabic: ['داكن', 'رمادي', 'أبيض'],
     space: 'medium',
     spaceArabic: 'متوسطة',
     approximateArea: '18 م²',
     mainImage: getProjectImage('p2.jpg'),
-    galleryImages: [
-      getProjectImage('p2.jpg'),
-      getProjectImage('p1.jpg'),
-      getProjectImage('p7.jpg')
-    ],
-    description: 'مطبخ على شكل حرف U بخزائن رمادية داكنة بدون مقابض مع سطح عمل فاتح وإضاءة LED تحت الخزائن العلوية، ونافذة كبيرة تطل على الخارج وأرضية خشب فاتح.',
-    materials: ['خزائن PVC رمادي داكن', 'سطح عمل كوارتز فاتح', 'أرضية باركيه فاتح', 'إضاءة LED مخفية'],
-    tags: ['مطبخ_U', 'مطبخ_رمادي', 'بدون_مقابض', 'شركة_المجد'],
+    galleryImages: [getProjectImage('p2.jpg')],
+    description: 'مطبخ متكامل بتوزيع حرف U يمتد على 3 جدران. الخزائن بالكامل بلون رمادي داكن مطفي بنظام سحب داخلي بدون مقابض، وسطح العمل (كاونتر) من الكوارتز الأبيض العاجي الفاتح. يتوسط الجدار الأيسر نافذة ألمنيوم واسعة فوق حوض الجلي المزدوج، مع موقد غاز أسود بـ 4 شعلات بالوسط، وإضاءة شريطية LED متصلة تحت الخزائن العلوية، وأرضية باركيه خشبي فاتح.',
+    materials: ['خزائن PVC رمادي داكن مطفي', 'كاونتر كوارتز أبيض عاجي', 'موقد غاز أسود 4 شعلات', 'إضاءة LED تحت الخزائن'],
+    tags: ['مطبخ_حرف_U', 'رمادي_داكن', 'كوارتز_فاتح', 'نافذة_مطبخ', 'باركيه'],
     views: 1490,
     favoritesCount: 410,
     dateAdded: '2026-08-18',
@@ -66,12 +58,12 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p3
+  // 3. Photo 3 (p3.jpg)
   {
     id: 'mg-k-03',
-    title: 'مطبخ خشبي فاتح مع شفاط أسود وأرفف مضاءة',
-    titleEn: 'Light Wood Kitchen with Black Range Hood & Lit Shelves',
-    slug: 'light-wood-black-hood-kitchen-03',
+    title: 'مطبخ حرف L بخشب البلوط الفاتح وكريمي مع شفاط أسود',
+    titleEn: 'L-Shaped Kitchen in Light Oak & Cream with Black Hood',
+    slug: 'l-shaped-light-oak-cream-black-hood-03',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'modern',
@@ -80,16 +72,12 @@ export const designsData: DesignItem[] = [
     colorsArabic: ['خشبي', 'بيج', 'أسود'],
     space: 'medium',
     spaceArabic: 'متوسطة',
-    approximateArea: '20 م²',
+    approximateArea: '19 م²',
     mainImage: getProjectImage('p3.jpg'),
-    galleryImages: [
-      getProjectImage('p3.jpg'),
-      getProjectImage('p8.jpg'),
-      getProjectImage('p9.jpg')
-    ],
-    description: 'مطبخ على شكل L بخزائن سفلية خشب فاتح وعلوية بيج مع شفاط أسود بارز، وأرفف جانبية مضاءة بإضاءة دافئة، وسطح عمل جرانيت أسود، وشعار شركة المجد ظاهر.',
-    materials: ['خشب بلوط فاتح', 'سطح جرانيت أسود', 'شفاط جداري أسود', 'تكسيات خشبية ريفلود'],
-    tags: ['مطابخ_خشبية', 'أرفف_مضاءة', 'شفاط_أسود', 'المجد_للمطابخ'],
+    galleryImages: [getProjectImage('p3.jpg')],
+    description: 'مطبخ زاوية حرف L من تنفيذ وتصاميم شركة المجد (يظهر شعار المجد الذهبي). الخزائن السفلية بتشطيب خشب البلوط الفاتح الطبيعي، والخزائن العلوية بلون أبيض كريمي يعلوها تاج من الشرائح الخشبية المضلعة. سطح العمل من الجرانيت الأسود المصقول، مع شفاط جداري مائل أسود في المنتصف فوق موقد الغاز، وعمود أرفف خشبية مفتوحة بإضاءة دافئة على اليسار، ونافذة بشتر خفيف.',
+    materials: ['خشب بلوط طبيعي فاتح', 'خزائن علوية كريمي مع تكسيات مضلعة', 'كاونتر جرانيت أسود مصقول', 'شفاط زجاجي مائل أسود'],
+    tags: ['مطبخ_حرف_L', 'خشب_بلوط', 'كريمي', 'شفاط_أسود', 'شركة_المجد'],
     views: 1980,
     favoritesCount: 560,
     dateAdded: '2026-08-16',
@@ -98,30 +86,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p4 - 3D Design
+  // 4. Photo 4 (p4.jpg)
   {
-    id: 'mg-3d-02',
-    title: 'تصميم 3D - مطبخ أخضر زيتي فاخر مع خزائن زجاجية',
-    titleEn: '3D Concept: Olive Green Luxury Kitchen with Glass Cabinets',
-    slug: 'olive-green-luxury-kitchen-04',
-    category: '3d-designs',
-    categoryArabic: 'تصاميم 3D',
+    id: 'mg-k-04',
+    title: 'مطبخ حرف U بلون أخضر زيتي وخزائن زجاجية عسلية مضاءة',
+    titleEn: 'U-Shaped Kitchen in Olive Green with Illuminated Glass Cabinets',
+    slug: 'u-shaped-olive-green-glass-cabinets-04',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ حديثة',
     style: 'luxury',
     styleArabic: 'فاخر',
-    colors: ['dark', 'wood'],
-    colorsArabic: ['داكن', 'خشبي'],
+    colors: ['green', 'dark', 'wood'],
+    colorsArabic: ['أخضر', 'داكن', 'خشبي'],
     space: 'large',
     spaceArabic: 'واسعة',
-    approximateArea: '26 م²',
+    approximateArea: '25 م²',
     mainImage: getProjectImage('p4.jpg'),
-    galleryImages: [
-      getProjectImage('p4.jpg'),
-      getProjectImage('p6.jpg'),
-      getProjectImage('p26.jpg')
-    ],
-    description: 'تصور ثلاثي الأبعاد لمطبخ فاخر على شكل U بخزائن سفلية خضراء زيتية لامعة وخزائن علوية زجاجية مع خلفية خشب جوز مضاءة، وسطح عمل جرانيت أسود، ورخام أبيض كخلفية.',
-    materials: ['أكريليك أخضر زيتي لامع', 'زجاج عسلي مقسى', 'خشب جوز داخلي', 'رخام أبيض كلكتا'],
-    tags: ['تصميم_3D', 'مطبخ_أخضر', 'زجاج_عسلي', 'مطابخ_فاخرة'],
+    galleryImages: [getProjectImage('p4.jpg')],
+    description: 'مطبخ ملكي بتوزيع حرف U يجمع بين لونين فاخرين: الخزائن السفلية بلون أخضر زيتي لامع مع مقابض أفقية مدمجة، والخزائن العلوية من الزجاج العسلي الشفاف بإطارات سوداء مجهزة بإضاءة داخلية تبرز الأرفف الخشبية والأواني. سطح العمل من الجرانيت الأسود الفاخر، مع خلفية جدارية من رخام كلكتا الأبيض بعروق رمادية، وسقف جبسي ببيت نور مستطيل وإضاءات سبوت.',
+    materials: ['أكريليك أخضر زيتي لامع', 'درف زجاجية عسلية بإطارات سوداء', 'كاونتر جرانيت أسود فاخر', 'رخام كلكتا أبيض عروق'],
+    tags: ['مطبخ_حرف_U', 'أخضر_زيتي', 'زجاج_عسلي', 'رخام_كلكتا', 'سقف_جبسي'],
     views: 1210,
     favoritesCount: 315,
     dateAdded: '2026-08-14',
@@ -130,12 +114,12 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p5
+  // 5. Photo 5 (p5.jpg)
   {
     id: 'mg-k-05',
-    title: 'مطبخ رمادي مات مع سطح عمل خشبي وفرن مدمج',
-    titleEn: 'Matte Gray Kitchen with Wood Countertop & Built-in Oven',
-    slug: 'matte-gray-wood-counter-kitchen-05',
+    title: 'مطبخ حرف U بلون رمادي توب وسطح وخلفية خشب طبيعي',
+    titleEn: 'U-Shaped Kitchen in Matte Taupe with Natural Wood Splash & Counter',
+    slug: 'u-shaped-matte-taupe-wood-counter-05',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'modern',
@@ -144,16 +128,12 @@ export const designsData: DesignItem[] = [
     colorsArabic: ['رمادي', 'خشبي'],
     space: 'medium',
     spaceArabic: 'متوسطة',
-    approximateArea: '16 م²',
+    approximateArea: '17 م²',
     mainImage: getProjectImage('p5.jpg'),
-    galleryImages: [
-      getProjectImage('p5.jpg'),
-      getProjectImage('p10.jpg'),
-      getProjectImage('p1.jpg')
-    ],
-    description: 'مطبخ أنيق بخزائن رمادية مات مع تكسيات خشبية كخلفية وسطح عمل خشبي، وفرن Samsung مدمج، وإضاءة LED مخفية تحت الخزائن العلوية ذات الخطوط الأفقية.',
-    materials: ['PVC رمادي مات', 'سطح عمل خشب معالج', 'تكسيات خشب بلوط', 'فرن مدمج Samsung'],
-    tags: ['مطبخ_رمادي', 'سطح_خشبي', 'فرن_مدمج', 'تصميم_مودرن'],
+    galleryImages: [getProjectImage('p5.jpg')],
+    description: 'مطبخ عصري أنيق بتوزيع حرف U بلون رمادي كاكاو مطفي (Matte Taupe). يتميز بسطح عمل وخلفية جدارية متكاملة من ألواح خشب البلوط الطبيعي الدافئ المعالج. الخزائن العلوية تتوسطها درف بتضليع عمودي ناعم، مع فرن كهربائي رقمي أسود مدمج Samsung في منتصف الكاونتر، وموقد سيراميك مسطح، وإضاءة LED شريطية مخفية تحت الخزائن العلوية، وأرضية رخام رمادي فاتح.',
+    materials: ['خزائن رمادي توب مطفي (Taupe)', 'سطح وخلفية خشب بلوط طبيعي', 'فرن Samsung مدمج', 'إضاءة شريطية LED'],
+    tags: ['مطبخ_حرف_U', 'رمادي_توب', 'سطح_خشب_طبيعي', 'فرن_سامسونج', 'تضليع_خشبي'],
     views: 1350,
     favoritesCount: 390,
     dateAdded: '2026-08-12',
@@ -162,30 +142,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p6 - 3D Design
+  // 6. Photo 6 (p6.jpg)
   {
-    id: 'mg-3d-03',
-    title: 'تصميم 3D - مطبخ رمادي فاخر مع خزانة كؤوس زجاجية وسقف هندسي',
-    titleEn: '3D Concept: Gray Luxury Kitchen with Glass Display & Geometric Ceiling',
-    slug: 'gray-luxury-glass-cabinet-kitchen-06',
-    category: '3d-designs',
-    categoryArabic: 'تصاميم 3D',
+    id: 'mg-k-06',
+    title: 'مطبخ حرف L بلون رمادي فاتح مع فترينة كؤوس زجاجية وسقف هندسي',
+    titleEn: 'L-Shaped Kitchen in Light Gray with Glass Display & Geometric Ceiling',
+    slug: 'l-shaped-light-gray-glass-display-ceiling-06',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ حديثة',
     style: 'luxury',
     styleArabic: 'فاخر',
     colors: ['gray', 'white'],
     colorsArabic: ['رمادي', 'أبيض'],
     space: 'large',
     spaceArabic: 'واسعة',
-    approximateArea: '22 م²',
+    approximateArea: '23 م²',
     mainImage: getProjectImage('p6.jpg'),
-    galleryImages: [
-      getProjectImage('p6.jpg'),
-      getProjectImage('p4.jpg'),
-      getProjectImage('p17.jpg')
-    ],
-    description: 'رندر واقعي ثلاثي الأبعاد لمطبخ على شكل L بخزائن رمادية مات وأجهزة مدمجة (فرن، ميكرويف) مع خزانة كؤوس زجاجية مضاءة بإضاءة ذهبية، وسقف جبسي بإضاءة LED هندسية.',
-    materials: ['خزائن MDF رمادي', 'رخام أبيض كلكتا', 'زجاج كؤوس مضاء', 'سقف جبس بورد مع LED'],
-    tags: ['تصميم_3D', 'خزانة_كؤوس', 'سقف_مضيء', 'مطبخ_رمادي'],
+    galleryImages: [getProjectImage('p6.jpg')],
+    description: 'مطبخ فسيح بتوزيع زاوية حرف L بلون رمادي فاتح مطفي هادئ. يضم في طرفه الأيمن فترينة كؤوس زجاجية رأسية ممتدة حتى السقف بإضاءة دافئة داخلية، مع عمود أجهزة كامل على اليسار يحتوي على فرن ومايكرويف مدمجين باللون الأسود. سطح العمل والخلفية الجدارية والأرضية من الرخام الأبيض الفاخر اللامع، مع سقف جبسي حديث بإطار إضاءة LED هندسي مستطيل، وإضاءة سفلية للأرضية (Toe-kick LED).',
+    materials: ['خزائن رمادي فاتح مطفي', 'فترينة زجاجية رأسية مضاءة', 'رخام أبيض كلكتا للأرضية والأسطح', 'أجهزة بلت إن سوداء'],
+    tags: ['مطبخ_حرف_L', 'رمادي_فاتح', 'فترينة_زجاجية', 'سقف_هندسي', 'إضاءة_أرضية'],
     views: 1120,
     favoritesCount: 280,
     dateAdded: '2026-08-10',
@@ -194,30 +170,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p7
+  // 7. Photo 7 (p7.jpg)
   {
     id: 'mg-k-07',
-    title: 'مطبخ داكن أنيق مع فرن وميكرويف Bosch مدمج',
-    titleEn: 'Dark Elegant Kitchen with Built-in Bosch Appliances',
-    slug: 'dark-elegant-bosch-kitchen-07',
+    title: 'مطبخ حرف L بلون رمادي فحمي داكن مع أجهزة Bosch مدمجة',
+    titleEn: 'L-Shaped Kitchen in Dark Charcoal with Built-in Bosch Appliances',
+    slug: 'l-shaped-dark-charcoal-bosch-appliances-07',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'modern',
     styleArabic: 'مودرن',
-    colors: ['dark', 'beige'],
-    colorsArabic: ['داكن', 'بيج'],
+    colors: ['dark', 'gray', 'beige'],
+    colorsArabic: ['داكن', 'رمادي', 'بيج'],
     space: 'medium',
     spaceArabic: 'متوسطة',
     approximateArea: '16 م²',
     mainImage: getProjectImage('p7.jpg'),
-    galleryImages: [
-      getProjectImage('p7.jpg'),
-      getProjectImage('p1.jpg'),
-      getProjectImage('p2.jpg')
-    ],
-    description: 'مطبخ على شكل L بخزائن داكنة بدون مقابض مع خلفية رخام بيج وإضاءة LED تحت الخزائن العلوية، وفرن وميكرويف Bosch مدمج في عمود جانبي، وحوض مع خلاط أسود.',
-    materials: ['PVC داكن مضاد للبصمات', 'رخام بيج طبيعي', 'أجهزة Bosch مدمجة', 'إضاءة LED دافئة'],
-    tags: ['مطبخ_داكن', 'Bosch_مدمج', 'بدون_مقابض', 'إضاءة_دافئة'],
+    galleryImages: [getProjectImage('p7.jpg')],
+    description: 'مطبخ زاوية عصري بتوزيع حرف L بلون رمادي فحمي داكن مطفي (Anthracite Charcoal) بخزائن مسطحة ملساء بدون مقابض. يحتوي على عمود أجهزة رأسي على اليمين يضم ميكرويف وفرن كهربائي مدمج من ماركة Bosch الأصلية. كاونتر العمل والخلفية الجدارية من الرخام البيج الطبيعي، مع حوض جلي أسود مدمج وخلاط أسود طويل مقوس، وإضاءة LED شريطية متصلة تحت الخزائن العلوية.',
+    materials: ['خزائن PVC رمادي فحمي مطفي', 'أجهزة Bosch مدمجة (فرن ومايكرويف)', 'رخام بيج طبيعي', 'حوض وخلاط أسود مطفي'],
+    tags: ['مطبخ_حرف_L', 'رمادي_فحمي', 'أجهزة_بوش', 'رخام_بيج', 'حوض_أسود'],
     views: 1750,
     favoritesCount: 470,
     dateAdded: '2026-08-08',
@@ -226,12 +198,12 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p8
+  // 8. Photo 8 (p8.jpg)
   {
     id: 'mg-k-08',
-    title: 'مطبخ خشبي دافئ مع ميكرويف مدمج وأرفف زجاجية',
-    titleEn: 'Warm Wood Kitchen with Built-in Microwave & Glass Shelves',
-    slug: 'warm-wood-microwave-kitchen-08',
+    title: 'مطبخ حرف U بخشب الجوز الطبيعي بالكامل وسقف جبسي مضيء',
+    titleEn: 'U-Shaped Kitchen in Natural Walnut Wood with Lit Cove Ceiling',
+    slug: 'u-shaped-natural-walnut-wood-ceiling-08',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'contemporary',
@@ -242,14 +214,10 @@ export const designsData: DesignItem[] = [
     spaceArabic: 'متوسطة',
     approximateArea: '18 م²',
     mainImage: getProjectImage('p8.jpg'),
-    galleryImages: [
-      getProjectImage('p8.jpg'),
-      getProjectImage('p3.jpg'),
-      getProjectImage('p9.jpg')
-    ],
-    description: 'مطبخ على شكل U بخزائن خشبية دافئة مع ميكرويف مدمج في الأعلى وسقف جبسي بإضاءة مخفية، وأرفف جانبية زجاجية مع خلاط أسود وسطح رخام أبيض.',
-    materials: ['خشب طبيعي معالج', 'سطح رخام أبيض', 'ميكرويف مدمج', 'إضاءة سقف مخفية'],
-    tags: ['مطبخ_خشبي', 'ميكرويف_مدمج', 'سقف_جبس', 'أرفف_زجاج'],
+    galleryImages: [getProjectImage('p8.jpg')],
+    description: 'مطبخ فخم متوازي بتوزيع حرف U مكسو بالكامل بخشب الجوز الطبيعي (Walnut) ذي التعريقات الرأسية المتناسقة. يتضمن ميكرويف أسود مدمج في الخزائن العلوية بالمنتصف، وقضيب تعليق أسود لأدوات المطبخ، مع خزانة علوية يمنى بزجاج مدخن. كاونتر العمل والخلفية من الرخام الأبيض الفاتح، مع سقف جبسي ببيت نور دافئ وإضاءات سبوت مدمجة، وأرضية باركيه بيج فاتح.',
+    materials: ['خشب جوز طبيعي بتعريقات رأسية', 'كاونتر رخام أبيض ناعم', 'ميكرويف أسود مدمج', 'سقف جبسي بيت نور'],
+    tags: ['مطبخ_حرف_U', 'خشب_جوز', 'ميكرويف_مدمج', 'سقف_جبسي', 'تعليق_أدوات'],
     views: 1290,
     favoritesCount: 340,
     dateAdded: '2026-08-05',
@@ -258,30 +226,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p9
+  // 9. Photo 9 (p9.jpg)
   {
     id: 'mg-k-09',
-    title: 'مطبخ خشبي طولي مع خزائن زجاجية سوداء وخلفية رخام',
-    titleEn: 'Linear Wood Kitchen with Black Glass Cabinets & Marble Splash',
-    slug: 'linear-wood-glass-kitchen-09',
+    title: 'مطبخ طولي مستقيم بخشب البلوط ودرف علوية زجاجية سوداء',
+    titleEn: 'Linear Kitchen in Oak Wood with Black Tinted Glass Uppers',
+    slug: 'linear-oak-wood-black-glass-uppers-09',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'modern',
     styleArabic: 'مودرن',
-    colors: ['wood', 'beige'],
-    colorsArabic: ['خشبي', 'بيج'],
+    colors: ['wood', 'beige', 'black'],
+    colorsArabic: ['خشبي', 'بيج', 'أسود'],
     space: 'medium',
     spaceArabic: 'متوسطة',
-    approximateArea: '14 م²',
+    approximateArea: '15 م²',
     mainImage: getProjectImage('p9.jpg'),
-    galleryImages: [
-      getProjectImage('p9.jpg'),
-      getProjectImage('p8.jpg'),
-      getProjectImage('p3.jpg')
-    ],
-    description: 'مطبخ طولي بخزائن خشبية فاتحة مع خزائن علوية تتضمن أجزاء زجاجية بإطار أسود، وخلفية رخام عسلي مضاءة بإضاءة LED، وموقد غاز مسطح وحوض مع خلاط أسود.',
-    materials: ['خشب بلوط فاتح', 'زجاج بإطار أسود', 'رخام عسلي طبيعي', 'موقد غاز مسطح'],
-    tags: ['مطبخ_طولي', 'زجاج_أسود', 'خشب_بلوط', 'رخام_عسلي'],
+    galleryImages: [getProjectImage('p9.jpg')],
+    description: 'مطبخ طولي يمتد على جدار مستقيم بخزائن سفلية من خشب البلوط الطبيعي الدافئ بتعريقات طولية ناعمة بدون مقابض. الخزائن العلوية تجمع بين الخشب ودرف علوية بإطارات سوداء وزجاج مضلع أسود مدخن. كاونتر العمل والخلفية من رخام الترافنتينو البيج الطبيعي بإضاءة شريطية مخفية تعكس دفء الحجر، مع موقد غاز مسطح أسود وحوض جلي أسود مع خلاط أسود مقوس.',
+    materials: ['خشب بلوط طبيعي', 'زجاج أسود مدخن مضلع', 'رخام ترافنتينو بيج', 'موقد وحوض أسود'],
+    tags: ['مطبخ_طولي_مستقيم', 'خشب_بلوط', 'زجاج_أسود_مدخن', 'ترافنتينو', 'مطبخ_جداري'],
     views: 1180,
     favoritesCount: 295,
     dateAdded: '2026-08-03',
@@ -290,30 +254,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p10
+  // 10. Photo 10 (p10.jpg)
   {
     id: 'mg-k-10',
-    title: 'مطبخ أسود مع خشب وإضاءة LED سفلية مميزة',
-    titleEn: 'Black & Wood Kitchen with LED Floor Lighting',
-    slug: 'black-wood-led-kitchen-10',
+    title: 'مطبخ حرف L بلون أسود مطفي مع أسطح وخلفية خشب طبيعي',
+    titleEn: 'L-Shaped Kitchen in Matte Black with Natural Wood Surfaces',
+    slug: 'l-shaped-matte-black-natural-wood-10',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'modern',
     styleArabic: 'مودرن',
-    colors: ['dark', 'wood'],
-    colorsArabic: ['داكن', 'خشبي'],
+    colors: ['black', 'wood', 'dark'],
+    colorsArabic: ['أسود', 'خشبي', 'داكن'],
     space: 'medium',
     spaceArabic: 'متوسطة',
     approximateArea: '18 م²',
     mainImage: getProjectImage('p10.jpg'),
-    galleryImages: [
-      getProjectImage('p10.jpg'),
-      getProjectImage('p1.jpg'),
-      getProjectImage('p7.jpg')
-    ],
-    description: 'مطبخ عصري بخزائن سفلية وعلوية داكنة مع خلفية وسطح عمل خشبي، وسقف جبسي بإضاءة مخفية حول الأطراف، وإضاءة LED سفلية تحت الخزائن تمنح إحساساً بالعمق.',
-    materials: ['خزائن داكنة بدون مقابض', 'سطح خشب طبيعي', 'خلفية خشب ريفي', 'LED سفلي وعلوي'],
-    tags: ['مطبخ_أسود', 'إضاءة_سفلية', 'خشب_طبيعي', 'تصميم_جريء'],
+    galleryImages: [getProjectImage('p10.jpg')],
+    description: 'مطبخ زاوية حرف L عصري بتباين لوني قوي؛ الخزائن السفلية والعلوية بلون أسود مطفي فاحم (Matte Black) بدون مقابض، وتكتسي أسطح الكاونتر والخلفية الجدارية بألواح الخشب الطبيعي الدافئ السميك. يضم شفاطاً جدارياً أسود بتصميم هرمي أنيق، وموقداً كهربائياً مسطحاً، وعمود أفران مدمجة على اليسار، مع إضاءة LED سفلية للأرضية (Toe-kick) وأرضية باركيه خشبي متطابق.',
+    materials: ['خزائن أسود مطفي (Matte Black)', 'أسطح وخلفية خشب طبيعي سميك', 'شفاط أسود هرمي', 'إضاءة سفلية للأرضية'],
+    tags: ['مطبخ_حرف_L', 'أسود_مطفي', 'خشب_طبيعي', 'شفاط_أسود', 'إضاءة_أرضية'],
     views: 1540,
     favoritesCount: 430,
     dateAdded: '2026-08-01',
@@ -322,30 +282,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p11
+  // 11. Photo 11 (p11.jpg)
   {
     id: 'mg-k-11',
-    title: 'مطبخ خشب جوز مع سطح جرانيت رمادي داكن',
-    titleEn: 'Walnut Kitchen with Dark Gray Granite Counters',
-    slug: 'walnut-dark-granite-kitchen-11',
+    title: 'مطبخ مفتوح بخشب الجوز وجزيرة شلالية بجرانيت رمادي داكن',
+    titleEn: 'Open Kitchen in Walnut Wood with Dark Gray Granite Waterfall Island',
+    slug: 'open-kitchen-walnut-granite-waterfall-island-11',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'luxury',
     styleArabic: 'فاخر',
-    colors: ['wood', 'dark', 'gray'],
-    colorsArabic: ['خشبي', 'داكن', 'رمادي'],
+    colors: ['wood', 'gray', 'dark'],
+    colorsArabic: ['خشبي', 'رمادي', 'داكن'],
     space: 'large',
     spaceArabic: 'واسعة',
     approximateArea: '28 م²',
     mainImage: getProjectImage('p11.jpg'),
-    galleryImages: [
-      getProjectImage('p11.jpg'),
-      getProjectImage('p12.jpg'),
-      getProjectImage('p13.jpg')
-    ],
-    description: 'مطبخ فسيح بخزائن خشب جوز مع لوح داكن بالوسط، وسطح عمل جرانيت رمادي داكن، وجزيرة مطبخ واسعة مع أرفف مفتوحة تعرض أطباق وأواني أنيقة وإضاءة LED مخفية.',
-    materials: ['خشب جوز طبيعي', 'جرانيت رمادي داكن', 'أرفف مفتوحة مضاءة', 'فرن مدمج'],
-    tags: ['مطبخ_جوز', 'جرانيت_رمادي', 'جزيرة_مطبخ', 'أرفف_مفتوحة'],
+    galleryImages: [getProjectImage('p11.jpg')],
+    description: 'مطبخ أمريكي مفتوح فخم بخزائن من خشب الجوز البني الطبيعي الغني. يتوسطه جزيرة عمل واسعة بسطح وساق شلالية من الجرانيت الرمادي الداكن بسماكة حجرية عالية تضم حوض جلي أسود مدمجاً. الجدار الخلفي يضم خزائن خشبية مع أرفف عمودية مفتوحة لعرض الأواني الخزفية، ومدخنة شفاط بلون فحمي مدمجة، وموقداً مسطحاً وفرناً مدمجاً، مع أرضية رخامية رمادية متناسقة.',
+    materials: ['خشب جوز طبيعي بني', 'جرانيت رمادي داكن شلال (Waterfall)', 'أرفف عمودية مفتوحة', 'حوض جلي مدمج بالجزيرة'],
+    tags: ['مطبخ_مفتوح', 'جزيرة_شلالية', 'خشب_جوز', 'جرانيت_رمادي', 'أرفف_مفتوحة'],
     views: 1680,
     favoritesCount: 490,
     dateAdded: '2026-08-22',
@@ -354,30 +310,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p12
+  // 12. Photo 12 (p12.jpg)
   {
     id: 'mg-k-12',
-    title: 'مطبخ خشبي واسع مع جرانيت أسود وأجهزة مدمجة',
-    titleEn: 'Spacious Wood Kitchen with Black Granite & Built-in Appliances',
-    slug: 'spacious-wood-black-granite-kitchen-12',
+    title: 'مطبخ ممر متوازي بجزيرة رخام أسود عروق وخشب بني داكن',
+    titleEn: 'Galley Kitchen with Black Marble Island & Dark Wood Cabinets',
+    slug: 'galley-kitchen-black-marble-island-dark-wood-12',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'luxury',
     styleArabic: 'فاخر',
-    colors: ['wood', 'dark', 'beige'],
-    colorsArabic: ['خشبي', 'داكن', 'بيج'],
+    colors: ['wood', 'black', 'dark'],
+    colorsArabic: ['خشبي', 'أسود', 'داكن'],
     space: 'large',
     spaceArabic: 'واسعة',
     approximateArea: '30 م²',
     mainImage: getProjectImage('p12.jpg'),
-    galleryImages: [
-      getProjectImage('p12.jpg'),
-      getProjectImage('p11.jpg'),
-      getProjectImage('p13.jpg')
-    ],
-    description: 'مطبخ galley واسع بخزائن خشب بني داكن على الجانبين مع سطح عمل جرانيت أسود، وفرن مدمج في عمود طويل، وشفاط أسود، وأرضية بيج فاتحة تمنح تبايناً راقياً.',
-    materials: ['خشب بني داكن', 'جرانيت أسود مصقول', 'مقابض معدنية سوداء', 'فرن وميكرويف مدمج'],
-    tags: ['مطبخ_واسع', 'جرانيت_أسود', 'خشب_داكن', 'أجهزة_مدمجة'],
+    galleryImages: [getProjectImage('p12.jpg')],
+    description: 'مطبخ ممر فسيح (Galley) ذو واجهتين متوازيتين؛ يضم جزيرة تحضير طولية ضخمة على اليسار مكسوة بالكامل بالرخام الأسود الإيطالي ذي العروق البيضاء مع حوض وخلاط أسود. الواجهة المقابلة على اليمين مجهزة بكاونتر أسود وموقد مسطح وشفاط أسود عصري وأرفف خشبية عائمة ومضاءة، مع جدار خلفي كامل من خزائن خشب بني داكن تضم فرنين مدمجين وميكرويف بلت إن وأرضية بيج فاتحة.',
+    materials: ['رخام أسود إيطالي عروق بيضاء', 'خشب بني داكن مدخن', 'أفران مدمجة مزدوجة', 'أرفف خشبية عائمة مضاءة'],
+    tags: ['مطبخ_ممر_متوازي', 'جزيرة_طولية', 'رخام_أسود_عروق', 'خشب_داكن', 'أفران_مزدوجة'],
     views: 1390,
     favoritesCount: 360,
     dateAdded: '2026-08-19',
@@ -386,14 +338,14 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p13 - Interior Design
+  // 13. Photo 13 (p13.jpg)
   {
-    id: 'mg-i-03',
-    title: 'مطبخ مفتوح مع جزيرة خشبية وكراسي بار وإضاءات معلقة',
-    titleEn: 'Open Kitchen with Wooden Island, Bar Stools & Pendants',
-    slug: 'wood-island-bar-pendant-kitchen-13',
-    category: 'interior-design',
-    categoryArabic: 'ديكور وتصميم داخلي',
+    id: 'mg-k-13',
+    title: 'مطبخ أمريكي مفتوح بجزيرة خشبية عريضة و4 كراسي بار وثريات',
+    titleEn: 'Open Concept Kitchen with Wide Wood Island, 4 Bar Stools & Pendants',
+    slug: 'open-kitchen-wood-island-bar-stools-pendants-13',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ حديثة',
     style: 'modern',
     styleArabic: 'مودرن',
     colors: ['wood', 'beige'],
@@ -402,14 +354,10 @@ export const designsData: DesignItem[] = [
     spaceArabic: 'واسعة',
     approximateArea: '32 م²',
     mainImage: getProjectImage('p13.jpg'),
-    galleryImages: [
-      getProjectImage('p13.jpg'),
-      getProjectImage('p16.jpg'),
-      getProjectImage('p20.jpg')
-    ],
-    description: 'تنسيق داخلي متكامل يربط المطبخ بالصالة مع جزيرة خشبية واسعة مزودة بـ 4 كراسي بار جلدية بنية، وإضاءات معلقة ذهبية أنيقة، وخلفية رخام أبيض.',
-    materials: ['خشب بلوط فاتح', 'سطح كوارتز أبيض', 'إضاءات معلقة ذهبية', 'كراسي بار جلد بني'],
-    tags: ['ديكور_داخلي', 'جزيرة_مطبخ', 'كراسي_بار', 'إضاءات_معلقة'],
+    galleryImages: [getProjectImage('p13.jpg')],
+    description: 'مطبخ أمريكي مفتوح وفسيح يضم جزيرة وسطية ضخمة من خشب البلوط الطبيعي بسطح كوارتز أبيض، مدمج بها موقد حثي مسطح، وتتسع لـ 4 كراسي بار جلدية بنية مريحة لتناول الوجبات. تعلو الجزيرة 3 ثريات متدلية بإضاءة إديسون الدافئة، مع خزائن جدارية كاملة من خشب البلوط الطبيعي تضم عمود أجهزة أسود مدمجاً (فرن ومايكرويف)، وخلفية رخام أبيض ناعمة ونباتات ديكورية.',
+    materials: ['خشب بلوط طبيعي دافئ', 'كاونتر كوارتز أبيض رخامي', '4 كراسي بار جلد بني', 'ثريات متدلية إديسون'],
+    tags: ['مطبخ_أمريكي_مفتوح', 'جزيرة_بار', 'كراسي_بار', 'خشب_بلوط', 'ثريات_معلقة'],
     views: 1190,
     favoritesCount: 290,
     dateAdded: '2026-08-15',
@@ -418,12 +366,12 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p14
+  // 14. Photo 14 (p14.jpg)
   {
     id: 'mg-k-14',
-    title: 'مطبخ بيج فاخر مع خزائن عرض زجاجية وشفاط أسود',
-    titleEn: 'Beige Luxury Kitchen with Glass Display Cabinets & Black Hood',
-    slug: 'beige-luxury-glass-display-kitchen-14',
+    title: 'مطبخ حرف L بلون بيج موكا وخزائن زجاجية متناظرة',
+    titleEn: 'L-Shaped Kitchen in Mocha Beige with Symmetrical Glass Cabinets',
+    slug: 'l-shaped-mocha-beige-symmetrical-glass-cabinets-14',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'luxury',
@@ -434,14 +382,10 @@ export const designsData: DesignItem[] = [
     spaceArabic: 'واسعة',
     approximateArea: '24 م²',
     mainImage: getProjectImage('p14.jpg'),
-    galleryImages: [
-      getProjectImage('p14.jpg'),
-      getProjectImage('p15.jpg'),
-      getProjectImage('p17.jpg')
-    ],
-    description: 'مطبخ بيج فاخر مع خزائن عرض زجاجية مضاءة من الداخل لعرض الأطباق والكؤوس، وعمود أرفف رأسي مضاء، وشفاط أسود، وخلفية رخام أبيض ذهبي.',
-    materials: ['خزائن بيج لامع', 'زجاج عرض مضاء', 'رخام أبيض ذهبي', 'شفاط أسود عصري'],
-    tags: ['مطبخ_بيج', 'خزائن_عرض', 'أرفف_مضاءة', 'مطبخ_فاخر'],
+    galleryImages: [getProjectImage('p14.jpg')],
+    description: 'مطبخ متناسق بتوزيع زاوية حرف L بلون بيج موكا دافئ مطفي بدون مقابض ظاهرة. يتميز بوحدات خزائن علوية متناظرة بزجاج عسلي شفاف مضاء من الداخل على جانبي الشفاط الأسود المركزي، بالإضافة إلى عمود أرفف زجاجي مضاء في الزاوية اليسرى. سطح العمل والخلفية الجدارية من الرخام البيج الفاتح، مع موقد غاز مسطح وفرن مدمج في أقصى اليمين، وإضاءة سبوت لايت دافئة.',
+    materials: ['خزائن بيج موكا مطفي', 'خزائن علوية زجاجية عسلية مضاءة', 'كاونتر وخلفية رخام بيج', 'شفاط أسود عصري'],
+    tags: ['مطبخ_حرف_L', 'بيج_موكا', 'خزائن_زجاجية', 'تناظر_معماري', 'رخام_بيج'],
     views: 1580,
     favoritesCount: 440,
     dateAdded: '2026-08-11',
@@ -450,30 +394,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p15
+  // 15. Photo 15 (p15.jpg)
   {
     id: 'mg-k-15',
-    title: 'مطبخ بيج مع رف عرض رأسي مضاء وحوض أسود مزدوج',
-    titleEn: 'Beige Kitchen with Lit Display Shelf & Black Double Sink',
-    slug: 'beige-display-shelf-kitchen-15',
+    title: 'مطبخ حرف L بلون بيج عاجي مع فترينة مشروبات زجاجية ونافذة بانورامية',
+    titleEn: 'L-Shaped Kitchen in Ivory Beige with Glass Showcase & Window Splash',
+    slug: 'l-shaped-ivory-beige-glass-showcase-window-15',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'modern',
     styleArabic: 'مودرن',
-    colors: ['beige', 'wood'],
-    colorsArabic: ['بيج', 'خشبي'],
+    colors: ['beige', 'wood', 'black'],
+    colorsArabic: ['بيج', 'خشبي', 'أسود'],
     space: 'medium',
     spaceArabic: 'متوسطة',
     approximateArea: '18 م²',
     mainImage: getProjectImage('p15.jpg'),
-    galleryImages: [
-      getProjectImage('p15.jpg'),
-      getProjectImage('p14.jpg'),
-      getProjectImage('p16.jpg')
-    ],
-    description: 'مطبخ بيج أنيق مع رف عرض رأسي مضاء لعرض المشروبات والأكواب، وحوض أسود مزدوج مع خلاط أسود، وخلفية رخام كلكتا أبيض، وأرفف خشبية مفتوحة.',
-    materials: ['PVC بيج مات', 'رخام كلكتا أبيض', 'حوض أسود مزدوج', 'أرفف خشب طبيعي'],
-    tags: ['مطبخ_بيج', 'حوض_أسود', 'رخام_كلكتا', 'رف_عرض'],
+    galleryImages: [getProjectImage('p15.jpg')],
+    description: 'مطبخ زاوية حرف L عصري بلون بيج عاجي ناعم مع مقابض سوداء مدمجة. يبرز فيه عمود فترينة زجاجية رأسية بإطار أسود مضاءة بشرائط LED عمودية لعرض المشروبات والأواني، مع نافذة أفقية مستطيلة فوق حوض الجلي الأسود المزدوج تطل على مباني المدينة، وأرفف خشبية مفتوحة في أقصى اليسار، وسطح كاونتر وخلفية من رخام كلكتا الأبيض بعروق سوداء.',
+    materials: ['خزائن بيج عاجي مطفي', 'فترينة زجاجية رأسية سوداء مضاءة', 'حوض جلي أسود مزدوج مع خلاط أسود', 'رخام كلكتا أبيض'],
+    tags: ['مطبخ_حرف_L', 'بيج_عاجي', 'فترينة_زجاجية', 'نافذة_أفقية', 'حوض_مزدوج'],
     views: 1240,
     favoritesCount: 310,
     dateAdded: '2026-08-07',
@@ -482,14 +422,14 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p16 - Interior Design
+  // 16. Photo 16 (p16.jpg)
   {
-    id: 'mg-i-04',
-    title: 'ركن مطبخ دافئ مع جزيرة ريفلود وكراسي بار ذهبية',
-    titleEn: 'Warm Kitchen Nook with Fluted Island & Gold Bar Stools',
-    slug: 'warm-beige-gold-stools-kitchen-16',
-    category: 'interior-design',
-    categoryArabic: 'ديكور وتصميم داخلي',
+    id: 'mg-k-16',
+    title: 'مطبخ مفتوح بلون بيج كشميري بجزيرة مضلعة وتفاصيل ذهبية',
+    titleEn: 'Open Kitchen in Cashmere Beige with Fluted Island & Gold Accents',
+    slug: 'open-kitchen-cashmere-beige-fluted-island-gold-16',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ حديثة',
     style: 'luxury',
     styleArabic: 'فاخر',
     colors: ['beige', 'white'],
@@ -498,14 +438,10 @@ export const designsData: DesignItem[] = [
     spaceArabic: 'واسعة',
     approximateArea: '28 م²',
     mainImage: getProjectImage('p16.jpg'),
-    galleryImages: [
-      getProjectImage('p16.jpg'),
-      getProjectImage('p13.jpg'),
-      getProjectImage('p17.jpg')
-    ],
-    description: 'تصميم ديكور داخلي دافئ لمطبخ بيج مع جزيرة ذات واجهة خشبية ريفلود وسطح رخامي، وكراسي بار ذهبية أنيقة، وإضاءات كريستال معلقة، وخلاط ذهبي.',
-    materials: ['خزائن بيج مات', 'تكسيات ريفلود خشبي', 'إضاءات كريستال', 'كراسي بار ذهبية'],
-    tags: ['ديكور_داخلي', 'كراسي_ذهبية', 'جزيرة_ريفلود', 'إضاءات_كريستال'],
+    galleryImages: [getProjectImage('p16.jpg')],
+    description: 'مطبخ راقٍ بأجواء دافئة بلون بيج كشميري ناعم، يتوسطه جزيرة كاونتر رخامية بيضاء بواجهة أمامية مضلعة (Fluted Tambour) مع إضاءة LED محيطية ساحرة تحت الرخام. يضم كرسيين بار مريحين بلون بيج بأرجل ذهبية معدنية رفيعة، وخلاط حوض ذهبياً مقوساً، مع أرفف خشبية علوية مفتوحة بإضاءة دافئة وثريتين زجاجيتين معلقتين بلمسات ذهبية كريستالية.',
+    materials: ['خزائن بيج كشميري ناعم', 'جزيرة مضلعة ريفلود بإضاءة محيطية', 'كراسي بار بأرجل ذهبية', 'خلاط ذهبي وثريات كريستال'],
+    tags: ['مطبخ_مفتوح', 'بيج_كشميري', 'جزيرة_مضلعة', 'كراسي_ذهبية', 'خلاط_ذهبي'],
     views: 2100,
     favoritesCount: 640,
     dateAdded: '2026-08-25',
@@ -514,14 +450,14 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p17 - 3D Design
+  // 17. Photo 17 (p17.jpg)
   {
-    id: 'mg-3d-04',
-    title: 'تصميم 3D - مطبخ فاخر بيج مع ثريا حلقية وخزائن زجاجية',
-    titleEn: '3D Concept: Luxury Beige Kitchen with Ring Chandelier & Glass Cabinets',
-    slug: 'luxury-beige-ring-chandelier-kitchen-17',
-    category: '3d-designs',
-    categoryArabic: 'تصاميم 3D',
+    id: 'mg-k-17',
+    title: 'مطبخ حرف U بلون بيج لاتيه وثريا حلقية وخزائن زجاجية',
+    titleEn: 'U-Shaped Kitchen in Latte Beige with Ring Chandelier & Glass Display',
+    slug: 'u-shaped-latte-beige-ring-chandelier-glass-display-17',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ حديثة',
     style: 'luxury',
     styleArabic: 'فاخر',
     colors: ['beige', 'white'],
@@ -530,14 +466,10 @@ export const designsData: DesignItem[] = [
     spaceArabic: 'واسعة',
     approximateArea: '24 م²',
     mainImage: getProjectImage('p17.jpg'),
-    galleryImages: [
-      getProjectImage('p17.jpg'),
-      getProjectImage('p14.jpg'),
-      getProjectImage('p6.jpg')
-    ],
-    description: 'رندر معماري ثلاثي الأبعاد لمطبخ بيج فاخر على شكل U مع ثريا حلقية مزدوجة مضيئة، وخزائن زجاجية عرض مضاءة بإضاءة ذهبية، وخلفية رخام ذهبي.',
-    materials: ['خزائن بيج لامع', 'ثريا حلقية LED', 'رخام ذهبي', 'زجاج عرض مضاء'],
-    tags: ['تصميم_3D', 'ثريا_حلقية', 'مطبخ_فاخر', 'رخام_ذهبي'],
+    galleryImages: [getProjectImage('p17.jpg')],
+    description: 'مطبخ ملكي بتوزيع متوازي حرف U بلون بيج لاتيه هادئ. تتوسط السقف ثريا دائرية مزدوجة معلقة (Halo Ring Chandelier) بإضاءة LED ذهبية، مع خزائن علوية بواجهات زجاجية عسلية مضاءة من الداخل لعرض الكؤوس والأواني. كاونتر العمل والخلفية الجدارية من رخام كلكتا الأبيض بعروق ذهبية دافئة، مع إضاءة شريطية سفلية على مستوى وزرة الأرضية الرخامية اللامعة.',
+    materials: ['خزائن بيج لاتيه ملساء', 'ثريا حلقية دائرية LED', 'خزائن زجاجية عسلية بإضاءة داخلية', 'رخام كلكتا عروق ذهبية'],
+    tags: ['مطبخ_حرف_U', 'بيج_لاتيه', 'ثريا_حلقية', 'رخام_ذهبي', 'خزائن_زجاجية'],
     views: 1470,
     favoritesCount: 380,
     dateAdded: '2026-08-21',
@@ -546,30 +478,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p18
+  // 18. Photo 18 (p18.jpg)
   {
     id: 'mg-k-18',
-    title: 'مطبخ بيج وخشبي مع خزانة زجاجية وإضاءة LED خطية',
-    titleEn: 'Beige & Wood Kitchen with Glass Cabinet & Linear LED',
-    slug: 'beige-wood-glass-linear-led-kitchen-18',
+    title: 'مطبخ حرف U بلون بيج كريمي وخشب بني مع كاونتر أسود',
+    titleEn: 'U-Shaped Kitchen in Cream Beige & Brown Wood with Black Counter',
+    slug: 'u-shaped-cream-beige-brown-wood-black-counter-18',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'modern',
     styleArabic: 'مودرن',
-    colors: ['beige', 'wood'],
-    colorsArabic: ['بيج', 'خشبي'],
+    colors: ['beige', 'wood', 'black'],
+    colorsArabic: ['بيج', 'خشبي', 'أسود'],
     space: 'large',
     spaceArabic: 'واسعة',
     approximateArea: '22 م²',
     mainImage: getProjectImage('p18.jpg'),
-    galleryImages: [
-      getProjectImage('p18.jpg'),
-      getProjectImage('p20.jpg'),
-      getProjectImage('p14.jpg')
-    ],
-    description: 'مطبخ واسع بخزائن سفلية بيج وعلوية خشبية مع خزانة عرض زجاجية، وسطح عمل داكن، وإضاءة LED خطية على السقف، وتصميم U مع إضاءة سفلية.',
-    materials: ['PVC بيج', 'خشبيات بني دافئ', 'إضاءة خطية LED', 'سطح كوارتز داكن'],
-    tags: ['مطبخ_بيج_خشبي', 'إضاءة_خطية', 'خزانة_عرض', 'مطبخ_واسع'],
+    galleryImages: [getProjectImage('p18.jpg')],
+    description: 'مطبخ متسع بتوزيع حرف U يدمج ببراعة بين لونين؛ الخزائن السفلية بلون بيج كريمي أوف وايت بدون مقابض، والخزائن العلوية مكسوة بالخشب البني الطبيعي العمودي وتتوسطها فترينة زجاجية سوداء مضاءة. كاونتر العمل من الكوارتز الأسود المات، مع إضاءة سقفية طولية مدمجة، وإضاءة سفلية للأرضية (Toe-kick LED) تبرز انعكاس الرخام البيج الفاتح.',
+    materials: ['خزائن سفلية بيج كريمي', 'خزائن علوية خشب بني طبيعي', 'كاونتر كوارتز أسود', 'إضاءة سفلية LED'],
+    tags: ['مطبخ_حرف_U', 'بيج_كريمي', 'خشب_بني', 'كاونتر_أسود', 'إضاءة_أرضية'],
     views: 1320,
     favoritesCount: 320,
     dateAdded: '2026-08-17',
@@ -578,30 +506,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p19 - 3D Design
+  // 19. Photo 19 (p19.jpg)
   {
-    id: 'mg-3d-05',
-    title: 'تصميم 3D - مطبخ بيج لامع مع سقف LED هندسي وميكرويف مدمج',
-    titleEn: '3D Concept: Glossy Beige Kitchen with Geometric LED Ceiling',
-    slug: 'glossy-beige-geometric-ceiling-kitchen-19',
-    category: '3d-designs',
-    categoryArabic: 'تصاميم 3D',
+    id: 'mg-k-19',
+    title: 'مطبخ حرف U بلون بيج هاي جلوس لامع مع سقف LED هندسي',
+    titleEn: 'U-Shaped High-Gloss Beige Kitchen with Geometric LED Ceiling',
+    slug: 'u-shaped-high-gloss-beige-geometric-ceiling-19',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ حديثة',
     style: 'modern',
     styleArabic: 'مودرن',
-    colors: ['beige', 'white'],
-    colorsArabic: ['بيج', 'أبيض'],
+    colors: ['beige', 'white', 'dark'],
+    colorsArabic: ['بيج', 'أبيض', 'داكن'],
     space: 'medium',
     spaceArabic: 'متوسطة',
     approximateArea: '18 م²',
     mainImage: getProjectImage('p19.jpg'),
-    galleryImages: [
-      getProjectImage('p19.jpg'),
-      getProjectImage('p23.jpg'),
-      getProjectImage('p6.jpg')
-    ],
-    description: 'تصور ثلاثي الأبعاد لمطبخ بيج لامع هاي جلوس على شكل U مع سقف مميز بإضاءة LED هندسية مربعة، ونافذة تطل على الخارج، وميكرويف مدمج، وأرضية رخام أبيض.',
-    materials: ['هاي جلوس بيج', 'سقف جبسي بإضاءة LED', 'أرضية رخام أبيض', 'ميكرويف وفرن مدمج'],
-    tags: ['تصميم_3D', 'هاي_جلوس', 'سقف_هندسي', 'مطبخ_بيج'],
+    galleryImages: [getProjectImage('p19.jpg')],
+    description: 'مطبخ عصري فائق اللمعان بتوزيع حرف U بخزائن أكريليك هاي جلوس بلون بيج رمادي ناعم عاكس للضوء. يتألق السقف الجبسي ببيت نور LED مربع هندسي يغطي كامل المساحة، مع نافذة بيضاء في الجدار الأوسط فوق الحوض تطل على الأشجار، وميكرويف مدمج أسود في العمود الأيسر، مع كاونتر أسود مصقول وأرضية من بلاط الرخام الأبيض اللامع.',
+    materials: ['أكريليك هاي جلوس بيج رمادي', 'كاونتر جرانيت أسود مصقول', 'سقف جبسي LED مربع هندسي', 'رخام أبيض للأرضية'],
+    tags: ['مطبخ_حرف_U', 'هاي_جلوس', 'بيج_لامع', 'سقف_هندسي', 'نافذة_طبيعية'],
     views: 1610,
     favoritesCount: 450,
     dateAdded: '2026-08-13',
@@ -610,14 +534,14 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p20 - Interior Design
+  // 20. Photo 20 (p20.jpg)
   {
-    id: 'mg-i-05',
-    title: 'مطبخ بيج وخشبي مع طاولة طعام مدمجة وكراسي أنيقة',
-    titleEn: 'Beige & Wood Kitchen with Dining Table Integration',
-    slug: 'beige-wood-dining-kitchen-20',
-    category: 'interior-design',
-    categoryArabic: 'ديكور وتصميم داخلي',
+    id: 'mg-k-20',
+    title: 'مطبخ طولي بلون بيج وخشبي مع طاولة طعام مدمجة',
+    titleEn: 'Linear Kitchen in Beige & Wood with Integrated Dining Table',
+    slug: 'linear-kitchen-beige-wood-integrated-dining-20',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ حديثة',
     style: 'contemporary',
     styleArabic: 'معاصر',
     colors: ['beige', 'wood', 'gray'],
@@ -626,14 +550,10 @@ export const designsData: DesignItem[] = [
     spaceArabic: 'متوسطة',
     approximateArea: '20 م²',
     mainImage: getProjectImage('p20.jpg'),
-    galleryImages: [
-      getProjectImage('p20.jpg'),
-      getProjectImage('p16.jpg'),
-      getProjectImage('p18.jpg')
-    ],
-    description: 'تنسيق داخلي يدمج منطقة تحضير الطعام مع طاولة طعام خشبية وكراسي بيج أنيقة، وخلفية جرانيت رمادي داكن، وإضاءة معلقة بيضاء، وأرضية خشبية فاتحة.',
-    materials: ['خزائن بيج وخشب', 'جرانيت رمادي داكن', 'طاولة خشب مع كراسي', 'إضاءة معلقة'],
-    tags: ['ديكور_داخلي', 'مطبخ_مع_طاولة', 'طاولة_طعام', 'تصميم_عائلي'],
+    galleryImages: [getProjectImage('p20.jpg')],
+    description: 'مطبخ طولي متكامل يدمج منطقة الطهي مع طاولة طعام عائلية مدمجة بجسم الخزائن. الخزائن السفلية بلون بيج مطفي هادئ، والخزائن العلوية بخشب بني رأسية التعريقات. يمتد من كاونتر العمل طاولة خشبية مدمجة بكراسي مريحة منجدة بقماش بيج دافئ، مع خلفية جدارية من الرخام الرمادي الداكن المطفّي، وثريات معلقة بيضاء أنيقة، وأرضية باركيه خشبي فاتح.',
+    materials: ['خزائن سفلية بيج وخشب علوي', 'طاولة طعام خشبية مدمجة', 'خلفية رخام رمادي داكن', 'ثريات بيضاوية معلقة'],
+    tags: ['مطبخ_طولي', 'طاولة_طعام_مدمجة', 'بيج_وخشبي', 'ثريات_معلقة', 'باركيه'],
     views: 1280,
     favoritesCount: 340,
     dateAdded: '2026-08-09',
@@ -642,12 +562,12 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p21
+  // 21. Photo 21 (p21.jpg)
   {
     id: 'mg-k-21',
-    title: 'مطبخ رمادي فاتح مع شفاط ومقابض أدوات معلقة',
-    titleEn: 'Light Gray Kitchen with Hood & Hanging Utensils',
-    slug: 'light-gray-hood-utensils-kitchen-21',
+    title: 'مطبخ حرف L بلون رمادي بيج مضلع مع عمود ثلاجة وأجهزة مدمجة',
+    titleEn: 'L-Shaped Kitchen in Ribbed Greige with Fridge Column & Built-in Suite',
+    slug: 'l-shaped-ribbed-greige-fridge-column-21',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'modern',
@@ -658,14 +578,10 @@ export const designsData: DesignItem[] = [
     spaceArabic: 'متوسطة',
     approximateArea: '16 م²',
     mainImage: getProjectImage('p21.jpg'),
-    galleryImages: [
-      getProjectImage('p21.jpg'),
-      getProjectImage('p2.jpg'),
-      getProjectImage('p5.jpg')
-    ],
-    description: 'مطبخ رمادي فاتح على شكل L مع خزائن لامعة وسقف LED خطي، وشفاط جداري رمادي، وبار أدوات مطبخ معلق، وموقد غاز، وفرن مدمج، وثلاجة فولاذية.',
-    materials: ['PVC رمادي فاتح لامع', 'سطح أسود كوارتز', 'شفاط جداري', 'إضاءة خطية LED'],
-    tags: ['مطبخ_رمادي', 'أدوات_معلقة', 'فرن_مدمج', 'تصميم_عملي'],
+    galleryImages: [getProjectImage('p21.jpg')],
+    description: 'مطبخ زاوية حرف L عملي وأنيق بلون رمادي بيج بتشطيب خطوط مضلعة رأسية خفيفة. يحتوي على عمود تخزين كامل في أقصى اليسار يدمج ثلاجة ستانلس ستيل عريضة وأفران مدمجة ودولاب تخزين. كاونتر العمل باللون الأبيض الكوارتز مع موقد غاز سطحي، وشفاط هرمي ستانلس، وقضيب جداري أسود لتعليق المغارف وأدوات الطهي، وأرضية بيضاء ناصعة.',
+    materials: ['خزائن رمادي بيج مضلعة', 'كاونتر كوارتز أبيض', 'شفاط ستانلس ستيل جداري', 'عمود ثلاجة وأجهزة ستانلس'],
+    tags: ['مطبخ_حرف_L', 'رمادي_بيج', 'خزائن_مضلعة', 'عمود_ثلاجة', 'أدوات_معلقة'],
     views: 1150,
     favoritesCount: 275,
     dateAdded: '2026-08-06',
@@ -674,14 +590,14 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p22 - REAL EXECUTED PROJECT (rendering category)
+  // 22. Photo 22 (p22.jpg) - Real project
   {
-    id: 'mg-r-01',
-    title: 'مشروع حقيقي منفذ - مطبخ أبيض وخشبي واسع مع جزيرة وسطية',
-    titleEn: 'Real Executed Project: White & Wood Kitchen with Center Island',
-    slug: 'real-white-wood-island-kitchen-22',
-    category: 'rendering',
-    categoryArabic: 'مشاريع منفذة',
+    id: 'mg-k-22',
+    title: 'مشروع منفذ - مطبخ واسع بلون أبيض وخشب فاتح مع جزيرة وسطية',
+    titleEn: 'Real Executed Project: Spacious White & Light Wood Kitchen with Island',
+    slug: 'real-project-white-light-wood-island-22',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ حديثة',
     style: 'modern',
     styleArabic: 'مودرن',
     colors: ['white', 'wood'],
@@ -690,14 +606,10 @@ export const designsData: DesignItem[] = [
     spaceArabic: 'واسعة',
     approximateArea: '30 م²',
     mainImage: getProjectImage('p22.jpg'),
-    galleryImages: [
-      getProjectImage('p22.jpg'),
-      getProjectImage('p28.jpg'),
-      getProjectImage('p1.jpg')
-    ],
-    description: 'صورة حقيقية من موقع العمل لمشروع تم تنفيذه وتسليمه بنجاح في البيضاء - مطبخ واسع بخزائن بيضاء مع خزائن علوية بتشطيب خشبي وجزيرة وسطية وأرضية رخام.',
-    materials: ['خزائن بيضاء عالية المتانة', 'خشب فاتح علوي', 'سطح أبيض كوارتز', 'أرضية رخام فاتح'],
-    tags: ['مشروع_حقيقي', 'تنفيذ_المجد', 'مطبخ_أبيض', 'البيضاء_ليبيا'],
+    galleryImages: [getProjectImage('p22.jpg')],
+    description: 'صورة فوتوغرافية حقيقية من موقع العمل لمشروع مطبخ واسع تم تصنيعه وتركيبه بالكامل وتسليمه في مدينة البيضاء - ليبيا بواسطة شركة المجد. المطبخ بتوزيع L عريض مع جزيرة وسطية حرة؛ الخزائن السفلية بلون أبيض ناصع بمقابض مخفية، يعلوها صف خزائن وسطية بتشطيب خشب السنديان الفاتح يتخلله زجاج أسود، ثم صف علوي أبيض حتى السقف مع فتحات التكييف المركزية وأرضية رخامية فاتحة.',
+    materials: ['MDF مقاوم للرطوبة مطلي أبيض', 'خشب سنديان فاتح معالج', 'كاونتر كوارتز أبيض ناصع', 'جزيرة وسطية حرة'],
+    tags: ['مشروع_حقيقي_منفذ', 'شركة_المجد', 'مطبخ_أبيض_وخشبي', 'جزيرة_وسطية', 'البيضاء_ليبيا'],
     views: 1920,
     favoritesCount: 580,
     dateAdded: '2026-08-23',
@@ -706,30 +618,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p23
+  // 23. Photo 23 (p23.jpg)
   {
     id: 'mg-k-23',
-    title: 'مطبخ بيج لامع مع ميكرويف مدمج وعلاقات أدوات',
-    titleEn: 'Glossy Beige Kitchen with Built-in Microwave & Tool Rack',
-    slug: 'glossy-beige-microwave-tool-rack-kitchen-23',
+    title: 'مطبخ حرف U بلون بيج عاجي هاي جلوس مع كاونتر أسود',
+    titleEn: 'U-Shaped High-Gloss Ivory Beige Kitchen with Black Granite Counter',
+    slug: 'u-shaped-high-gloss-ivory-beige-black-counter-23',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'modern',
     styleArabic: 'مودرن',
-    colors: ['beige', 'dark'],
-    colorsArabic: ['بيج', 'داكن'],
+    colors: ['beige', 'dark', 'black'],
+    colorsArabic: ['بيج', 'داكن', 'أسود'],
     space: 'medium',
     spaceArabic: 'متوسطة',
-    approximateArea: '16 م²',
+    approximateArea: '17 م²',
     mainImage: getProjectImage('p23.jpg'),
-    galleryImages: [
-      getProjectImage('p23.jpg'),
-      getProjectImage('p19.jpg'),
-      getProjectImage('p21.jpg')
-    ],
-    description: 'مطبخ بيج لامع على شكل L مع خزائن حتى السقف وإضاءة LED خطية، وميكرويف مدمج أسود، وعلاقة أدوات مطبخ معدنية، وسطح عمل جرانيت أسود.',
-    materials: ['هاي جلوس بيج', 'جرانيت أسود', 'ميكرويف مدمج', 'إضاءة خطية LED'],
-    tags: ['هاي_جلوس_بيج', 'ميكرويف_مدمج', 'أدوات_معلقة', 'خزائن_سقف'],
+    galleryImages: [getProjectImage('p23.jpg')],
+    description: 'مطبخ فاخر بتوزيع حرف U يمتد حتى السقف بخزائن هاي جلوس بلون بيج عاجي عاكس فائق النقاء. كاونتر العمل من الجرانيت الأسود المصقول مع موقد غاز 5 شعلات أسود وحوض جلي أسود. يضم ميكرويف مدمجاً في الخزائن العلوية وقضيباً جدارياً أسود لتعليق أدوات الطهي، مع إضاءة سقفية مربعة ببيت نور متصل وأرضية رخامية بيضاء بعروق ناعمة.',
+    materials: ['أكريليك هاي جلوس بيج عاجي', 'كاونتر جرانيت أسود مصقول', 'ميكرويف أسود بلت إن', 'سقف جبسي بيت نور مربع'],
+    tags: ['مطبخ_حرف_U', 'بيج_هاي_جلوس', 'كاونتر_أسود', 'ميكرويف_مدمج', 'رخام_أبيض'],
     views: 1650,
     favoritesCount: 460,
     dateAdded: '2026-08-18',
@@ -738,30 +646,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p24
+  // 24. Photo 24 (p24.jpg)
   {
     id: 'mg-k-24',
-    title: 'مطبخ أسود مات مع خشب طبيعي وأرضية باركيه',
-    titleEn: 'Matte Black Kitchen with Natural Wood & Parquet Floor',
-    slug: 'matte-black-natural-wood-parquet-kitchen-24',
+    title: 'مطبخ حرف L بلون أسود مطفي مع أسطح خشب طبيعي سميك',
+    titleEn: 'L-Shaped Kitchen in Matte Black with Thick Solid Wood Countertop',
+    slug: 'l-shaped-matte-black-solid-wood-counter-24',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'modern',
     styleArabic: 'مودرن',
-    colors: ['black', 'wood'],
-    colorsArabic: ['أسود', 'خشبي'],
+    colors: ['black', 'wood', 'dark'],
+    colorsArabic: ['أسود', 'خشبي', 'داكن'],
     space: 'small',
     spaceArabic: 'صغيرة',
-    approximateArea: '12 م²',
+    approximateArea: '13 م²',
     mainImage: getProjectImage('p24.jpg'),
-    galleryImages: [
-      getProjectImage('p24.jpg'),
-      getProjectImage('p10.jpg'),
-      getProjectImage('p27.jpg')
-    ],
-    description: 'مطبخ جريء بخزائن سوداء مات مع سطح عمل وخلفية خشب طبيعي بلون دافئ، وأرضية باركيه خشبي، وفرن مدمج أسود، وإضاءة سبوت مخفية - تصميم صغير وعملي.',
-    materials: ['خزائن أسود مات', 'سطح وخلفية خشب طبيعي', 'أرضية باركيه', 'فرن مدمج أسود'],
-    tags: ['مطبخ_أسود', 'خشب_طبيعي', 'باركيه', 'مطبخ_صغير'],
+    galleryImages: [getProjectImage('p24.jpg')],
+    description: 'مطبخ زاوية حرف L دافئ بطابع ريفي مودرن أنيق. الخزائن السفلية والعلوية مكسوة باللون الأسود المطفي الداكن (Matte Black) بدون مقابض، ويتميز بسطح كاونتر عريض وخلفية جدارية بالكامل من ألواح الخشب الطبيعي السميك بتعريقات خشبية عتيقة. يحتوي على شفاط أسود مدمج، وفرن وميكرويف أسود في العمود الأيسر، وموقد حثي مسطح، مع أرضية باركيه خشبية متناسقة.',
+    materials: ['خزائن أسود مطفي فاحم', 'أسطح وخلفية خشب طبيعي صلب سميك', 'أجهزة سوداء بلت إن', 'أرضية باركيه'],
+    tags: ['مطبخ_حرف_L', 'أسود_مطفي', 'خشب_طبيعي_سميك', 'طابع_ريفي_مودرن', 'مطبخ_صغير'],
     views: 1410,
     favoritesCount: 370,
     dateAdded: '2026-08-14',
@@ -770,30 +674,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p25 - 3D Design
+  // 25. Photo 25 (p25.jpg)
   {
-    id: 'mg-3d-06',
-    title: 'تصميم 3D - مطبخ أخضر زيتي صناعي مع سقف إسمنتي وأرفف مضاءة',
-    titleEn: '3D Concept: Industrial Olive Green Kitchen with Concrete Ceiling',
-    slug: 'industrial-olive-concrete-kitchen-25',
-    category: '3d-designs',
-    categoryArabic: 'تصاميم 3D',
+    id: 'mg-k-25',
+    title: 'مطبخ حرف L بلون أخضر زيتي وخشب مضلع مع سقف خرساني',
+    titleEn: 'L-Shaped Kitchen in Matte Olive Green & Fluted Wood with Concrete Ceiling',
+    slug: 'l-shaped-olive-green-fluted-wood-concrete-ceiling-25',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ حديثة',
     style: 'contemporary',
     styleArabic: 'معاصر',
     colors: ['green', 'wood', 'gray'],
-    colorsArabic: ['أخضر زيتي', 'خشبي', 'رمادي'],
+    colorsArabic: ['أخضر', 'خشبي', 'رمادي'],
     space: 'large',
     spaceArabic: 'واسعة',
     approximateArea: '22 م²',
     mainImage: getProjectImage('p25.jpg'),
-    galleryImages: [
-      getProjectImage('p25.jpg'),
-      getProjectImage('p4.jpg'),
-      getProjectImage('p10.jpg')
-    ],
-    description: 'تصور ثلاثي الأبعاد لمطبخ بطابع صناعي بخزائن سفلية خضراء زيتية وعلوية خشبية مع تكسيات ريفلود، وسقف إسمنتي ظاهر بإضاءة سكة، وأرفف رأسية مضاءة.',
-    materials: ['خزائن خضراء زيتية', 'خشب بلوط علوي', 'سقف إسمنتي', 'أرفف مضاءة LED'],
-    tags: ['تصميم_3D', 'مطبخ_صناعي', 'أخضر_زيتي', 'سقف_إسمنتي'],
+    galleryImages: [getProjectImage('p25.jpg')],
+    description: 'مطبخ بتصميم زاوية حرف L وبطابع صناعي عصري فريد. الخزائن السفلية بلون أخضر زيتي مطفي راقٍ بمقابض مدمجة، والخزائن العلوية من خشب البلوط الطبيعي يعلوها تاج مضلع من الشرائح الخشبية. يحتوي على عمود أجهزة يمين يضم فرناً وميكرويف مدمجين وفترينة رأسية مفتوحة مضاءة، وسقف مكشوف من الخرسانة المعمارية الرمادية مزود بإضاءة مسار تراك لايت أسود.',
+    materials: ['خزائن خضراء زيتية مطفية', 'خشب بلوط مضلع ريفلود', 'سقف خرسانة معمارية بإضاءة تراك', 'أرفف كؤوس رأسية مضاءة'],
+    tags: ['مطبخ_حرف_L', 'أخضر_زيتي', 'خشب_مضلع', 'سقف_خرساني', 'طابع_صناعي'],
     views: 1820,
     favoritesCount: 510,
     dateAdded: '2026-08-10',
@@ -802,30 +702,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p26 - Interior Design
+  // 26. Photo 26 (p26.jpg)
   {
-    id: 'mg-i-06',
-    title: 'مطبخ أسود فاخر مع جزيرة رخام وكراسي خضراء',
-    titleEn: 'Luxury Black Kitchen with Marble Island & Green Stools',
-    slug: 'luxury-black-marble-island-green-stools-26',
-    category: 'interior-design',
-    categoryArabic: 'ديكور وتصميم داخلي',
+    id: 'mg-k-26',
+    title: 'مطبخ مفتوح فاخر بلون أسود بجزيرة رخام أسود وكراسي خضراء',
+    titleEn: 'Luxury Open Kitchen in Black with Nero Marquina Island & Green Stools',
+    slug: 'luxury-open-black-nero-marquina-island-green-stools-26',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ حديثة',
     style: 'luxury',
     styleArabic: 'فاخر',
-    colors: ['black', 'wood', 'dark'],
-    colorsArabic: ['أسود', 'خشبي', 'داكن'],
+    colors: ['black', 'wood', 'dark', 'green'],
+    colorsArabic: ['أسود', 'خشبي', 'داكن', 'أخضر'],
     space: 'large',
     spaceArabic: 'واسعة',
     approximateArea: '32 م²',
     mainImage: getProjectImage('p26.jpg'),
-    galleryImages: [
-      getProjectImage('p26.jpg'),
-      getProjectImage('p25.jpg'),
-      getProjectImage('p31.jpg')
-    ],
-    description: 'تصميم ديكور داخلي مفتوح يجمع بين مطبخ فاخر بخزائن سوداء وجزيرة كبيرة برخام أسود وتكسيات خشبية ريفلود، وكراسي بار خضراء أنيقة، وإضاءات معلقة زجاجية.',
-    materials: ['خزائن سوداء مات', 'رخام أسود فاخر', 'خشب جوز مضاء', 'إضاءات زجاجية معلقة'],
-    tags: ['ديكور_داخلي', 'مطبخ_أسود_فاخر', 'جزيرة_رخام', 'كراسي_خضراء'],
+    galleryImages: [getProjectImage('p26.jpg')],
+    description: 'مطبخ أمريكي مفتوح ملكي بلون أسود مطفي بالكامل، يتصدره جزيرة كاونتر وبار ضخمة بسطح وساق شلالية من الرخام الأسود الفاخر ذي العروق البيضاء (Nero Marquina) مع واجهة خشبية مضلعة. يضم 3 كراسي بار مخملية خضراء زيتية أنيقة، وتعلوه مجموعة من 5 ثريات زجاجية عسلية مضلعة متدلية، مع خزائن جدارية سوداء كاملة تضم أرفف خشب جوز مضاءة وثلاجة سوداء مدمجة.',
+    materials: ['رخام أسود نيرو ماركينا عروق بيضاء', 'خزائن أسود مطفي فاحم', 'كراسي بار مخمل أخضر زيتي', 'ثريات زجاجية عسلية متدلية'],
+    tags: ['مطبخ_مفتوح', 'رخام_أسود_شلال', 'كراسي_خضراء', 'ثريات_عسلية', 'خشب_جوز'],
     views: 1730,
     favoritesCount: 480,
     dateAdded: '2026-08-24',
@@ -834,30 +730,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p27
+  // 27. Photo 27 (p27.jpg)
   {
     id: 'mg-k-27',
-    title: 'مطبخ داكن مات مع خلفية رخام أبيض وإضاءة LED سفلية',
-    titleEn: 'Dark Matte Kitchen with White Marble Splash & LED Kick Light',
-    slug: 'dark-matte-marble-led-kick-kitchen-27',
+    title: 'مطبخ حرف L بلون رمادي فحمي داكن مع كاونتر ورخام أبيض كلكتا',
+    titleEn: 'L-Shaped Kitchen in Charcoal Gray with White Calacatta Marble',
+    slug: 'l-shaped-charcoal-gray-calacatta-marble-27',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'modern',
     styleArabic: 'مودرن',
-    colors: ['dark', 'white'],
-    colorsArabic: ['داكن', 'أبيض'],
+    colors: ['dark', 'gray', 'white'],
+    colorsArabic: ['داكن', 'رمادي', 'أبيض'],
     space: 'medium',
     spaceArabic: 'متوسطة',
-    approximateArea: '14 م²',
+    approximateArea: '15 م²',
     mainImage: getProjectImage('p27.jpg'),
-    galleryImages: [
-      getProjectImage('p27.jpg'),
-      getProjectImage('p7.jpg'),
-      getProjectImage('p24.jpg')
-    ],
-    description: 'مطبخ داكن مات على شكل L مع خلفية رخام أبيض بعروق رمادية وسطح عمل أبيض، وإضاءة LED سفلية تحت الخزائن، وفرن وثلاجة مدمجة، وأرضية رمادية فاتحة.',
-    materials: ['خزائن داكنة مات', 'رخام أبيض بعروق', 'إضاءة LED سفلية', 'أجهزة مدمجة'],
-    tags: ['مطبخ_داكن', 'رخام_أبيض', 'إضاءة_سفلية', 'تصميم_أنيق'],
+    galleryImages: [getProjectImage('p27.jpg')],
+    description: 'مطبخ زاوية بتوزيع حرف L بلون رمادي فحمي داكن مطفي ناعم الملمس بدون مقابض. يبرز التباين الحاد مع كاونتر العمل والخلفية الجدارية الكاملة من رخام كلكتا الأبيض النقي ذي العروق الرمادية الناعمة. يحتوي على فرن كهربائي مدمج أسود في الجدار الأوسط مع ثلاجة ستانلس ستيل في اليمين، وإضاءة LED شريطية تحت الخزائن العلوية وإضاءة سفلية للأرضية تمنحه إحساساً بالخفة والاتساع.',
+    materials: ['خزائن رمادي فحمي داكن مطفي', 'رخام كلكتا أبيض عروق رمادية', 'إضاءة LED سفلية للأرضية', 'أجهزة بلت إن ستانلس'],
+    tags: ['مطبخ_حرف_L', 'رمادي_فحمي', 'رخام_كلكتا_أبيض', 'إضاءة_أرضية', 'ثلاجة_ستانلس'],
     views: 1380,
     favoritesCount: 350,
     dateAdded: '2026-08-16',
@@ -866,14 +758,14 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p28 - REAL EXECUTED PROJECT (rendering category)
+  // 28. Photo 28 (p28.jpg) - Real project
   {
-    id: 'mg-r-02',
-    title: 'مشروع حقيقي منفذ - مطبخ رمادي وخشبي مع خزائن زجاجية مخططة',
-    titleEn: 'Real Executed Project: Gray & Wood Kitchen with Fluted Glass Cabinets',
-    slug: 'real-gray-wood-fluted-glass-kitchen-28',
-    category: 'rendering',
-    categoryArabic: 'مشاريع منفذة',
+    id: 'mg-k-28',
+    title: 'مشروع منفذ - مطبخ زاوية بخزائن زجاجية مضلعة وخشب رمادي فاتح',
+    titleEn: 'Real Executed Project: L-Kitchen with Fluted Glass & Light Woodgrain',
+    slug: 'real-project-fluted-glass-light-wood-28',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ حديثة',
     style: 'modern',
     styleArabic: 'مودرن',
     colors: ['gray', 'wood', 'white'],
@@ -882,14 +774,10 @@ export const designsData: DesignItem[] = [
     spaceArabic: 'متوسطة',
     approximateArea: '16 م²',
     mainImage: getProjectImage('p28.jpg'),
-    galleryImages: [
-      getProjectImage('p28.jpg'),
-      getProjectImage('p22.jpg'),
-      getProjectImage('p1.jpg')
-    ],
-    description: 'صورة حقيقية من موقع العمل لمشروع تم تنفيذه في البيضاء - مطبخ بخزائن سفلية خشبية وعلوية بيضاء مع خزائن زجاج مخطط (فلوتد) بالكامل وفرن مدمج من Bosch.',
-    materials: ['خشب فاتح سفلي', 'أبيض علوي', 'زجاج فلوتد مخطط', 'رخام أبيض', 'فرن Bosch'],
-    tags: ['مشروع_منفذ', 'تنفيذ_المجد', 'زجاج_فلوتد', 'البيضاء_ليبيا'],
+    galleryImages: [getProjectImage('p28.jpg')],
+    description: 'صورة فوتوغرافية حقيقية من موقع العمل لمشروع مطبخ مكتمل تم تنفيذه وتسليمه داخل مدينة البيضاء بواسطة شركة المجد. المطبخ بتوزيع زاوية L يدمج الخزائن السفلية الخشبية بتعريقات رأسية رمادية فاتحة، والخزائن العلوية البيضاء النقية، مع صف خزائن سقفي زجاجي مضلع بالكامل (Fluted Glass) بإطارات سوداء مضاءة من الداخل، وكاونتر وخلفية رخام أبيض، وفرن كهربائي Bosch مدمج بلصاقة الكفاءة الأصلية.',
+    materials: ['خشب رمادي فاتح رأسي التعريقات', 'خزائن زجاجية مضلعة فلوتد بإطارات سوداء', 'فرن Bosch مدمج أصلي', 'كاونتر وخلفية رخام أبيض'],
+    tags: ['مشروع_حقيقي_منفذ', 'شركة_المجد', 'زجاج_مضلع_فلوتد', 'خشب_رمادي', 'فرن_بوش', 'البيضاء_ليبيا'],
     views: 1260,
     favoritesCount: 310,
     dateAdded: '2026-08-12',
@@ -898,30 +786,26 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p29 - Interior Design
+  // 29. Photo 29 (p29.jpg)
   {
-    id: 'mg-i-01',
-    title: 'مطبخ رمادي لامع مع طاولة رخام وكراسي مخملية رمادية',
-    titleEn: 'Glossy Gray Kitchen with Marble Dining & Velvet Chairs',
-    slug: 'glossy-gray-marble-dining-velvet-kitchen-01',
-    category: 'interior-design',
-    categoryArabic: 'ديكور وتصميم داخلي',
+    id: 'mg-k-29',
+    title: 'مطبخ حرف L بلون رمادي لامع مع طاولة طعام رخامية وكراسي مخمل',
+    titleEn: 'L-Shaped Kitchen in Glossy Gray with Marble Dining Table & Velvet Chairs',
+    slug: 'l-shaped-glossy-gray-marble-dining-velvet-29',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ حديثة',
     style: 'luxury',
     styleArabic: 'فاخر',
     colors: ['gray', 'white'],
     colorsArabic: ['رمادي', 'أبيض'],
     space: 'large',
     spaceArabic: 'واسعة',
-    approximateArea: '28 م²',
+    approximateArea: '26 م²',
     mainImage: getProjectImage('p29.jpg'),
-    galleryImages: [
-      getProjectImage('p29.jpg'),
-      getProjectImage('p30.jpg'),
-      getProjectImage('p16.jpg')
-    ],
-    description: 'تصميم داخلي متكامل يجمع بين مطبخ رمادي لامع هاي جلوس ومنطقة طعام بطاولة رخام أبيض وكراسي مخملية رمادية بأرجل ذهبية، وخلفية رخام أبيض بعروق وورود بيضاء.',
-    materials: ['هاي جلوس رمادي', 'طاولة رخام أبيض', 'كراسي مخمل رمادي', 'مقابض ذهبية'],
-    tags: ['تصميم_داخلي', 'طاولة_رخام', 'كراسي_مخمل', 'ديكور_فاخر'],
+    galleryImages: [getProjectImage('p29.jpg')],
+    description: 'مطبخ مفتوح فاخر بتوزيع زاوية حرف L بلون رمادي فاتح هاي جلوس لامع مع مقابض ستانلس ذهبية راقية. يتكامل مباشرة مع منطقة طعام تضم طاولة رخامية رمادية كلكتا وكراسي مريحة منجدة بالمخمل الرمادي بأرجل سوداء وأطراف ذهبية. كاونتر العمل والخلفية الجدارية من الرخام الأبيض ذي العروق الرمادية، مع خلاط حوض ذهبي فاخر، وأفران مدمجة ومايكرويف علوي ستانلس ستيل.',
+    materials: ['أكريليك رمادي هاي جلوس لامع', 'طاولة طعام رخامية مدمجة', 'كراسي مخملية رمادية بأطراف ذهبية', 'خلاط ومقابض ذهبية'],
+    tags: ['مطبخ_حرف_L', 'رمادي_لامع', 'طاولة_طعام_رخام', 'كراسي_مخمل', 'مقابض_ذهبية'],
     views: 1590,
     favoritesCount: 420,
     dateAdded: '2026-08-22',
@@ -930,12 +814,12 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'wide'
   },
 
-  // p30
+  // 30. Photo 30 (p30.jpg)
   {
     id: 'mg-k-30',
-    title: 'مطبخ رمادي عصري مع جزيرة وتكسيات ريفلود وإضاءة سقف',
-    titleEn: 'Modern Gray Kitchen with Island, Fluted Panels & Ceiling Light',
-    slug: 'modern-gray-island-fluted-ceiling-kitchen-02',
+    title: 'مطبخ مفتوح بلون رمادي لامع مع جزيرة مضلعة وثريات أسطوانية',
+    titleEn: 'Open Kitchen in Glossy Gray with Fluted Island & Cylindrical Pendants',
+    slug: 'open-kitchen-glossy-gray-fluted-island-pendants-30',
     category: 'kitchens',
     categoryArabic: 'مطابخ حديثة',
     style: 'modern',
@@ -946,14 +830,10 @@ export const designsData: DesignItem[] = [
     spaceArabic: 'واسعة',
     approximateArea: '26 م²',
     mainImage: getProjectImage('p30.jpg'),
-    galleryImages: [
-      getProjectImage('p30.jpg'),
-      getProjectImage('p31.jpg'),
-      getProjectImage('p29.jpg')
-    ],
-    description: 'تصميم مطبخ رمادي لامع مع جزيرة بتكسيات ريفلود وسطح كوارتز أبيض، وسقف جبسي بإضاءة مخفية وإضاءات معلقة، ونافذة كبيرة، وموقد غاز وشفاط مخفي.',
-    materials: ['رمادي لامع', 'تكسيات ريفلود', 'سقف جبسي مع LED', 'إضاءات معلقة'],
-    tags: ['جزيرة_ريفلود', 'سقف_إضاءة', 'مطبخ_رمادي', 'تصميم_حديث'],
+    galleryImages: [getProjectImage('p30.jpg')],
+    description: 'مطبخ مفتوح حديث بخزائن جدارية ممتدة لكامل الارتفاع بلون رمادي ميتاليك هاي جلوس لامع بدون مقابض. يتوسطه جزيرة كاونتر أمامية بسطح كوارتز أبيض شلال، وواجهة أمامية سوداء بتكسية مضلعة عمودية (Fluted Slats) مع إضاءة شريطية مخفية LED. تعلو الجزيرة ثريات أسطوانية سوداء متدلية بلمسات ذهبية، مع نافذة جانبية بإضاءة طبيعية، وسقف جبسي بكورنيش إضاءة دافئة، وثلاجة ستانلس ستيل عريضة.',
+    materials: ['خزائن رمادي ميتاليك هاي جلوس', 'جزيرة كاونتر بيضاء بواجهة سوداء مضلعة', 'ثريات أسطوانية سوداء معلقة', 'ثلاجة ستانلس ستيل عريضة'],
+    tags: ['مطبخ_مفتوح', 'رمادي_هاي_جلوس', 'جزيرة_مضلعة', 'ثريات_أسطوانية', 'سقف_جبسي'],
     views: 1460,
     favoritesCount: 380,
     dateAdded: '2026-08-17',
@@ -962,14 +842,14 @@ export const designsData: DesignItem[] = [
     aspectRatio: 'tall'
   },
 
-  // p31 - 3D Design
+  // 31. Photo 31 (p31.jpg)
   {
-    id: 'mg-3d-01',
-    title: 'تصميم 3D - مطبخ رمادي فاخر مع جزيرة وإضاءات ذهبية وخطوط LED',
-    titleEn: '3D Concept: Luxury Gray Kitchen with Island, Gold Accents & LED Lines',
-    slug: 'luxury-gray-island-gold-led-kitchen-3d-01',
-    category: '3d-designs',
-    categoryArabic: 'تصاميم 3D',
+    id: 'mg-k-31',
+    title: 'مطبخ ملكي بلون رمادي هاي جلوس بجزيرة ضخمة وخطوط إضاءة ذهبية',
+    titleEn: 'Luxury High-Gloss Gray Kitchen with Grand Island & Gold Channel Lighting',
+    slug: 'luxury-high-gloss-gray-grand-island-gold-lighting-31',
+    category: 'kitchens',
+    categoryArabic: 'مطابخ حديثة',
     style: 'luxury',
     styleArabic: 'فاخر',
     colors: ['gray', 'white'],
@@ -978,14 +858,10 @@ export const designsData: DesignItem[] = [
     spaceArabic: 'واسعة',
     approximateArea: '35 م²',
     mainImage: getProjectImage('p31.jpg'),
-    galleryImages: [
-      getProjectImage('p31.jpg'),
-      getProjectImage('p6.jpg'),
-      getProjectImage('p17.jpg')
-    ],
-    description: 'تصميم فاخر لمطبخ رمادي لامع مع جزيرة كبيرة بسطح أبيض كوارتز وخطوط ذهبية LED على الخزائن، وإضاءات كروية معلقة، وشفاط أسود مدمج، وسقف جبسي بإضاءة مخفية.',
-    materials: ['هاي جلوس رمادي', 'خطوط ذهبية LED', 'إضاءات كروية معلقة', 'سطح كوارتز أبيض'],
-    tags: ['تصميم_3D', 'خطوط_ذهبية', 'جزيرة_فاخرة', 'إضاءات_كروية'],
+    galleryImages: [getProjectImage('p31.jpg')],
+    description: 'تصميم ملكي فائق الفخامة لمطبخ مفتوح واسع بخزائن رمادية هاي جلوس عاكسة. يتصدر المطبخ جزيرة عمل عملاقة بسطح كوارتز أبيض ناصع، مجهزة بمجرى مقابض جولا أفقي ذهبي مدمج (Gold Gola Profile) مضاء بشرائط LED مخفية يمتد على كامل الجزيرة والخزائن الجدارية. تعلو الجزيرة ثلاث ثريات كروية زجاجية معلقة ذات بريق ذهبي، مع خلاط حوض ذهبي مقوس، وشفاط زجاجي أسود مائل، وسقف جبسي ببيت نور مستطيل.',
+    materials: ['أكريليك رمادي فاتح هاي جلوس', 'مجرى مقابض جولا ذهبي مضاء بـ LED', 'ثلاث ثريات كروية ذهبية متدلية', 'كاونتر كوارتز أبيض ناصع وخلاط ذهبي'],
+    tags: ['مطبخ_ملكي', 'رمادي_هاي_جلوس', 'جزيرة_ضخمة', 'خطوط_ذهبية_LED', 'ثريات_كروية', 'خلاط_ذهبي'],
     views: 1310,
     favoritesCount: 315,
     dateAdded: '2026-08-11',

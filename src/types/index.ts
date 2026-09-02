@@ -71,6 +71,7 @@ export interface CategoryInfo {
   description: string;
   image: string;
   count: number;
+  link?: string;
 }
 
 export interface ServiceItem {
