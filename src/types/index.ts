@@ -2,12 +2,14 @@ export type CategoryType =
   | 'all' 
   | 'kitchens' 
   | 'bedrooms' 
+  | 'wardrobes' 
+  | 'interior-design' 
+  | '3d-designs' 
+  | 'rendering'
   | 'living-rooms' 
   | 'home-decor' 
   | 'shops' 
-  | 'offices' 
-  | 'wardrobes' 
-  | '3d-designs';
+  | 'offices';
 
 export type StyleType = 
   | 'modern' 

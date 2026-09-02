@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { HeroSection } from '../components/home/HeroSection';
-import { CompanyIntro } from '../components/home/CompanyIntro';
-import { CategoryGrid } from '../components/home/CategoryGrid';
 import { FeaturedDesigns } from '../components/home/FeaturedDesigns';
-import { DiscoveryWizard } from '../components/home/DiscoveryWizard';
-import { MostViewed } from '../components/home/MostViewed';
+import { CategoryGrid } from '../components/home/CategoryGrid';
 import { ServicesShowcase } from '../components/home/ServicesShowcase';
 import { BeforeAfter } from '../components/home/BeforeAfter';
 import { DesignProcess } from '../components/home/DesignProcess';
+import { CompanyIntro } from '../components/home/CompanyIntro';
 import { ConsultationCta } from '../components/home/ConsultationCta';
 import { FullscreenViewer } from '../components/viewer/FullscreenViewer';
 import { DesignItem } from '../types';
@@ -24,37 +22,31 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="w-full">
-      {/* 1. Hero */}
+      {/* 1. Hero Section (Photorealistic, Minimal, View & WhatsApp CTA) */}
       <HeroSection />
 
-      {/* 2. Company Introduction */}
-      <CompanyIntro />
-
-      {/* 3. Design Categories */}
-      <CategoryGrid />
-
-      {/* 4. Featured Designs */}
+      {/* 2. Featured Projects (4-6 Curated Realistic Kitchen & Interior Projects) */}
       <FeaturedDesigns onQuickView={handleQuickView} />
 
-      {/* 5. Interactive Discovery Wizard */}
-      <DiscoveryWizard />
+      {/* 3. Portfolio Categories (Kitchens, Bedrooms, Wardrobes, Interior, 3D, Rendering) */}
+      <CategoryGrid />
 
-      {/* 6. Most Viewed Designs */}
-      <MostViewed onQuickView={handleQuickView} />
-
-      {/* 7. Services Showcase */}
+      {/* 4. Visual Services Section (6 Core Services with Images & Short Text) */}
       <ServicesShowcase />
 
-      {/* 8. Before & After Interactive Slider */}
+      {/* 5. Before & After Visual Transformation */}
       <BeforeAfter />
 
-      {/* 9. 7-Step Design Process */}
+      {/* 6. Why Choose Us (4 Points) & Our Process (4 Steps) */}
       <DesignProcess />
 
-      {/* 10. Final Call To Action */}
+      {/* 7. About The Company (Logo, Strong Interior Photo, Trust Statement) */}
+      <CompanyIntro />
+
+      {/* 8. Final Call To Action */}
       <ConsultationCta />
 
-      {/* Global Fullscreen Lightbox */}
+      {/* Global Fullscreen Project Viewer & WhatsApp Inquirer */}
       <FullscreenViewer
         isOpen={isViewerOpen}
         onClose={() => setIsViewerOpen(false)}

@@ -10,8 +10,7 @@ import {
   ShareNetwork, 
   WhatsappLogo, 
   ArrowsOut,
-  ArrowsIn,
-  Sparkle
+  ArrowsIn
 } from '@phosphor-icons/react';
 import { DesignItem } from '../../types';
 import { useFavorites } from '../../context/FavoritesContext';
@@ -116,22 +115,18 @@ export const FullscreenViewer: React.FC<FullscreenViewerProps> = ({
   if (!isOpen || !design) return null;
 
   const isFav = isFavorite(design.id);
+  const whatsAppUrl = getWhatsAppUrl(getDesignInquiryMessage(design));
 
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-50 flex flex-col bg-brand-dark/95 backdrop-blur-xl text-brand-ivory select-none overflow-hidden">
         {/* Top Control Bar */}
-        <div className="relative z-20 flex items-center justify-between px-4 sm:px-6 py-3.5 border-b border-brand-gold/15 bg-brand-dark/80 backdrop-blur-md">
+        <div className="relative z-20 flex items-center justify-between px-4 sm:px-6 py-3 border-b border-brand-gold/15 bg-brand-dark/80 backdrop-blur-md">
           {/* Design Info */}
-          <div className="flex items-center gap-3 min-w-0">
-            <div className="hidden sm:flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-brand-surface border border-brand-gold/30 text-brand-gold">
-                {design.categoryArabic}
-              </span>
-              <span className="text-xs text-brand-champagne/80">
-                {design.styleArabic}
-              </span>
-            </div>
+          <div className="flex items-center gap-2.5 min-w-0">
+            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-surface border border-brand-gold/30 text-brand-gold shrink-0">
+              {design.categoryArabic}
+            </span>
             <h3 className="text-xs sm:text-sm font-bold text-brand-ivory truncate max-w-xs sm:max-w-md">
               {design.title}
             </h3>
@@ -216,7 +211,7 @@ export const FullscreenViewer: React.FC<FullscreenViewerProps> = ({
         </div>
 
         {/* Main Stage Image Area */}
-        <div className="relative flex-1 flex items-center justify-center p-2 sm:p-6 overflow-hidden">
+        <div className="relative flex-1 flex items-center justify-center p-2 sm:p-5 overflow-hidden">
           <motion.div
             key={`${design.id}-${activeImageIndex}`}
             initial={{ opacity: 0.4, scale: 0.98 }}
@@ -234,7 +229,7 @@ export const FullscreenViewer: React.FC<FullscreenViewerProps> = ({
                 cursor: zoomLevel > 1 ? 'grab' : 'zoom-in',
               }}
               onClick={() => (zoomLevel === 1 ? handleZoomIn() : handleZoomReset())}
-              className="max-h-[72vh] sm:max-h-[78vh] w-auto max-w-full object-contain rounded-xl shadow-2xl border border-brand-gold/20"
+              className="max-h-[68vh] sm:max-h-[74vh] w-auto max-w-full object-contain rounded-2xl shadow-2xl border border-brand-gold/20"
             />
           </motion.div>
 
@@ -243,34 +238,34 @@ export const FullscreenViewer: React.FC<FullscreenViewerProps> = ({
             <>
               <button
                 onClick={handlePrevImage}
-                className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-brand-dark/80 hover:bg-brand-gold hover:text-brand-dark border border-brand-gold/30 text-brand-ivory transition-all backdrop-blur-md shadow-2xl z-20"
+                className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-2.5 sm:p-3 rounded-full bg-brand-dark/80 hover:bg-brand-gold hover:text-brand-dark border border-brand-gold/30 text-brand-ivory transition-all backdrop-blur-md shadow-2xl z-20"
                 aria-label="الصورة السابقة"
               >
-                <CaretRight size={22} weight="bold" />
+                <CaretRight size={20} weight="bold" />
               </button>
               <button
                 onClick={handleNextImage}
-                className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-brand-dark/80 hover:bg-brand-gold hover:text-brand-dark border border-brand-gold/30 text-brand-ivory transition-all backdrop-blur-md shadow-2xl z-20"
+                className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-2.5 sm:p-3 rounded-full bg-brand-dark/80 hover:bg-brand-gold hover:text-brand-dark border border-brand-gold/30 text-brand-ivory transition-all backdrop-blur-md shadow-2xl z-20"
                 aria-label="الصورة التالية"
               >
-                <CaretLeft size={22} weight="bold" />
+                <CaretLeft size={20} weight="bold" />
               </button>
             </>
           )}
 
           {/* Navigation Arrows for Next/Prev Design in Gallery */}
           {allDesigns.length > 1 && (
-            <div className="hidden lg:flex items-center gap-3 absolute top-6 left-6 z-20">
+            <div className="hidden lg:flex items-center gap-3 absolute top-5 left-5 z-20">
               <button
                 onClick={handlePrevDesign}
-                className="px-3 py-1.5 rounded-lg bg-brand-surface/70 border border-brand-gold/20 text-xs text-brand-ivory hover:text-brand-gold transition-colors flex items-center gap-1"
+                className="px-3 py-1.5 rounded-lg bg-brand-surface/80 border border-brand-gold/20 text-xs text-brand-ivory hover:text-brand-gold transition-colors flex items-center gap-1"
               >
                 <CaretRight size={14} weight="bold" />
                 <span>التصميم السابق</span>
               </button>
               <button
                 onClick={handleNextDesign}
-                className="px-3 py-1.5 rounded-lg bg-brand-surface/70 border border-brand-gold/20 text-xs text-brand-ivory hover:text-brand-gold transition-colors flex items-center gap-1"
+                className="px-3 py-1.5 rounded-lg bg-brand-surface/80 border border-brand-gold/20 text-xs text-brand-ivory hover:text-brand-gold transition-colors flex items-center gap-1"
               >
                 <span>التصميم التالي</span>
                 <CaretLeft size={14} weight="bold" />
@@ -279,60 +274,51 @@ export const FullscreenViewer: React.FC<FullscreenViewerProps> = ({
           )}
         </div>
 
-        {/* Bottom Bar */}
-        <div className="relative z-20 border-t border-brand-gold/15 bg-brand-dark/90 backdrop-blur-md p-3 sm:p-4">
-          <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        {/* Bottom Bar: Large WhatsApp CTA Button & Short Info */}
+        <div className="relative z-20 border-t border-brand-gold/15 bg-brand-dark/95 backdrop-blur-md p-3 sm:p-4">
+          <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
             
-            {/* Thumbnails */}
-            {images.length > 1 ? (
-              <div className="flex items-center gap-2 overflow-x-auto max-w-full pb-1">
-                {images.map((img, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => {
-                      setActiveImageIndex(idx);
-                      setZoomLevel(1);
-                    }}
-                    className={`relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden border-2 shrink-0 transition-all ${
-                      activeImageIndex === idx
-                        ? 'border-brand-gold scale-105 shadow-luxury-gold'
-                        : 'border-brand-gold/20 opacity-60 hover:opacity-100'
-                    }`}
-                  >
-                    <img src={img} alt="" className="w-full h-full object-cover" />
-                  </button>
-                ))}
-              </div>
-            ) : (
-              <div className="text-xs text-brand-ivory/60 hidden sm:block">
+            {/* Short Project Info & Thumbnails */}
+            <div className="flex items-center gap-3 overflow-x-auto max-w-full">
+              {images.length > 1 && (
+                <div className="flex items-center gap-1.5 shrink-0">
+                  {images.map((img, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => {
+                        setActiveImageIndex(idx);
+                        setZoomLevel(1);
+                      }}
+                      className={`relative w-11 h-11 rounded-lg overflow-hidden border-2 shrink-0 transition-all ${
+                        activeImageIndex === idx
+                          ? 'border-brand-gold scale-105 shadow-luxury-gold'
+                          : 'border-brand-gold/20 opacity-60 hover:opacity-100'
+                      }`}
+                    >
+                      <img src={img} alt="" className="w-full h-full object-cover" />
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              <div className="text-xs text-brand-ivory/70 hidden md:flex items-center gap-2">
                 <span>المساحة: {design.approximateArea}</span>
-                <span className="mx-2">•</span>
+                <span>•</span>
                 <span>المواد: {design.materials.slice(0, 2).join('، ')}</span>
               </div>
-            )}
-
-            {/* Direct CTA */}
-            <div className="flex items-center gap-3 w-full sm:w-auto">
-              <a
-                href={getWhatsAppUrl(getDesignInquiryMessage(design))}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-gradient-to-r from-brand-gold via-brand-champagne to-brand-gold text-brand-dark shadow-luxury-gold hover:opacity-95 transition-all whitespace-nowrap"
-              >
-                <Sparkle size={14} weight="fill" className="text-brand-dark" />
-                <span>أريد تنفيذ هذا التصميم</span>
-              </a>
-
-              <a
-                href={getWhatsAppUrl(getDesignInquiryMessage(design))}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-semibold bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/30 transition-all whitespace-nowrap"
-              >
-                <WhatsappLogo size={16} weight="fill" />
-                <span>واتساب</span>
-              </a>
             </div>
+
+            {/* Prominent WhatsApp CTA Button */}
+            <a
+              href={whatsAppUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl text-xs sm:text-sm font-extrabold bg-[#25D366] text-white shadow-luxury hover:bg-[#20bd5a] hover:scale-[1.02] active:scale-[0.98] transition-all whitespace-nowrap"
+            >
+              <WhatsappLogo size={18} weight="fill" />
+              <span>اطلب هذا التصميم عبر واتساب</span>
+            </a>
+
           </div>
         </div>
 

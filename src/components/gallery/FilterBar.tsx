@@ -37,12 +37,10 @@ export const FilterBar: React.FC<FilterBarProps> = ({
     { id: 'all', label: 'الكل' },
     { id: 'kitchens', label: 'مطابخ' },
     { id: 'bedrooms', label: 'غرف نوم' },
-    { id: 'living-rooms', label: 'غرف معيشة' },
-    { id: 'home-decor', label: 'ديكور منزل' },
-    { id: 'shops', label: 'ديكور محلات' },
-    { id: 'offices', label: 'مكاتب' },
-    { id: 'wardrobes', label: 'خزائن ودولاب' },
+    { id: 'wardrobes', label: 'خزائن ودواليب' },
+    { id: 'interior-design', label: 'ديكور داخلي' },
     { id: '3d-designs', label: 'تصاميم 3D' },
+    { id: 'rendering', label: 'رندر وإظهار' },
   ];
 
   const styles: { id: StyleType | 'all'; label: string }[] = [
@@ -50,8 +48,8 @@ export const FilterBar: React.FC<FilterBarProps> = ({
     { id: 'modern', label: 'مودرن Modern' },
     { id: 'luxury', label: 'فاخر Luxury' },
     { id: 'minimal', label: 'مينيمال Minimal' },
-    { id: 'classic', label: 'كلاسيك Classic' },
     { id: 'contemporary', label: 'معاصر Contemporary' },
+    { id: 'classic', label: 'كلاسيك Classic' },
   ];
 
   const colors: { id: ColorType | 'all'; label: string; bgClass: string }[] = [

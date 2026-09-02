@@ -43,18 +43,18 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 h-[68px] flex items-center transition-all duration-400 ${
           isScrolled || !isHome
-            ? 'glass-nav bg-brand-dark/90 shadow-luxury border-b border-brand-gold/15 backdrop-blur-md'
-            : 'bg-gradient-to-b from-brand-dark/80 via-brand-dark/30 to-transparent'
+            ? 'glass-nav bg-brand-dark/95 shadow-luxury border-b border-brand-gold/15 backdrop-blur-md'
+            : 'bg-gradient-to-b from-brand-dark/85 via-brand-dark/40 to-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
           
           {/* Brand Identity */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl overflow-hidden border border-brand-gold/30 p-0.5 bg-brand-dark shadow-md group-hover:border-brand-gold transition-colors">
+            <div className="w-10 h-10 rounded-xl overflow-hidden border border-brand-gold/30 p-0.5 bg-brand-dark shadow-md group-hover:border-brand-gold transition-colors shrink-0">
               <img
                 src={logoImg}
-                alt="المجد - AL MĀGD"
+                alt="شركة المجد للمطابخ الحديثة و PVC"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -68,12 +68,12 @@ export const Navbar: React.FC = () => {
                 </span>
               </div>
               <span className="text-[10px] text-brand-champagne/80 tracking-wider">
-                Modern Kitchens & PVC
+                Modern Kitchens & P V C
               </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation Links (Single Line) */}
+          {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-1.5">
             {navLinks.map(link => {
               const active = isActive(link.path);
@@ -128,13 +128,13 @@ export const Navbar: React.FC = () => {
               )}
             </Link>
 
-            {/* Primary CTA */}
+            {/* Prominent CTA Button ("Start Your Project") */}
             <Link
               to="/request"
               className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-brand-gold via-brand-champagne to-brand-gold text-brand-dark shadow-luxury-gold hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all whitespace-nowrap"
             >
               <Sparkle size={14} weight="fill" className="text-brand-dark" />
-              <span>اطلب تصميمك</span>
+              <span>ابدأ مشروعك</span>
             </Link>
 
             {/* Mobile Menu Trigger */}
