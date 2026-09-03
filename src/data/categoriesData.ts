@@ -14,9 +14,9 @@ export const categoriesData: CategoryInfo[] = [
     id: 'bedrooms',
     nameArabic: 'غرف نوم وأجنحة فندقية',
     nameEn: 'Luxury Bedroom Suites',
-    description: 'تصميم وتصنيع غرف نوم رئيسية ماستر بتكسيات خشبية جدارية، خلفيات سرير منجدة، تسريحات، وإضاءات محيطية دافئة.',
-    image: getProjectImage('p11.jpg'),
-    count: 0
+    description: 'تصميم وتصنيع غرف نوم رئيسية ماستر بتكسيات خشبية جدارية، خلفيات سرير منجدة، تسريحات، ودواليب ملابس مدمجة.',
+    image: getProjectImage('b5.jpg'),
+    count: 14
   },
   {
     id: 'wardrobes',

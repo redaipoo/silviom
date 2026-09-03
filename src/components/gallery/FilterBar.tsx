@@ -34,9 +34,9 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   activeFilterCount,
 }) => {
   const categories: { id: CategoryType; label: string }[] = [
-    { id: 'all', label: 'الكل' },
+    { id: 'all', label: 'الكل (45)' },
     { id: 'kitchens', label: 'مطابخ حديثة (31)' },
-    { id: 'bedrooms', label: 'غرف نوم فاخرة' },
+    { id: 'bedrooms', label: 'غرف نوم فاخرة (14)' },
     { id: 'wardrobes', label: 'خزائن ودواليب' },
     { id: 'interior-design', label: 'ديكور وتصميم داخلي' },
     { id: 'rendering', label: 'أعمال PVC وأبواب' },
