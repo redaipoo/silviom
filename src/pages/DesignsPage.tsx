@@ -6,7 +6,7 @@ import { DesignCard } from '../components/gallery/DesignCard';
 import { FilterBar } from '../components/gallery/FilterBar';
 import { MobileFilterDrawer } from '../components/gallery/MobileFilterDrawer';
 import { FullscreenViewer } from '../components/viewer/FullscreenViewer';
-import { MagnifyingGlass, ImageSquare } from '@phosphor-icons/react';
+import { MagnifyingGlass, ImageSquare, WhatsappLogo, Sparkle } from '@phosphor-icons/react';
 
 export const DesignsPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -189,22 +189,60 @@ export const DesignsPage: React.FC = () => {
             ))}
           </div>
         ) : (
-          /* Empty State */
-          <div className="py-20 text-center space-y-4 max-w-md mx-auto">
-            <div className="w-14 h-14 rounded-2xl bg-brand-surface border border-brand-gold/20 flex items-center justify-center text-brand-gold/60 mx-auto">
-              <ImageSquare size={28} weight="duotone" />
+          /* Empty State or Coming Soon for Pending Category */
+          selectedCategory !== 'all' && selectedCategory !== 'kitchens' ? (
+            <div className="py-14 sm:py-16 text-center space-y-5 max-w-lg mx-auto bg-brand-surface/50 border border-brand-gold/30 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+              <div className="w-16 h-16 rounded-2xl bg-brand-surface border border-brand-gold/40 flex items-center justify-center text-brand-gold mx-auto shadow-luxury-gold">
+                <Sparkle size={32} weight="duotone" />
+              </div>
+              <div className="space-y-2">
+                <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-brand-gold/15 text-brand-gold border border-brand-gold/30 inline-block">
+                  قيد تجهيز ألبوم الصور وسيتم إضافتها قريباً
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-brand-ivory font-arabic">
+                  تصاميم {selectedCategory === 'bedrooms' ? 'غرف النوم الفاخرة' : selectedCategory === 'wardrobes' ? 'خزائن ودواليب الملابس' : selectedCategory === 'interior-design' ? 'الديكور والتصميم الداخلي' : selectedCategory === 'rendering' ? 'أعمال PVC والأبواب' : 'التصاميم ثلاثية الأبعاد 3D'}
+                </h3>
+                <p className="text-xs sm:text-sm text-brand-ivory/70 leading-relaxed font-light">
+                  نقوم حالياً بتجهيز صور ومشاريع هذا القسم لإضافتها في الموقع. يمكنك التواصل معنا مباشرة لطلب نماذج الكتالوج الخاص وتفصيل تصميم مخصص لمساحتك عبر واتساب.
+                </p>
+              </div>
+
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a
+                  href={`https://wa.me/218945919679?text=${encodeURIComponent(`السلام عليكم شركة المجد، أود الاستفسار وطلب كتالوج وتصاميم ${selectedCategory === 'bedrooms' ? 'غرف النوم' : selectedCategory === 'wardrobes' ? 'الدواليب والخزائن' : selectedCategory === 'interior-design' ? 'الديكور الداخلي' : selectedCategory === 'rendering' ? 'أعمال PVC والأبواب' : 'التصاميم 3D'}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#25D366] text-white font-bold text-xs shadow-luxury hover:bg-[#20bd5a] transition-all"
+                >
+                  <WhatsappLogo size={18} weight="fill" />
+                  <span>طلب الكتالوج عبر واتساب</span>
+                </a>
+
+                <button
+                  onClick={handleResetFilters}
+                  className="w-full sm:w-auto px-5 py-3 rounded-xl bg-brand-surface border border-brand-gold/30 text-brand-ivory hover:text-brand-gold font-bold text-xs transition-all"
+                >
+                  معرض المطابخ (31 تصميم)
+                </button>
+              </div>
             </div>
-            <h3 className="text-base font-bold text-brand-ivory">لا توجد تصاميم مطابقة للبحث</h3>
-            <p className="text-xs text-brand-ivory/60 leading-relaxed">
-              جرّب تخفيف الفلاتر أو استخدام كلمات بحث أخرى لاستعراض المزيد من الخيارات
-            </p>
-            <button
-              onClick={handleResetFilters}
-              className="px-5 py-2.5 rounded-xl bg-brand-gold text-brand-dark font-bold text-xs shadow-luxury-gold hover:bg-brand-champagne transition-all"
-            >
-              إعادة ضبط الفلاتر
-            </button>
-          </div>
+          ) : (
+            <div className="py-20 text-center space-y-4 max-w-md mx-auto">
+              <div className="w-14 h-14 rounded-2xl bg-brand-surface border border-brand-gold/20 flex items-center justify-center text-brand-gold/60 mx-auto">
+                <ImageSquare size={28} weight="duotone" />
+              </div>
+              <h3 className="text-base font-bold text-brand-ivory">لا توجد تصاميم مطابقة للبحث</h3>
+              <p className="text-xs text-brand-ivory/60 leading-relaxed">
+                جرّب تخفيف الفلاتر أو استخدام كلمات بحث أخرى لاستعراض المزيد من الخيارات
+              </p>
+              <button
+                onClick={handleResetFilters}
+                className="px-5 py-2.5 rounded-xl bg-brand-gold text-brand-dark font-bold text-xs shadow-luxury-gold hover:bg-brand-champagne transition-all"
+              >
+                إعادة ضبط الفلاتر
+              </button>
+            </div>
+          )
         )}
 
       </div>

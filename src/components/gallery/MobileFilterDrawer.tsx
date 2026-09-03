@@ -36,8 +36,13 @@ export const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({
   totalResultsCount,
 }) => {
   const categories: { id: CategoryType; label: string }[] = [
-    { id: 'all', label: 'جميع المطابخ (31)' },
-    { id: 'kitchens', label: 'مطابخ حديثة' },
+    { id: 'all', label: 'الكل' },
+    { id: 'kitchens', label: 'مطابخ حديثة (31)' },
+    { id: 'bedrooms', label: 'غرف نوم فاخرة' },
+    { id: 'wardrobes', label: 'خزائن ودواليب' },
+    { id: 'interior-design', label: 'ديكور وتصميم داخلي' },
+    { id: 'rendering', label: 'أعمال PVC وأبواب' },
+    { id: '3d-designs', label: 'تصاميم 3D' },
   ];
 
   const styles: { id: StyleType | 'all'; label: string }[] = [

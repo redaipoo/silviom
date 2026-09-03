@@ -48,8 +48,8 @@ export const CategoryGrid: React.FC = () => {
               </div>
 
               {/* Count Badge */}
-              <div className="absolute top-4 right-4 px-2.5 py-1 rounded-full text-[10px] font-bold bg-brand-dark/80 text-brand-champagne border border-brand-gold/30 backdrop-blur-sm">
-                {category.count} تصميم
+              <div className="absolute top-4 right-4 px-2.5 py-1 rounded-full text-[10px] font-bold bg-brand-dark/85 text-brand-champagne border border-brand-gold/30 backdrop-blur-sm">
+                {category.count > 0 ? `${category.count} تصميم` : 'قريباً • طلب كتالوج'}
               </div>
 
               {/* Card Content */}
@@ -63,7 +63,7 @@ export const CategoryGrid: React.FC = () => {
                 </p>
 
                 <div className="pt-2 flex items-center justify-between text-xs font-bold text-brand-gold">
-                  <span>تصفح التصاميم</span>
+                  <span>{category.count > 0 ? 'تصفح التصاميم' : 'طلب كتالوج عبر واتساب'}</span>
                   <div className="w-6 h-6 rounded-full bg-brand-surface/80 border border-brand-gold/30 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-all">
                     <ArrowLeft size={12} weight="bold" />
                   </div>
