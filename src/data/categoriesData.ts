@@ -35,19 +35,11 @@ export const categoriesData: CategoryInfo[] = [
     count: 0
   },
   {
-    id: 'rendering',
+    id: 'pvc-doors',
     nameArabic: 'أعمال PVC وأبواب عصرية',
     nameEn: 'PVC Doors & CNC Custom Works',
     description: 'تصنيع أبواب ونوافذ PVC عازلة للصوت والحرارة، وأبواب غرف ومداخل MDF محفورة بأحدث ماكينات CNC الدقيقة.',
     image: getProjectImage('p28.jpg'),
-    count: 0
-  },
-  {
-    id: '3d-designs',
-    nameArabic: 'تصاميم 3D ثلاثية الأبعاد',
-    nameEn: '3D Spatial Planning & Renders',
-    description: 'مخططات وتصاميم هندسية ثلاثية الأبعاد لمعاينة المساحة وتوزيع الأثاث واختيار الخامات بدقة تامة قبل بدء التصنيع.',
-    image: getProjectImage('p31.jpg'),
     count: 0
   }
 ];

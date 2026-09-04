@@ -33,14 +33,13 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   onResetFilters,
   activeFilterCount,
 }) => {
-  const categories: { id: CategoryType; label: string }[] = [
-    { id: 'all', label: 'الكل (55)' },
-    { id: 'kitchens', label: 'مطابخ حديثة (31)' },
-    { id: 'bedrooms', label: 'غرف نوم فاخرة (14)' },
-    { id: 'wardrobes', label: 'خزائن وغرف غسيل (10)' },
-    { id: 'interior-design', label: 'ديكور وتصميم داخلي' },
-    { id: 'rendering', label: 'أعمال PVC وأبواب' },
-    { id: '3d-designs', label: 'تصاميم 3D' },
+  const categories: { id: CategoryType; label: string; badge?: string }[] = [
+    { id: 'all', label: 'جميع التصاميم', badge: '55' },
+    { id: 'kitchens', label: 'مطابخ حديثة', badge: '31' },
+    { id: 'bedrooms', label: 'غرف نوم فاخرة', badge: '14' },
+    { id: 'wardrobes', label: 'خزائن وغرف غسيل', badge: '10' },
+    { id: 'interior-design', label: 'ديكور وتصميم صالات', badge: 'كتالوج' },
+    { id: 'pvc-doors', label: 'أبواب وأعمال PVC', badge: 'كتالوج' },
   ];
 
   const styles: { id: StyleType | 'all'; label: string }[] = [
@@ -72,22 +71,33 @@ export const FilterBar: React.FC<FilterBarProps> = ({
 
   return (
     <div className="space-y-4">
-      {/* Top Main Category Pills */}
+      {/* Top Main Category Pills with Clear High-Contrast Badges */}
       <div className="flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none max-w-full">
+        <div className="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-none max-w-full">
           {categories.map(cat => {
             const isSelected = selectedCategory === cat.id;
             return (
               <button
                 key={cat.id}
                 onClick={() => onSelectCategory(cat.id)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold shrink-0 transition-all ${
+                className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-bold shrink-0 transition-all ${
                   isSelected
-                    ? 'bg-brand-gold text-brand-dark shadow-luxury-gold scale-[1.02]'
-                    : 'bg-brand-surface/70 text-brand-ivory/80 hover:text-brand-champagne hover:bg-brand-surface border border-brand-gold/15'
+                    ? 'bg-gradient-to-r from-brand-gold via-brand-champagne to-brand-gold text-brand-dark shadow-luxury-gold ring-2 ring-brand-gold/50 scale-[1.03]'
+                    : 'bg-brand-surface/80 text-brand-ivory/90 hover:text-brand-champagne hover:bg-brand-surface border border-brand-gold/25 hover:border-brand-gold/50'
                 }`}
               >
-                {cat.label}
+                <span>{cat.label}</span>
+                {cat.badge && (
+                  <span
+                    className={`px-2 py-0.5 rounded-full text-[11px] font-black transition-colors ${
+                      isSelected
+                        ? 'bg-brand-dark/90 text-brand-gold'
+                        : 'bg-brand-gold/15 text-brand-gold border border-brand-gold/30'
+                    }`}
+                  >
+                    {cat.badge}
+                  </span>
+                )}
               </button>
             );
           })}

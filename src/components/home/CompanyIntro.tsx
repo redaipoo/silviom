@@ -41,7 +41,7 @@ export const CompanyIntro: React.FC = () => {
             
             {/* Logo + Identity Header */}
             <div className="flex items-center gap-3.5">
-              <div className="w-14 h-14 rounded-2xl overflow-hidden border border-brand-gold/40 p-1 bg-brand-dark shadow-luxury shrink-0">
+              <div className="w-16 h-16 rounded-2xl overflow-hidden border border-brand-gold/40 p-1 bg-black shadow-luxury-gold shrink-0">
                 <img
                   src={logoImg}
                   alt="شركة المجد للمطابخ الحديثة و PVC"

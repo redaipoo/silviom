@@ -6,7 +6,7 @@ import { DesignCard } from '../components/gallery/DesignCard';
 import { FilterBar } from '../components/gallery/FilterBar';
 import { MobileFilterDrawer } from '../components/gallery/MobileFilterDrawer';
 import { FullscreenViewer } from '../components/viewer/FullscreenViewer';
-import { MagnifyingGlass, ImageSquare, WhatsappLogo, Sparkle } from '@phosphor-icons/react';
+import { ImageSquare, WhatsappLogo, Sparkle } from '@phosphor-icons/react';
 
 export const DesignsPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -17,14 +17,12 @@ export const DesignsPage: React.FC = () => {
   const colorParam = (searchParams.get('color') as ColorType | 'all') || 'all';
   const spaceParam = (searchParams.get('space') as SpaceType | 'all') || 'all';
   const sortParam = (searchParams.get('sort') as SortType) || 'newest';
-  const searchParam = searchParams.get('q') || '';
 
   const [selectedCategory, setSelectedCategory] = useState<CategoryType>(categoryParam);
   const [selectedStyle, setSelectedStyle] = useState<StyleType | 'all'>(styleParam);
   const [selectedColor, setSelectedColor] = useState<ColorType | 'all'>(colorParam);
   const [selectedSpace, setSelectedSpace] = useState<SpaceType | 'all'>(spaceParam);
   const [sortBy, setSortBy] = useState<SortType>(sortParam);
-  const [searchQuery, setSearchQuery] = useState(searchParam);
 
   const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
   const [selectedViewerDesign, setSelectedViewerDesign] = useState<DesignItem | null>(null);
@@ -38,10 +36,9 @@ export const DesignsPage: React.FC = () => {
     if (selectedColor !== 'all') params.color = selectedColor;
     if (selectedSpace !== 'all') params.space = selectedSpace;
     if (sortBy !== 'newest') params.sort = sortBy;
-    if (searchQuery.trim()) params.q = searchQuery.trim();
 
     setSearchParams(params, { replace: true });
-  }, [selectedCategory, selectedStyle, selectedColor, selectedSpace, sortBy, searchQuery, setSearchParams]);
+  }, [selectedCategory, selectedStyle, selectedColor, selectedSpace, sortBy, setSearchParams]);
 
   // Sync URL params when back/forward is used
   useEffect(() => {
@@ -50,7 +47,6 @@ export const DesignsPage: React.FC = () => {
     setSelectedColor((searchParams.get('color') as ColorType | 'all') || 'all');
     setSelectedSpace((searchParams.get('space') as SpaceType | 'all') || 'all');
     setSortBy((searchParams.get('sort') as SortType) || 'newest');
-    setSearchQuery(searchParams.get('q') || '');
   }, [searchParams]);
 
   // Filter & Sort Logic
@@ -61,21 +57,6 @@ export const DesignsPage: React.FC = () => {
         if (selectedStyle !== 'all' && item.style !== selectedStyle) return false;
         if (selectedColor !== 'all' && !item.colors.includes(selectedColor)) return false;
         if (selectedSpace !== 'all' && item.space !== selectedSpace) return false;
-        
-        if (searchQuery.trim()) {
-          const q = searchQuery.toLowerCase().trim();
-          const matchTitle = item.title.toLowerCase().includes(q) || (item.titleEn && item.titleEn.toLowerCase().includes(q));
-          const matchCategory = item.categoryArabic.toLowerCase().includes(q);
-          const matchStyle = item.styleArabic.toLowerCase().includes(q);
-          const matchColors = item.colorsArabic.some(c => c.toLowerCase().includes(q));
-          const matchTags = item.tags.some(t => t.toLowerCase().includes(q));
-          const matchDesc = item.description.toLowerCase().includes(q);
-
-          if (!matchTitle && !matchCategory && !matchStyle && !matchColors && !matchTags && !matchDesc) {
-            return false;
-          }
-        }
-
         return true;
       })
       .sort((a, b) => {
@@ -83,13 +64,12 @@ export const DesignsPage: React.FC = () => {
         if (sortBy === 'most-saved') return b.favoritesCount - a.favoritesCount;
         return new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime();
       });
-  }, [selectedCategory, selectedStyle, selectedColor, selectedSpace, sortBy, searchQuery]);
+  }, [selectedCategory, selectedStyle, selectedColor, selectedSpace, sortBy]);
 
   const activeFilterCount = (selectedCategory !== 'all' ? 1 : 0) +
     (selectedStyle !== 'all' ? 1 : 0) +
     (selectedColor !== 'all' ? 1 : 0) +
-    (selectedSpace !== 'all' ? 1 : 0) +
-    (searchQuery.trim() ? 1 : 0);
+    (selectedSpace !== 'all' ? 1 : 0);
 
   const handleResetFilters = () => {
     setSelectedCategory('all');
@@ -97,7 +77,6 @@ export const DesignsPage: React.FC = () => {
     setSelectedColor('all');
     setSelectedSpace('all');
     setSortBy('newest');
-    setSearchQuery('');
   };
 
   const handleQuickView = (design: DesignItem) => {
@@ -110,38 +89,17 @@ export const DesignsPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Page Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10">
+        <div className="text-center max-w-2xl mx-auto mb-8">
           <h1 className="text-3xl sm:text-5xl font-extrabold text-brand-ivory tracking-tight font-arabic">
-            التصاميم
+            معرض التصاميم
           </h1>
           <p className="text-xs sm:text-sm text-brand-ivory/70 mt-2.5 leading-relaxed font-light">
-            اكتشف مجموعة من تصاميمنا واختر الأسلوب الذي يناسبك.
+            تصفح أقسام تصاميمنا الحصرية من المطابخ وغرف النوم والخزائن واختر الأسلوب الأنسب لمساحتك
           </p>
         </div>
 
-        {/* Search & Filter Toolbar */}
-        <div className="space-y-5 mb-10">
-          {/* Real-time Search Input Box */}
-          <div className="relative max-w-xl mx-auto">
-            <MagnifyingGlass size={18} weight="bold" className="absolute right-4 top-1/2 -translate-y-1/2 text-brand-gold" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
-              placeholder="ابحث بالاسم، اللون (بيج، أسود، خشبي)، الطراز، أو الخامة..."
-              className="w-full bg-brand-surface/70 border border-brand-gold/25 focus:border-brand-gold rounded-2xl pr-11 pl-4 py-3 text-xs sm:text-sm text-brand-ivory placeholder-brand-ivory/40 outline-none transition-all shadow-lg backdrop-blur-md"
-            />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery('')}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-xs text-brand-gold hover:text-brand-champagne"
-              >
-                مسح
-              </button>
-            )}
-          </div>
-
-          {/* Filter Bar */}
+        {/* Categories & Filter Toolbar (Search Removed for Simplicity & Clarity) */}
+        <div className="mb-8">
           <FilterBar
             selectedCategory={selectedCategory}
             onSelectCategory={setSelectedCategory}
@@ -200,7 +158,7 @@ export const DesignsPage: React.FC = () => {
                   قيد تجهيز ألبوم الصور وسيتم إضافتها قريباً
                 </span>
                 <h3 className="text-lg sm:text-xl font-bold text-brand-ivory font-arabic">
-                  تصاميم {selectedCategory === 'interior-design' ? 'الديكور والتصميم الداخلي' : selectedCategory === 'rendering' ? 'أعمال PVC والأبواب' : 'التصاميم ثلاثية الأبعاد 3D'}
+                  تصاميم {selectedCategory === 'interior-design' ? 'الديكور والتصميم الداخلي للصالات' : 'أبواب وأعمال PVC العصرية'}
                 </h3>
                 <p className="text-xs sm:text-sm text-brand-ivory/70 leading-relaxed font-light">
                   نقوم حالياً بتجهيز صور ومشاريع هذا القسم لإضافتها في الموقع. يمكنك التواصل معنا مباشرة لطلب نماذج الكتالوج الخاص وتفصيل تصميم مخصص لمساحتك عبر واتساب.
@@ -209,7 +167,7 @@ export const DesignsPage: React.FC = () => {
 
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href={`https://wa.me/218945919679?text=${encodeURIComponent(`السلام عليكم شركة المجد، أود الاستفسار وطلب كتالوج وتصاميم ${selectedCategory === 'interior-design' ? 'الديكور الداخلي' : selectedCategory === 'rendering' ? 'أعمال PVC والأبواب' : 'التصاميم 3D'}`)}`}
+                  href={`https://wa.me/218945919679?text=${encodeURIComponent(`السلام عليكم شركة المجد، أود الاستفسار وطلب كتالوج وتصاميم ${selectedCategory === 'interior-design' ? 'الديكور والتصميم الداخلي' : 'أعمال PVC والأبواب'}`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#25D366] text-white font-bold text-xs shadow-luxury hover:bg-[#20bd5a] transition-all"
@@ -231,9 +189,9 @@ export const DesignsPage: React.FC = () => {
               <div className="w-14 h-14 rounded-2xl bg-brand-surface border border-brand-gold/20 flex items-center justify-center text-brand-gold/60 mx-auto">
                 <ImageSquare size={28} weight="duotone" />
               </div>
-              <h3 className="text-base font-bold text-brand-ivory">لا توجد تصاميم مطابقة للبحث</h3>
+              <h3 className="text-base font-bold text-brand-ivory">لا توجد تصاميم مطابقة لهذا الاختيار</h3>
               <p className="text-xs text-brand-ivory/60 leading-relaxed">
-                جرّب تخفيف الفلاتر أو استخدام كلمات بحث أخرى لاستعراض المزيد من الخيارات
+                جرّب تغيير خيارات النمط أو اللون أو المساحة لاستعراض المزيد من الخيارات
               </p>
               <button
                 onClick={handleResetFilters}

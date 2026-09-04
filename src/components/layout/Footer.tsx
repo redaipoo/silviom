@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
           {/* Column 1 & 2: Brand & About */}
           <div className="lg:col-span-2 space-y-5">
             <Link to="/" className="flex items-center gap-3.5 group">
-              <div className="w-14 h-14 rounded-2xl overflow-hidden border border-brand-gold/40 p-1 bg-brand-surface shadow-luxury">
+              <div className="w-16 h-16 rounded-2xl overflow-hidden border border-brand-gold/40 p-1 bg-black shadow-luxury-gold group-hover:border-brand-gold transition-all shrink-0">
                 <img
                   src={logoImg}
                   alt="شركة المجد للمطابخ الحديثة و PVC"
@@ -123,13 +123,13 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/designs?category=shops" className="text-brand-ivory/70 hover:text-brand-champagne transition-colors">
-                  ديكورات محلات ومعارض
+                <Link to="/designs?category=interior-design" className="text-brand-ivory/70 hover:text-brand-champagne transition-colors">
+                  ديكور وتصميم صالات
                 </Link>
               </li>
               <li>
-                <Link to="/designs?category=3d-designs" className="text-brand-ivory/70 hover:text-brand-champagne transition-colors">
-                  تصاميم ورندر 3D
+                <Link to="/designs?category=pvc-doors" className="text-brand-ivory/70 hover:text-brand-champagne transition-colors">
+                  أبواب وأعمال PVC
                 </Link>
               </li>
             </ul>
