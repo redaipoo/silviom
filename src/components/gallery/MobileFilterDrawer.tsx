@@ -36,10 +36,10 @@ export const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({
   totalResultsCount,
 }) => {
   const categories: { id: CategoryType; label: string }[] = [
-    { id: 'all', label: 'الكل (45)' },
+    { id: 'all', label: 'الكل (55)' },
     { id: 'kitchens', label: 'مطابخ حديثة (31)' },
     { id: 'bedrooms', label: 'غرف نوم فاخرة (14)' },
-    { id: 'wardrobes', label: 'خزائن ودواليب' },
+    { id: 'wardrobes', label: 'خزائن وغرف غسيل (10)' },
     { id: 'interior-design', label: 'ديكور وتصميم داخلي' },
     { id: 'rendering', label: 'أعمال PVC وأبواب' },
     { id: '3d-designs', label: 'تصاميم 3D' },

@@ -190,7 +190,7 @@ export const DesignsPage: React.FC = () => {
           </div>
         ) : (
           /* Empty State or Coming Soon for Pending Category */
-          selectedCategory !== 'all' && selectedCategory !== 'kitchens' && selectedCategory !== 'bedrooms' ? (
+          selectedCategory !== 'all' && selectedCategory !== 'kitchens' && selectedCategory !== 'bedrooms' && selectedCategory !== 'wardrobes' ? (
             <div className="py-14 sm:py-16 text-center space-y-5 max-w-lg mx-auto bg-brand-surface/50 border border-brand-gold/30 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur-md">
               <div className="w-16 h-16 rounded-2xl bg-brand-surface border border-brand-gold/40 flex items-center justify-center text-brand-gold mx-auto shadow-luxury-gold">
                 <Sparkle size={32} weight="duotone" />
@@ -200,7 +200,7 @@ export const DesignsPage: React.FC = () => {
                   قيد تجهيز ألبوم الصور وسيتم إضافتها قريباً
                 </span>
                 <h3 className="text-lg sm:text-xl font-bold text-brand-ivory font-arabic">
-                  تصاميم {selectedCategory === 'wardrobes' ? 'خزائن ودواليب الملابس' : selectedCategory === 'interior-design' ? 'الديكور والتصميم الداخلي' : selectedCategory === 'rendering' ? 'أعمال PVC والأبواب' : 'التصاميم ثلاثية الأبعاد 3D'}
+                  تصاميم {selectedCategory === 'interior-design' ? 'الديكور والتصميم الداخلي' : selectedCategory === 'rendering' ? 'أعمال PVC والأبواب' : 'التصاميم ثلاثية الأبعاد 3D'}
                 </h3>
                 <p className="text-xs sm:text-sm text-brand-ivory/70 leading-relaxed font-light">
                   نقوم حالياً بتجهيز صور ومشاريع هذا القسم لإضافتها في الموقع. يمكنك التواصل معنا مباشرة لطلب نماذج الكتالوج الخاص وتفصيل تصميم مخصص لمساحتك عبر واتساب.
@@ -209,7 +209,7 @@ export const DesignsPage: React.FC = () => {
 
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href={`https://wa.me/218945919679?text=${encodeURIComponent(`السلام عليكم شركة المجد، أود الاستفسار وطلب كتالوج وتصاميم ${selectedCategory === 'wardrobes' ? 'الدواليب والخزائن' : selectedCategory === 'interior-design' ? 'الديكور الداخلي' : selectedCategory === 'rendering' ? 'أعمال PVC والأبواب' : 'التصاميم 3D'}`)}`}
+                  href={`https://wa.me/218945919679?text=${encodeURIComponent(`السلام عليكم شركة المجد، أود الاستفسار وطلب كتالوج وتصاميم ${selectedCategory === 'interior-design' ? 'الديكور الداخلي' : selectedCategory === 'rendering' ? 'أعمال PVC والأبواب' : 'التصاميم 3D'}`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#25D366] text-white font-bold text-xs shadow-luxury hover:bg-[#20bd5a] transition-all"
@@ -222,7 +222,7 @@ export const DesignsPage: React.FC = () => {
                   onClick={handleResetFilters}
                   className="w-full sm:w-auto px-5 py-3 rounded-xl bg-brand-surface border border-brand-gold/30 text-brand-ivory hover:text-brand-gold font-bold text-xs transition-all"
                 >
-                  معرض المطابخ (31 تصميم)
+                  عرض جميع التصاميم (55 تصميم)
                 </button>
               </div>
             </div>

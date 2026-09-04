@@ -20,11 +20,11 @@ export const categoriesData: CategoryInfo[] = [
   },
   {
     id: 'wardrobes',
-    nameArabic: 'خزائن ودواليب ملابس ودريسنج روم',
-    nameEn: 'Custom Wardrobes & Dressing Rooms',
-    description: 'تفصيل دواليب ملابس مدمجة ودريسنج روم (Walk-in Closets) بأبواب زجاجية عاكسة، تقسيمات ذكية، وإضاءات LED تلقائية.',
-    image: getProjectImage('p16.jpg'),
-    count: 0
+    nameArabic: 'خزائن ودواليب وغرف غسيل',
+    nameEn: 'Custom Wardrobes, Closets & Laundry Units',
+    description: 'تفصيل دواليب ملابس مدمجة ودريسنج روم زجاجي بتقسيمات ذكية، ووحدات خزائن غسيل مدمجة متطورة.',
+    image: getProjectImage('w3.jpg'),
+    count: 10
   },
   {
     id: 'interior-design',
