@@ -36,10 +36,10 @@ export const categoriesData: CategoryInfo[] = [
   },
   {
     id: 'pvc-doors',
-    nameArabic: 'أعمال PVC وأبواب عصرية',
-    nameEn: 'PVC Doors & CNC Custom Works',
-    description: 'تصنيع أبواب ونوافذ PVC عازلة للصوت والحرارة، وأبواب غرف ومداخل MDF محفورة بأحدث ماكينات CNC الدقيقة.',
-    image: getProjectImage('p28.jpg'),
-    count: 0
+    nameArabic: 'أبواب خشب و PVC عصرية',
+    nameEn: 'PVC Doors & Custom Luxury Entrances',
+    description: 'تصنيع وتفصيل أبواب داخلية وخارجية (PVC عازل للصوت والحرارة، MDF محفور CNC، وخشب مصفح للفيلات) بتشطيبات راقية.',
+    image: getProjectImage('dr8.jpg'),
+    count: 8
   }
 ];
