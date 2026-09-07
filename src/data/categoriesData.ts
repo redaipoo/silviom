@@ -30,9 +30,9 @@ export const categoriesData: CategoryInfo[] = [
     id: 'interior-design',
     nameArabic: 'ديكور وتصميم داخلي للصالات',
     nameEn: 'Interior Architecture & Decor',
-    description: 'تنسيق متكامل للصالات والمجالس، ديكورات شاشات بتكسيات بديل رخام وخشب، وأركان كوفي كورنر بتشطيبات راقية.',
-    image: getProjectImage('p29.jpg'),
-    count: 0
+    description: 'تنسيق متكامل للصالات والمجالس، ديكورات شاشات بتكسيات بديل رخام وخشب، قواطع خشبية مفرغة، ومداخل فخمة بتشطيبات راقية.',
+    image: getProjectImage('d4.jpg'),
+    count: 8
   },
   {
     id: 'pvc-doors',
