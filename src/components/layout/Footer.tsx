@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
           {/* Column 1 & 2: Brand & About */}
           <div className="lg:col-span-2 space-y-5">
             <Link to="/" className="flex items-center gap-3.5 group">
-              <div className="w-16 h-16 rounded-2xl overflow-hidden border border-brand-gold/40 p-1 bg-black shadow-luxury-gold group-hover:border-brand-gold transition-all shrink-0">
+              <div className="w-16 h-16 rounded-2xl overflow-hidden border border-brand-gold/30 p-1 bg-brand-surface/40 shadow-luxury-gold group-hover:border-brand-gold transition-all shrink-0">
                 <img
                   src={logoImg}
                   alt="شركة المجد للمطابخ الحديثة و PVC"

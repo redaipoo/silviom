@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
           
           {/* Brand Identity */}
           <Link to="/" className="flex items-center gap-3 group py-1">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden border border-brand-gold/40 p-0.5 bg-black shadow-luxury-gold group-hover:border-brand-gold transition-all shrink-0">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden border border-brand-gold/30 p-1 bg-brand-dark/80 shadow-luxury-gold group-hover:border-brand-gold transition-all shrink-0">
               <img
                 src={logoImg}
                 alt="شركة المجد للمطابخ الحديثة و PVC"

@@ -48,7 +48,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
             <img
               src={logoImg}
               alt="المجد"
-              className="w-11 h-11 object-contain rounded-xl border border-brand-gold/40 p-0.5 bg-black shadow-md shrink-0"
+              className="w-11 h-11 object-contain rounded-xl border border-brand-gold/30 p-0.5 bg-brand-dark/80 shadow-md shrink-0"
             />
             <div>
               <h3 className="font-extrabold text-brand-ivory text-base">المجد</h3>
