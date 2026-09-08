@@ -40,7 +40,7 @@ export const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({
     { id: 'bedrooms', label: 'غرف نوم فاخرة (14)' },
     { id: 'wardrobes', label: 'خزائن وغرف غسيل (10)' },
     { id: 'interior-design', label: 'ديكورات وتصميم صالات (8)' },
-    { id: 'pvc-doors', label: 'أبواب وأعمال PVC (8)' },
+    { id: 'pvc-doors', label: 'أبواب ونوافذ و PVC (18)' },
   ];
 
   const styles: { id: StyleType | 'all'; label: string }[] = [

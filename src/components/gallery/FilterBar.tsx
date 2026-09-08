@@ -38,7 +38,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
     { id: 'bedrooms', label: 'غرف نوم فاخرة', badge: '14' },
     { id: 'wardrobes', label: 'خزائن وغرف غسيل', badge: '10' },
     { id: 'interior-design', label: 'ديكورات وتصميم صالات', badge: '8' },
-    { id: 'pvc-doors', label: 'أبواب وأعمال PVC', badge: '8' },
+    { id: 'pvc-doors', label: 'أبواب ونوافذ و PVC', badge: '18' },
   ];
 
   const styles: { id: StyleType | 'all'; label: string }[] = [
