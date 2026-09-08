@@ -34,7 +34,6 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   activeFilterCount,
 }) => {
   const categories: { id: CategoryType; label: string; badge?: string }[] = [
-    { id: 'all', label: 'جميع التصاميم', badge: '71' },
     { id: 'kitchens', label: 'مطابخ حديثة', badge: '31' },
     { id: 'bedrooms', label: 'غرف نوم فاخرة', badge: '14' },
     { id: 'wardrobes', label: 'خزائن وغرف غسيل', badge: '10' },
@@ -139,31 +138,38 @@ export const FilterBar: React.FC<FilterBarProps> = ({
             </select>
           </div>
 
-          {/* Color filter swatch pills */}
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-brand-ivory/60">اللون:</span>
-            <div className="flex items-center gap-1.5">
-              {colors.map(col => {
-                const isSelected = selectedColor === col.id;
-                return (
-                  <button
-                    key={col.id}
-                    onClick={() => onSelectColor(col.id)}
-                    className={`relative w-6 h-6 rounded-full border transition-all ${col.bgClass} ${
-                      isSelected
-                        ? 'border-brand-gold ring-2 ring-brand-gold/60 scale-110'
-                        : 'border-white/30 hover:scale-105'
-                    }`}
-                    title={col.label}
-                  >
-                    {isSelected && (
-                      <Check size={12} weight="bold" className="mx-auto text-brand-gold drop-shadow-md" />
-                    )}
-                  </button>
-                );
-              })}
+          {/* Color filter swatch pills or notice */}
+          {selectedCategory === 'kitchens' || selectedCategory === 'bedrooms' ? (
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-brand-ivory/60">اللون:</span>
+              <div className="flex items-center gap-1.5">
+                {colors.map(col => {
+                  const isSelected = selectedColor === col.id;
+                  return (
+                    <button
+                      key={col.id}
+                      onClick={() => onSelectColor(col.id)}
+                      className={`relative w-6 h-6 rounded-full border transition-all ${col.bgClass} ${
+                        isSelected
+                          ? 'border-brand-gold ring-2 ring-brand-gold/60 scale-110'
+                          : 'border-white/30 hover:scale-105'
+                      }`}
+                      title={col.label}
+                    >
+                      {isSelected && (
+                        <Check size={12} weight="bold" className="mx-auto text-brand-gold drop-shadow-md" />
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-brand-gold/10 border border-brand-gold/25 text-xs text-brand-champagne">
+              <span className="text-brand-gold font-bold">🎨 الألوان:</span>
+              <span>جميع الألوان متوفرة وتُفصّل حسب طلبك واختيارك</span>
+            </div>
+          )}
 
           {/* Space Dropdown */}
           <div className="flex items-center gap-2">

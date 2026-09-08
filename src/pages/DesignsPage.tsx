@@ -12,13 +12,14 @@ export const DesignsPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   // URL State initialization
-  const categoryParam = (searchParams.get('category') as CategoryType) || 'all';
+  const categoryParam = searchParams.get('category') as CategoryType;
+  const initialCategory: CategoryType = (categoryParam && categoryParam !== 'all') ? categoryParam : 'kitchens';
   const styleParam = (searchParams.get('style') as StyleType | 'all') || 'all';
   const colorParam = (searchParams.get('color') as ColorType | 'all') || 'all';
   const spaceParam = (searchParams.get('space') as SpaceType | 'all') || 'all';
   const sortParam = (searchParams.get('sort') as SortType) || 'newest';
 
-  const [selectedCategory, setSelectedCategory] = useState<CategoryType>(categoryParam);
+  const [selectedCategory, setSelectedCategory] = useState<CategoryType>(initialCategory);
   const [selectedStyle, setSelectedStyle] = useState<StyleType | 'all'>(styleParam);
   const [selectedColor, setSelectedColor] = useState<ColorType | 'all'>(colorParam);
   const [selectedSpace, setSelectedSpace] = useState<SpaceType | 'all'>(spaceParam);
@@ -30,8 +31,9 @@ export const DesignsPage: React.FC = () => {
 
   // Sync state to URL params
   useEffect(() => {
-    const params: Record<string, string> = {};
-    if (selectedCategory !== 'all') params.category = selectedCategory;
+    const params: Record<string, string> = {
+      category: selectedCategory,
+    };
     if (selectedStyle !== 'all') params.style = selectedStyle;
     if (selectedColor !== 'all') params.color = selectedColor;
     if (selectedSpace !== 'all') params.space = selectedSpace;
@@ -42,7 +44,8 @@ export const DesignsPage: React.FC = () => {
 
   // Sync URL params when back/forward is used
   useEffect(() => {
-    setSelectedCategory((searchParams.get('category') as CategoryType) || 'all');
+    const cat = searchParams.get('category') as CategoryType;
+    setSelectedCategory((cat && cat !== 'all') ? cat : 'kitchens');
     setSelectedStyle((searchParams.get('style') as StyleType | 'all') || 'all');
     setSelectedColor((searchParams.get('color') as ColorType | 'all') || 'all');
     setSelectedSpace((searchParams.get('space') as SpaceType | 'all') || 'all');
@@ -53,9 +56,9 @@ export const DesignsPage: React.FC = () => {
   const filteredDesigns = useMemo(() => {
     return designsData
       .filter(item => {
-        if (selectedCategory !== 'all' && item.category !== selectedCategory) return false;
+        if (item.category !== selectedCategory) return false;
         if (selectedStyle !== 'all' && item.style !== selectedStyle) return false;
-        if (selectedColor !== 'all' && !item.colors.includes(selectedColor)) return false;
+        if ((selectedCategory === 'kitchens' || selectedCategory === 'bedrooms') && selectedColor !== 'all' && !item.colors.includes(selectedColor)) return false;
         if (selectedSpace !== 'all' && item.space !== selectedSpace) return false;
         return true;
       })
@@ -66,13 +69,11 @@ export const DesignsPage: React.FC = () => {
       });
   }, [selectedCategory, selectedStyle, selectedColor, selectedSpace, sortBy]);
 
-  const activeFilterCount = (selectedCategory !== 'all' ? 1 : 0) +
-    (selectedStyle !== 'all' ? 1 : 0) +
-    (selectedColor !== 'all' ? 1 : 0) +
+  const activeFilterCount = (selectedStyle !== 'all' ? 1 : 0) +
+    ((selectedCategory === 'kitchens' || selectedCategory === 'bedrooms') && selectedColor !== 'all' ? 1 : 0) +
     (selectedSpace !== 'all' ? 1 : 0);
 
   const handleResetFilters = () => {
-    setSelectedCategory('all');
     setSelectedStyle('all');
     setSelectedColor('all');
     setSelectedSpace('all');
@@ -180,7 +181,7 @@ export const DesignsPage: React.FC = () => {
                   onClick={handleResetFilters}
                   className="w-full sm:w-auto px-5 py-3 rounded-xl bg-brand-surface border border-brand-gold/30 text-brand-ivory hover:text-brand-gold font-bold text-xs transition-all"
                 >
-                  عرض جميع التصاميم (71 تصميم)
+                  إعادة ضبط فلاتر التصفية
                 </button>
               </div>
             </div>

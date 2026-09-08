@@ -36,7 +36,6 @@ export const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({
   totalResultsCount,
 }) => {
   const categories: { id: CategoryType; label: string }[] = [
-    { id: 'all', label: 'جميع التصاميم (71)' },
     { id: 'kitchens', label: 'مطابخ حديثة (31)' },
     { id: 'bedrooms', label: 'غرف نوم فاخرة (14)' },
     { id: 'wardrobes', label: 'خزائن وغرف غسيل (10)' },
@@ -149,29 +148,38 @@ export const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({
           </div>
 
           {/* Colors */}
-          <div>
-            <p className="text-xs font-bold text-brand-gold mb-2">اللون الغالب</p>
-            <div className="flex flex-wrap gap-2">
-              {colors.map(col => {
-                const isSelected = selectedColor === col.id;
-                return (
-                  <button
-                    key={col.id}
-                    onClick={() => onSelectColor(col.id)}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs border transition-all ${
-                      isSelected
-                        ? 'bg-brand-gold/20 border-brand-gold text-brand-gold font-bold'
-                        : 'bg-brand-surface text-brand-ivory/80 border border-brand-gold/15'
-                    }`}
-                  >
-                    <span className={`w-3 h-3 rounded-full ${col.bgClass} inline-block border border-white/20`} />
-                    <span>{col.label}</span>
-                    {isSelected && <Check size={12} weight="bold" className="text-brand-gold" />}
-                  </button>
-                );
-              })}
+          {selectedCategory === 'kitchens' || selectedCategory === 'bedrooms' ? (
+            <div>
+              <p className="text-xs font-bold text-brand-gold mb-2">اللون الغالب</p>
+              <div className="flex flex-wrap gap-2">
+                {colors.map(col => {
+                  const isSelected = selectedColor === col.id;
+                  return (
+                    <button
+                      key={col.id}
+                      onClick={() => onSelectColor(col.id)}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs border transition-all ${
+                        isSelected
+                          ? 'bg-brand-gold/20 border-brand-gold text-brand-gold font-bold'
+                          : 'bg-brand-surface text-brand-ivory/80 border border-brand-gold/15'
+                      }`}
+                    >
+                      <span className={`w-3 h-3 rounded-full ${col.bgClass} inline-block border border-white/20`} />
+                      <span>{col.label}</span>
+                      {isSelected && <Check size={12} weight="bold" className="text-brand-gold" />}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="p-3.5 rounded-2xl bg-brand-gold/10 border border-brand-gold/25">
+              <p className="text-xs font-bold text-brand-gold mb-1">🎨 الألوان وخامات التشطيب</p>
+              <p className="text-xs text-brand-champagne/80 leading-relaxed font-light">
+                جميع الألوان والدرجات متوفرة، وتُنفّذ حسب اختيارك وطلبك لمطابقة ديكور منزلك.
+              </p>
+            </div>
+          )}
 
           {/* Space */}
           <div>

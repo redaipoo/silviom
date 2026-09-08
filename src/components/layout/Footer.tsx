@@ -22,12 +22,15 @@ export const Footer: React.FC = () => {
           {/* Column 1 & 2: Brand & About */}
           <div className="lg:col-span-2 space-y-5">
             <Link to="/" className="flex items-center gap-3.5 group">
-              <div className="w-16 h-16 rounded-2xl overflow-hidden border border-brand-gold/30 p-1 bg-brand-surface/40 shadow-luxury-gold group-hover:border-brand-gold transition-all shrink-0">
+              <div className="relative flex items-center justify-center shrink-0 py-1">
                 <img
                   src={logoImg}
                   alt="شركة المجد للمطابخ الحديثة و PVC"
-                  className="w-full h-full object-contain"
+                  className="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
+                {/* Subtle gold beam beneath logo on hover */}
+                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4/5 h-[2px] bg-gradient-to-r from-transparent via-brand-gold/80 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-[1px] pointer-events-none" />
+                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-full h-4 bg-brand-gold/25 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
               <div>
                 <div className="flex items-baseline gap-2">

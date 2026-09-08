@@ -49,12 +49,15 @@ export const Navbar: React.FC = () => {
           
           {/* Brand Identity */}
           <Link to="/" className="flex items-center gap-3 group py-1">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden border border-brand-gold/30 p-1 bg-brand-dark/80 shadow-luxury-gold group-hover:border-brand-gold transition-all shrink-0">
+            <div className="relative flex items-center justify-center shrink-0 py-1">
               <img
                 src={logoImg}
                 alt="شركة المجد للمطابخ الحديثة و PVC"
-                className="w-full h-full object-contain"
+                className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
+              {/* Subtle gold beam beneath logo on hover */}
+              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4/5 h-[2px] bg-gradient-to-r from-transparent via-brand-gold/80 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-[1px] pointer-events-none" />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-full h-3 bg-brand-gold/25 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             </div>
             <div className="flex flex-col">
               <div className="flex items-baseline gap-1.5">

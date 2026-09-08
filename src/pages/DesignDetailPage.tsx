@@ -13,7 +13,8 @@ import {
   ArrowsOut, 
   CheckCircle, 
   Ruler, 
-  Compass
+  Compass,
+  Palette
 } from '@phosphor-icons/react';
 
 export const DesignDetailPage: React.FC = () => {
@@ -141,6 +142,28 @@ export const DesignDetailPage: React.FC = () => {
               <WhatsappLogo size={22} weight="fill" />
               <span>اطلب هذا التصميم عبر واتساب</span>
             </a>
+
+            {/* Color Customization Note for non-kitchen/bedroom designs or color display */}
+            {design.category !== 'kitchens' && design.category !== 'bedrooms' ? (
+              <div className="flex items-start gap-3 p-3.5 sm:p-4 rounded-2xl bg-brand-gold/10 border border-brand-gold/30">
+                <div className="w-8 h-8 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold shrink-0 mt-0.5">
+                  <Palette size={20} weight="duotone" />
+                </div>
+                <div className="space-y-1">
+                  <p className="text-xs sm:text-sm font-bold text-brand-gold">
+                    اللون حسب الطلب • جميع الألوان متوفرة
+                  </p>
+                  <p className="text-xs text-brand-ivory/80 leading-relaxed font-light">
+                    اللون الموضح في الصورة هو نموذج للتصميم فقط؛ يمكنك اختيار وتنفيذ هذا الموديل بأي لون أو درجة تشطيب تفضلها لتناسب ديكور منزلك.
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div className="flex items-center gap-2 text-xs text-brand-champagne/90 p-3 rounded-xl bg-brand-surface/40 border border-brand-gold/15">
+                <Palette size={16} className="text-brand-gold shrink-0" />
+                <span><strong>الألوان الموضحة في النموذج:</strong> {design.colorsArabic.join(' • ')}</span>
+              </div>
+            )}
 
             {/* Specs Grid */}
             <div className="grid grid-cols-2 gap-3 p-4 rounded-2xl bg-brand-surface/40 border border-brand-gold/20">

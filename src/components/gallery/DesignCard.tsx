@@ -79,10 +79,16 @@ export const DesignCard: React.FC<DesignCardProps> = ({
       {/* Content Info (Minimal & Clean) */}
       <div className="p-4 sm:p-5 flex flex-col justify-between flex-1 bg-brand-surface/20">
         <div>
-          <div className="flex items-center gap-2 text-[11px] text-brand-champagne/70 mb-1.5">
+          <div className="flex items-center gap-2 text-[11px] text-brand-champagne/70 mb-1.5 flex-wrap">
             <span>{design.styleArabic}</span>
             <span>•</span>
             <span>المساحة: {design.approximateArea}</span>
+            {design.category !== 'kitchens' && design.category !== 'bedrooms' && (
+              <>
+                <span>•</span>
+                <span className="text-brand-gold font-medium">اللون حسب الطلب</span>
+              </>
+            )}
           </div>
 
           <Link to={`/designs/${design.slug}`}>

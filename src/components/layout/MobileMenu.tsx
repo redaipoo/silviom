@@ -45,11 +45,14 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
         {/* Header */}
         <div className="p-4 border-b border-brand-gold/15 flex items-center justify-between bg-brand-surface/60">
           <div className="flex items-center gap-3">
-            <img
-              src={logoImg}
-              alt="المجد"
-              className="w-11 h-11 object-contain rounded-xl border border-brand-gold/30 p-0.5 bg-brand-dark/80 shadow-md shrink-0"
-            />
+            <div className="relative flex items-center justify-center shrink-0">
+              <img
+                src={logoImg}
+                alt="المجد"
+                className="h-10 w-auto object-contain"
+              />
+              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4/5 h-[2px] bg-gradient-to-r from-transparent via-brand-gold/70 to-transparent rounded-full blur-[1px]" />
+            </div>
             <div>
               <h3 className="font-extrabold text-brand-ivory text-base">المجد</h3>
               <p className="text-[10px] text-brand-gold font-serif">AL MĀGD</p>
