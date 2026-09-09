@@ -11,7 +11,7 @@ export const getWhatsAppUrl = (message: string, phone: string = OFFICIAL_WHATSAP
 export const getDesignInquiryMessage = (design: DesignItem): string => {
   const currentUrl = typeof window !== 'undefined'
     ? `${window.location.origin}/#/designs/${design.slug}`
-    : `https://redaipoo.github.io/silviom/#/designs/${design.slug}`;
+    : `https://almagdly.github.io/#/designs/${design.slug}`;
 
   return `السلام عليكم شركة المجد،
 أنا مهتم بتنفيذ تصميم "${design.title}" (${design.categoryArabic}) في مساحتي.
