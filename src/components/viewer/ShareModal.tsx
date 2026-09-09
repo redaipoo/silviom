@@ -15,7 +15,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, design 
 
   const currentUrl = typeof window !== 'undefined'
     ? `${window.location.origin}/#/designs/${design.slug}`
-    : `https://redaipoo.github.io/silviom/#/designs/${design.slug}`;
+    : `https://almagdly.github.io/#/designs/${design.slug}`;
 
   const shareText = `شاهد هذا التصميم الرائع "${design.title}" من شركة المجد للمطابخ والديكورات: ${currentUrl}`;
 
