@@ -52,44 +52,22 @@ export const BeforeAfter: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-2xl sm:text-4xl font-extrabold text-brand-ivory tracking-tight font-arabic">
             قبل و بعد <span className="text-gold-gradient">التنفيذ</span>
           </h2>
           <p className="text-xs sm:text-sm text-brand-ivory/70 mt-2">
             اسحب المؤشر لترى كيف نحوّل المساحات القديمة إلى تحف فنية متكاملة
           </p>
-
-          {/* Project Switcher Tabs */}
-          {beforeAfterData.length > 1 && (
-            <div className="flex items-center justify-center gap-2.5 mt-5">
-              {beforeAfterData.map((item, idx) => (
-                <button
-                  key={item.id}
-                  onClick={() => {
-                    setActiveItemIndex(idx);
-                    setSliderPosition(50);
-                  }}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
-                    activeItemIndex === idx
-                      ? 'bg-brand-gold text-brand-dark shadow-luxury-gold'
-                      : 'bg-brand-surface text-brand-ivory/70 border border-brand-gold/20 hover:text-brand-champagne'
-                  }`}
-                >
-                  {item.categoryArabic}: {item.location}
-                </button>
-              ))}
-            </div>
-          )}
         </div>
 
-        {/* Draggable Comparison Stage */}
+        {/* Draggable Comparison Stage - Clean & Boxless */}
         <div className="max-w-4xl mx-auto">
           <div
             ref={containerRef}
             onMouseDown={() => setIsDragging(true)}
             onTouchStart={() => setIsDragging(true)}
-            className="relative h-[320px] sm:h-[440px] md:h-[480px] rounded-3xl overflow-hidden select-none cursor-ew-resize border border-brand-gold/40 shadow-2xl"
+            className="relative h-[340px] sm:h-[460px] md:h-[500px] rounded-3xl overflow-hidden select-none cursor-ew-resize shadow-2xl"
           >
             {/* After Image */}
             <img
@@ -98,10 +76,10 @@ export const BeforeAfter: React.FC = () => {
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
             />
 
-            {/* After Label */}
-            <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-lg bg-brand-dark/85 backdrop-blur-md text-brand-gold border border-brand-gold/30 text-[11px] font-bold shadow-lg">
-              بعد التنفيذ (المجد)
-            </div>
+            {/* After Floating Text (No box, no border) */}
+            <span className="absolute top-5 left-5 z-10 text-brand-gold font-extrabold text-sm sm:text-base tracking-wide drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)]">
+              بعد التنفيذ
+            </span>
 
             {/* Before Image */}
             <div
@@ -116,13 +94,13 @@ export const BeforeAfter: React.FC = () => {
                   width: containerRef.current ? `${containerRef.current.clientWidth}px` : '100%',
                 }}
               />
-              <div className="absolute inset-0 bg-brand-dark/20" />
+              <div className="absolute inset-0 bg-brand-dark/15" />
             </div>
 
-            {/* Before Label */}
-            <div className="absolute top-4 right-4 z-10 px-3 py-1 rounded-lg bg-black/80 backdrop-blur-md text-white/90 border border-white/20 text-[11px] font-bold shadow-lg">
+            {/* Before Floating Text (No box, no border) */}
+            <span className="absolute top-5 right-5 z-10 text-white font-extrabold text-sm sm:text-base tracking-wide drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)]">
               قبل التجديد
-            </div>
+            </span>
 
             {/* Divider Line & Handle */}
             <div
@@ -135,29 +113,23 @@ export const BeforeAfter: React.FC = () => {
                 <ArrowsHorizontal size={18} weight="bold" />
               </div>
             </div>
-
-            {/* Hint */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 px-3.5 py-1 rounded-full bg-brand-dark/80 backdrop-blur-md border border-brand-gold/20 text-[10px] text-brand-ivory/80 flex items-center gap-1.5 pointer-events-none">
-              <ArrowsHorizontal size={12} weight="bold" className="text-brand-gold" />
-              <span>اسحب يميناً ويساراً للمقارنة</span>
-            </div>
           </div>
 
-          {/* Project Details Below */}
-          <div className="mt-5 p-5 rounded-2xl bg-brand-surface/50 border border-brand-gold/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div className="space-y-1">
-              <h3 className="text-sm sm:text-base font-bold text-brand-ivory">{currentItem.titleArabic}</h3>
-              <p className="text-xs text-brand-ivory/70 leading-relaxed max-w-xl">{currentItem.description}</p>
+          {/* Project Details Below (Clean text, no box frame) */}
+          <div className="mt-4 px-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-brand-ivory">
+            <div className="space-y-0.5">
+              <h3 className="text-sm sm:text-base font-bold text-brand-gold">{currentItem.titleArabic}</h3>
+              <p className="text-xs text-brand-ivory/70 leading-relaxed max-w-xl font-light">{currentItem.description}</p>
             </div>
 
-            <div className="flex items-center gap-3 shrink-0 text-xs text-brand-champagne/90 pt-1 sm:pt-0">
-              <div className="flex items-center gap-1">
-                <MapPin size={14} weight="duotone" className="text-brand-gold" />
+            <div className="flex items-center gap-4 shrink-0 text-xs text-brand-champagne/80">
+              <div className="flex items-center gap-1.5">
+                <MapPin size={15} weight="duotone" className="text-brand-gold" />
                 <span>{currentItem.location}</span>
               </div>
-              <div className="flex items-center gap-1">
-                <Clock size={14} weight="duotone" className="text-brand-gold" />
-                <span>مدة التنفيذ: {currentItem.duration}</span>
+              <div className="flex items-center gap-1.5">
+                <Clock size={15} weight="duotone" className="text-brand-gold" />
+                <span>المدة: {currentItem.duration}</span>
               </div>
             </div>
           </div>
